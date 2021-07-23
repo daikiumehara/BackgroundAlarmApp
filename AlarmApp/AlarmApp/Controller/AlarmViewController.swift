@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ESTabBarController_swift
 
 class AlarmViewController: UIViewController {
 
@@ -14,16 +15,16 @@ class AlarmViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    static func instantiate() -> AlarmViewController {
+        guard let vc = UIStoryboard(name: "Alarm", bundle: nil)
+                .instantiateInitialViewController()as? AlarmViewController else {
+            fatalError("storyboardが見つかりません")
+        }
+        vc.tabBarItem = ESTabBarItem(title: "アラーム",
+                                     image: UIImage(systemName: "alarm"),
+                                     selectedImage: UIImage(systemName: "alarm"),
+                                     tag: 1)
+        return vc
     }
-    */
-
 }

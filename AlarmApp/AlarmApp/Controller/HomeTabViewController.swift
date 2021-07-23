@@ -12,9 +12,9 @@ class HomeTabViewController: ESTabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let alarmVC = AlarmViewController()
-        let timerVC = TimerViewController()
-        let settingVC = SettingViewController()
+        let alarmVC = AlarmViewController.instantiate()
+        let timerVC = TimerViewController.instantiate()
+        let settingVC = SettingViewController.instantiate()
         self.viewControllers = [alarmVC, timerVC, settingVC]
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ESTabBarController_swift
 
 class TimerViewController: UIViewController {
 
@@ -14,16 +15,16 @@ class TimerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    static func instantiate() -> TimerViewController {
+        guard let vc = UIStoryboard(name: "Timer", bundle: nil)
+                .instantiateInitialViewController() as? TimerViewController else {
+            fatalError("storyboardが見つかりません")
+        }
+        vc.tabBarItem = ESTabBarItem(title: "タイマー",
+                                     image: UIImage(systemName: "timer"),
+                                     selectedImage: UIImage(systemName: "timer"),
+                                     tag: 2)
+        return vc
     }
-    */
-
 }
