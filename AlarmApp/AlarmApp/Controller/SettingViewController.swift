@@ -24,7 +24,8 @@ extension SettingViewController {
                 .instantiateInitialViewController() as? SettingViewController else {
             fatalError("storyboardが見つかりません")
         }
-        vc.tabBarItem = ESTabBarItem(title: "設定",
+        vc.tabBarItem = ESTabBarItem(BouncesContentView(),
+                                     title: "設定",
                                      image: UIImage(systemName: "gearshape"),
                                      selectedImage: UIImage(systemName: "gearshape"),
                                      tag: 3)

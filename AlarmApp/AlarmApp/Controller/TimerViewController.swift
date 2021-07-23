@@ -24,7 +24,8 @@ extension TimerViewController {
                 .instantiateInitialViewController() as? TimerViewController else {
             fatalError("storyboardが見つかりません")
         }
-        vc.tabBarItem = ESTabBarItem(title: "タイマー",
+        vc.tabBarItem = ESTabBarItem(BouncesContentView(),
+                                     title: "タイマー",
                                      image: UIImage(systemName: "timer"),
                                      selectedImage: UIImage(systemName: "timer"),
                                      tag: 2)

@@ -24,7 +24,8 @@ extension AlarmViewController {
                 .instantiateInitialViewController()as? AlarmViewController else {
             fatalError("storyboardが見つかりません")
         }
-        vc.tabBarItem = ESTabBarItem(title: "アラーム",
+        vc.tabBarItem = ESTabBarItem(BouncesContentView(),
+                                     title: "アラーム",
                                      image: UIImage(systemName: "alarm"),
                                      selectedImage: UIImage(systemName: "alarm"),
                                      tag: 1)
