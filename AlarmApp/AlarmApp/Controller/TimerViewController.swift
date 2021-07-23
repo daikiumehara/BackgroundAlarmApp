@@ -15,7 +15,10 @@ class TimerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+}
 
+// MARK: - instantiate
+extension TimerViewController {
     static func instantiate() -> TimerViewController {
         guard let vc = UIStoryboard(name: "Timer", bundle: nil)
                 .instantiateInitialViewController() as? TimerViewController else {

@@ -9,9 +9,13 @@ import UIKit
 import ESTabBarController_swift
 
 class HomeTabViewController: ESTabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureVC()
+    }
+
+    func configureVC() {
         let alarmVC = AlarmViewController.instantiate()
         let timerVC = TimerViewController.instantiate()
         let settingVC = SettingViewController.instantiate()

@@ -15,7 +15,10 @@ class SettingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+}
 
+// MARK: - instantiate
+extension SettingViewController {
     static func instantiate() -> SettingViewController {
         guard let vc = UIStoryboard(name: "Setting", bundle: nil)
                 .instantiateInitialViewController() as? SettingViewController else {

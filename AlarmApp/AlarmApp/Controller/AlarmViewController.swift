@@ -15,7 +15,10 @@ class AlarmViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+}
 
+// MARK: - instantiate
+extension AlarmViewController {
     static func instantiate() -> AlarmViewController {
         guard let vc = UIStoryboard(name: "Alarm", bundle: nil)
                 .instantiateInitialViewController()as? AlarmViewController else {
