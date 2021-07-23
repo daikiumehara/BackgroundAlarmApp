@@ -9,7 +9,6 @@ import UIKit
 import ESTabBarController_swift
 
 class TimerViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,15 +19,15 @@ class TimerViewController: UIViewController {
 // MARK: - instantiate
 extension TimerViewController {
     static func instantiate() -> TimerViewController {
-        guard let vc = UIStoryboard(name: "Timer", bundle: nil)
+        guard let initialVC = UIStoryboard(name: "Timer", bundle: nil)
                 .instantiateInitialViewController() as? TimerViewController else {
             fatalError("storyboardが見つかりません")
         }
-        vc.tabBarItem = ESTabBarItem(BouncesContentView(),
+        initialVC.tabBarItem = ESTabBarItem(BouncesContentView(),
                                      title: "タイマー",
                                      image: UIImage(systemName: "timer"),
                                      selectedImage: UIImage(systemName: "timer"),
                                      tag: 2)
-        return vc
+        return initialVC
     }
 }

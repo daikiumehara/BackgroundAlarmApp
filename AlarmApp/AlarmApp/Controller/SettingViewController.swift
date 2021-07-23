@@ -9,7 +9,6 @@ import UIKit
 import ESTabBarController_swift
 
 class SettingViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,15 +19,15 @@ class SettingViewController: UIViewController {
 // MARK: - instantiate
 extension SettingViewController {
     static func instantiate() -> SettingViewController {
-        guard let vc = UIStoryboard(name: "Setting", bundle: nil)
+        guard let initialVC = UIStoryboard(name: "Setting", bundle: nil)
                 .instantiateInitialViewController() as? SettingViewController else {
             fatalError("storyboardが見つかりません")
         }
-        vc.tabBarItem = ESTabBarItem(BouncesContentView(),
+        initialVC.tabBarItem = ESTabBarItem(BouncesContentView(),
                                      title: "設定",
                                      image: UIImage(systemName: "gearshape"),
                                      selectedImage: UIImage(systemName: "gearshape"),
                                      tag: 3)
-        return vc
+        return initialVC
     }
 }

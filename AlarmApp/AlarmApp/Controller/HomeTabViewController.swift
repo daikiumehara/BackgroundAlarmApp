@@ -12,7 +12,6 @@ class HomeTabViewController: ESTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureVC()
-        
     }
 
     func configureVC() {
