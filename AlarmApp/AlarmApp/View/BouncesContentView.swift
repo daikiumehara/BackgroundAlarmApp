@@ -13,10 +13,10 @@ class BouncesContentView: ESTabBarItemContentView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        textColor = ThemeColor.subColor
-        highlightTextColor = ThemeColor.mainColor
-        iconColor = ThemeColor.subColor
-        highlightIconColor = ThemeColor.mainColor
+        textColor = ColorModel.subColor
+        highlightTextColor = ColorModel.mainColor
+        iconColor = ColorModel.subColor
+        highlightIconColor = ColorModel.mainColor
     }
 
     public required init?(coder aDecoder: NSCoder) {

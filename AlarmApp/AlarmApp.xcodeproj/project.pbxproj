@@ -31,7 +31,7 @@
 		A6C8D3EE26ABE98D000684ED /* AlarmViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D3ED26ABE98D000684ED /* AlarmViewDelegate.swift */; };
 		A6C8D3F026ABE99D000684ED /* AlarmViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D3EF26ABE99D000684ED /* AlarmViewDataSource.swift */; };
 		A6C8D3F226ABE9AC000684ED /* AlarmViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D3F126ABE9AC000684ED /* AlarmViewLayout.swift */; };
-		A6C8D3F526ABECAC000684ED /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D3F426ABECAC000684ED /* CommonModel.swift */; };
+		A6C8D3F526ABECAC000684ED /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D3F426ABECAC000684ED /* ColorModel.swift */; };
 		AF9ACB9444068D99589DA3AF /* Pods_AlarmApp_AlarmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C345D327125BA6F122680 /* Pods_AlarmApp_AlarmAppUITests.framework */; };
 		D971C42591C587F511E71236 /* Pods_AlarmAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C6B18270BFCFCD00DA3A33 /* Pods_AlarmAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -87,7 +87,7 @@
 		A6C8D3ED26ABE98D000684ED /* AlarmViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewDelegate.swift; sourceTree = "<group>"; };
 		A6C8D3EF26ABE99D000684ED /* AlarmViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewDataSource.swift; sourceTree = "<group>"; };
 		A6C8D3F126ABE9AC000684ED /* AlarmViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewLayout.swift; sourceTree = "<group>"; };
-		A6C8D3F426ABECAC000684ED /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
+		A6C8D3F426ABECAC000684ED /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
 		A943C5B272FFCBBE5D9FB1EA /* Pods-AlarmApp-AlarmAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp-AlarmAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AlarmApp-AlarmAppUITests/Pods-AlarmApp-AlarmAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A95F69DA3E3E59017BEDA4FF /* Pods-AlarmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp.release.xcconfig"; path = "Target Support Files/Pods-AlarmApp/Pods-AlarmApp.release.xcconfig"; sourceTree = "<group>"; };
 		C57C345D327125BA6F122680 /* Pods_AlarmApp_AlarmAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmApp_AlarmAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,7 +232,7 @@
 				A6C8D3EC26ABE967000684ED /* AlarmViewModel */,
 				A6C8D3E826ABD550000684ED /* AlarmData.swift */,
 				A6C8D3EA26ABD58D000684ED /* SoundData.swift */,
-				A6C8D3F426ABECAC000684ED /* CommonModel.swift */,
+				A6C8D3F426ABECAC000684ED /* ColorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -527,7 +527,7 @@
 			files = (
 				A6C8D3D626AB14FB000684ED /* TimerViewController.swift in Sources */,
 				A6C8D3EE26ABE98D000684ED /* AlarmViewDelegate.swift in Sources */,
-				A6C8D3F526ABECAC000684ED /* CommonModel.swift in Sources */,
+				A6C8D3F526ABECAC000684ED /* ColorModel.swift in Sources */,
 				A6C8D3D426AB14D7000684ED /* AlarmViewController.swift in Sources */,
 				A6C8D3D226AB11D2000684ED /* HomeTabViewController.swift in Sources */,
 				A6C8D3F226ABE9AC000684ED /* AlarmViewLayout.swift in Sources */,

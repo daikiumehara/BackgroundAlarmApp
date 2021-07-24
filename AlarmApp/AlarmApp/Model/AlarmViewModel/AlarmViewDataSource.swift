@@ -12,11 +12,13 @@ class AlarmViewDataSource: NSObject, UICollectionViewDataSource {
         10
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView
                 .dequeueReusableCell(withReuseIdentifier: AlarmCell.identifier, for: indexPath) as? AlarmCell else {
             fatalError("セルが見つかりません")
         }
+        cell.configure()
         return cell
     }
 }
