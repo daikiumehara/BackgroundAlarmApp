@@ -204,8 +204,8 @@
 		A6C8D3CE26AB0778000684ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6C8D3EC26ABE967000684ED /* AlarmView */,
 				A6C8D3D126AB11D2000684ED /* HomeTabViewController.swift */,
-				A6C8D3D326AB14D7000684ED /* AlarmViewController.swift */,
 				A6C8D3D526AB14FB000684ED /* TimerViewController.swift */,
 				A6C8D3D726AB1528000684ED /* SettingViewController.swift */,
 			);
@@ -229,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				A6C8D3F326ABEC4F000684ED /* enum */,
-				A6C8D3EC26ABE967000684ED /* AlarmViewModel */,
 				A6C8D3E826ABD550000684ED /* AlarmData.swift */,
 				A6C8D3EA26ABD58D000684ED /* SoundData.swift */,
 				A6C8D3F426ABECAC000684ED /* ColorModel.swift */,
@@ -246,14 +245,15 @@
 			path = AlarmCell;
 			sourceTree = "<group>";
 		};
-		A6C8D3EC26ABE967000684ED /* AlarmViewModel */ = {
+		A6C8D3EC26ABE967000684ED /* AlarmView */ = {
 			isa = PBXGroup;
 			children = (
+				A6C8D3D326AB14D7000684ED /* AlarmViewController.swift */,
 				A6C8D3ED26ABE98D000684ED /* AlarmViewDelegate.swift */,
 				A6C8D3EF26ABE99D000684ED /* AlarmViewDataSource.swift */,
 				A6C8D3F126ABE9AC000684ED /* AlarmViewLayout.swift */,
 			);
-			path = AlarmViewModel;
+			path = AlarmView;
 			sourceTree = "<group>";
 		};
 		A6C8D3F326ABEC4F000684ED /* enum */ = {

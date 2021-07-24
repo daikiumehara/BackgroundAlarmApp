@@ -8,6 +8,12 @@
 import UIKit
 
 class AlarmViewDataSource: NSObject, UICollectionViewDataSource {
+    private var colorModel: ColorModel
+
+    init(_ colorModel: ColorModel) {
+        self.colorModel = colorModel
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         10
     }
@@ -18,7 +24,7 @@ class AlarmViewDataSource: NSObject, UICollectionViewDataSource {
                 .dequeueReusableCell(withReuseIdentifier: AlarmCell.identifier, for: indexPath) as? AlarmCell else {
             fatalError("セルが見つかりません")
         }
-        cell.configure()
+        cell.configure(colorModel: colorModel)
         return cell
     }
 }

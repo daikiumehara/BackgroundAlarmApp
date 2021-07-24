@@ -37,20 +37,29 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-mE-STM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3Yp-g5-dpy"/>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="7nJ-q1-oKb"/>
+                            <constraint firstItem="7u7-mE-STM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="D21-2v-Khz"/>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E88-GB-vgv"/>
+                            <constraint firstAttribute="trailing" secondItem="7u7-mE-STM" secondAttribute="trailing" id="HOA-ck-0yI"/>
+                            <constraint firstItem="HBd-pC-Vf5" firstAttribute="top" secondItem="7u7-mE-STM" secondAttribute="bottom" id="QYT-Ik-2iU"/>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="T07-aj-gW7"/>
+                            <constraint firstItem="7u7-mE-STM" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="wHo-DR-yWp"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="sHP-0O-7hB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="alarmView" destination="HBd-pC-Vf5" id="Djp-WE-Ivl"/>
+                        <outlet property="topSafeAreaView" destination="7u7-mE-STM" id="Eul-mP-SwH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

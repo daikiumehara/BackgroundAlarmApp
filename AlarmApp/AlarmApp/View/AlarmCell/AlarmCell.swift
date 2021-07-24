@@ -17,15 +17,19 @@ class AlarmCell: UICollectionViewCell {
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
 
-    func configure() {
-        self.layer.cornerRadius = 20.0
-        self.backgroundColor = ColorModel.themeColor.backgroundColor
+    func configure(colorModel: ColorModel) {
+        self.layer.cornerRadius = 10
+        self.backgroundColor = colorModel.themeColor.cellBackgroundColor
         self.layer.borderWidth = 0.5
-        self.titleLabel.textColor = ColorModel.themeColor.textColor
-        self.timeLabel.textColor = ColorModel.themeColor.textColor
-        self.alameNameLabel.textColor = ColorModel.themeColor.textColor
-        self.bellImage.tintColor = ColorModel.themeColor.textColor
-        self.alarmSwitch.tintColor = ColorModel.mainColor
-        self.alarmSwitch.onTintColor = ColorModel.mainColor
+        outletColorConfigure(model: colorModel)
+    }
+
+    private func outletColorConfigure(model: ColorModel) {
+        self.titleLabel.textColor = model.themeColor.textColor
+        self.timeLabel.textColor = model.themeColor.textColor
+        self.alameNameLabel.textColor = model.themeColor.textColor
+        self.bellImage.tintColor = model.themeColor.textColor
+        self.alarmSwitch.tintColor = model.mainColor
+        self.alarmSwitch.onTintColor = model.mainColor
     }
 }

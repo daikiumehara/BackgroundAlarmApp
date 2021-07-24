@@ -10,12 +10,15 @@ import ESTabBarController_swift
 
 class AlarmViewController: UIViewController {
     @IBOutlet private var alarmView: UICollectionView!
+    @IBOutlet private var topSafeAreaView: UIView!
 
+    private var colorModel: ColorModel!
     private let alarmViewDelegate = AlarmViewDelegate()
-    private let alarmViewDataSource = AlarmViewDataSource()
+    private lazy var alarmViewDataSource = AlarmViewDataSource(colorModel)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.topSafeAreaView.backgroundColor = colorModel.themeColor.backgroundColor
         configureCollectionView()
     }
 
@@ -25,17 +28,21 @@ class AlarmViewController: UIViewController {
         alarmView.delegate = alarmViewDelegate
         alarmView.dataSource = alarmViewDataSource
         alarmView.collectionViewLayout = AlarmViewLayout()
+        alarmView.backgroundColor = colorModel.themeColor.backgroundColor
     }
 }
 
 // MARK: - instantiate
 extension AlarmViewController {
-    static func instantiate() -> AlarmViewController {
+    static func instantiate(_ colorModel: ColorModel) -> AlarmViewController {
         guard let initialVC = UIStoryboard(name: "Alarm", bundle: nil)
                 .instantiateInitialViewController()as? AlarmViewController else {
             fatalError("storyboardが見つかりません")
         }
-        initialVC.tabBarItem = ESTabBarItem(BouncesContentView(),
+        initialVC.colorModel = colorModel
+        let contentView = BouncesContentView()
+        contentView.configure(colorModel)
+        initialVC.tabBarItem = ESTabBarItem(contentView,
                                      title: "アラーム",
                                      image: UIImage(systemName: "alarm"),
                                      selectedImage: UIImage(systemName: "alarm"),

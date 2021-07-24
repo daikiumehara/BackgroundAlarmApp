@@ -8,7 +8,7 @@
 import UIKit
 
 class AlarmViewLayout: UICollectionViewFlowLayout {
-    private var cellHeight: CGFloat = 80.0
+    private var cellHeight: CGFloat = 90.0
     private var cellMinWidth: CGFloat = 300.0
 
     override func prepare() {

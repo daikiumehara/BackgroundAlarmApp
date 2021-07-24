@@ -13,10 +13,6 @@ class BouncesContentView: ESTabBarItemContentView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        textColor = ColorModel.subColor
-        highlightTextColor = ColorModel.mainColor
-        iconColor = ColorModel.subColor
-        highlightIconColor = ColorModel.mainColor
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -39,5 +35,12 @@ class BouncesContentView: ESTabBarItemContentView {
         impliesAnimation.duration = duration * 2
         impliesAnimation.calculationMode = CAAnimationCalculationMode.cubic
         imageView.layer.add(impliesAnimation, forKey: nil)
+    }
+
+    func configure(_ colorModel: ColorModel) {
+        textColor = colorModel.subColor
+        highlightTextColor = colorModel.mainColor
+        iconColor = colorModel.subColor
+        highlightIconColor = colorModel.mainColor
     }
 }
