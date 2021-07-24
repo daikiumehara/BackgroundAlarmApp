@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LKo-yq-960" customClass="AlarmCell" customModule="AlarmApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PJe-Om-496">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs2-WQ-EBU">
+                        <rect key="frame" x="20" y="10" width="82" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アラーム音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUJ-YW-emZ">
+                        <rect key="frame" x="318" y="67" width="77" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hub-wm-QY1">
+                        <rect key="frame" x="341" y="29.5" width="51" height="31"/>
+                    </switch>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VPZ-D5-OEV">
+                        <rect key="frame" x="298" y="66.5" width="20" height="19.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-Hk-a3X">
+                        <rect key="frame" x="20" y="39" width="100" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zs2-WQ-EBU" firstAttribute="top" secondItem="PJe-Om-496" secondAttribute="top" constant="10" id="5gt-bO-6iB"/>
+                    <constraint firstAttribute="trailing" secondItem="Hub-wm-QY1" secondAttribute="trailing" constant="25" id="DfB-xX-mgw"/>
+                    <constraint firstItem="Uoc-Hk-a3X" firstAttribute="leading" secondItem="PJe-Om-496" secondAttribute="leading" constant="20" id="Uu7-mH-Jmw"/>
+                    <constraint firstItem="VPZ-D5-OEV" firstAttribute="centerY" secondItem="uUJ-YW-emZ" secondAttribute="centerY" id="XWS-Vd-gGC"/>
+                    <constraint firstItem="Uoc-Hk-a3X" firstAttribute="top" secondItem="Zs2-WQ-EBU" secondAttribute="bottom" constant="5" id="Xz7-gd-X92"/>
+                    <constraint firstItem="Uoc-Hk-a3X" firstAttribute="top" secondItem="Zs2-WQ-EBU" secondAttribute="bottom" constant="5" id="eRI-Bo-4JI"/>
+                    <constraint firstItem="Zs2-WQ-EBU" firstAttribute="leading" secondItem="PJe-Om-496" secondAttribute="leading" constant="20" id="gf6-42-xC3"/>
+                    <constraint firstItem="uUJ-YW-emZ" firstAttribute="leading" secondItem="VPZ-D5-OEV" secondAttribute="trailing" id="kPk-eQ-aiB"/>
+                    <constraint firstAttribute="trailing" secondItem="uUJ-YW-emZ" secondAttribute="trailing" constant="20" id="r14-f3-9ey"/>
+                    <constraint firstItem="Hub-wm-QY1" firstAttribute="centerY" secondItem="PJe-Om-496" secondAttribute="centerY" id="ufN-ZQ-mo8"/>
+                    <constraint firstAttribute="bottom" secondItem="uUJ-YW-emZ" secondAttribute="bottom" constant="5" id="wJ8-bb-0R6"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="415" height="90"/>
+            <point key="canvasLocation" x="177.536231884058" y="-105.13392857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
+    </resources>
+</document>

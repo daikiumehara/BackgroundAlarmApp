@@ -9,10 +9,22 @@ import UIKit
 import ESTabBarController_swift
 
 class AlarmViewController: UIViewController {
+    @IBOutlet private var alarmView: UICollectionView!
+
+    private let alarmViewDelegate = AlarmViewDelegate()
+    private let alarmViewDataSource = AlarmViewDataSource()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCollectionView()
+    }
 
-        // Do any additional setup after loading the view.
+    func configureCollectionView() {
+        alarmView.register(AlarmCell.nib,
+                                forCellWithReuseIdentifier: AlarmCell.identifier)
+        alarmView.delegate = alarmViewDelegate
+        alarmView.dataSource = alarmViewDataSource
+        alarmView.collectionViewLayout = AlarmViewLayout()
     }
 }
 
