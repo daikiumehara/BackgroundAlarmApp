@@ -27,7 +27,7 @@ class AlarmViewDataSource: NSObject, UICollectionViewDataSource {
         // TODO -Dataの取得
         let soundData = SoundModel.datas[indexPath.item]
         var data = AlarmData(title: "目覚まし",
-                             time: "11:00",
+                             time: "14:35",
                              soundData: soundData,
                              identifier: "2020:11:24:22:21:11",
                              setting: false)

@@ -28,4 +28,20 @@ struct CustomFormatter {
         formatter.dateFormat = "yyyy:MM:dd:HH:mm:ss"
         return formatter.string(from: date)
     }
+
+    static func getHourValue(_ time: String) -> Int {
+        let strings = time.split(separator: ":")
+        guard let hour = Int(strings[0]) else {
+            return 12
+        }
+        return hour
+    }
+
+    static func getMinuteValue(_ time: String) -> Int {
+        let strings = time.split(separator: ":")
+        guard let minute = Int(strings[1]) else {
+            return 0
+        }
+        return minute
+    }
 }

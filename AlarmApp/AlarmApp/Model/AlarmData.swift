@@ -57,7 +57,12 @@ struct AlarmData: Comparable {
         content.body = "起床の時間です"
         let sound = UNNotificationSound(named: UNNotificationSoundName(soundData.fileName))
         content.sound = sound
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        var component = DateComponents()
+        component.timeZone = TimeZone(identifier: "Asia/Tokyo")
+        component.hour = CustomFormatter.getHourValue(time)
+        component.minute = CustomFormatter.getMinuteValue(time)
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: component, repeats: true)
         let request = UNNotificationRequest(identifier: alarmIdentifier,
                                             content: content,
                                             trigger: trigger)
