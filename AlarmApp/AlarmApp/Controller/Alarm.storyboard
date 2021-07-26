@@ -41,6 +41,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-e9-1jO">
+                                <rect key="frame" x="334" y="738.5" width="60" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="07w-kM-mYA"/>
+                                    <constraint firstAttribute="height" constant="60" id="gtr-6G-31u"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="plus.circle.fill" catalog="system">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.66461390769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,13 +61,16 @@
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E88-GB-vgv"/>
                             <constraint firstAttribute="trailing" secondItem="7u7-mE-STM" secondAttribute="trailing" id="HOA-ck-0yI"/>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="top" secondItem="7u7-mE-STM" secondAttribute="bottom" id="QYT-Ik-2iU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="fAd-e9-1jO" secondAttribute="bottom" constant="15" id="SkW-PF-ynM"/>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="T07-aj-gW7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fAd-e9-1jO" secondAttribute="trailing" constant="20" id="gfE-CX-xLu"/>
                             <constraint firstItem="7u7-mE-STM" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="wHo-DR-yWp"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="sHP-0O-7hB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="fAd-e9-1jO" id="1A3-KS-8ly"/>
                         <outlet property="alarmView" destination="HBd-pC-Vf5" id="Djp-WE-Ivl"/>
                         <outlet property="topSafeAreaView" destination="7u7-mE-STM" id="Eul-mP-SwH"/>
                     </connections>
@@ -68,6 +81,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

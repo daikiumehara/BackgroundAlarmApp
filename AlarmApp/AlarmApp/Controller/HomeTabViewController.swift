@@ -9,7 +9,6 @@ import UIKit
 import ESTabBarController_swift
 
 class HomeTabViewController: ESTabBarController {
-
     let colorModel = ColorModel()
 
     override func viewDidLoad() {

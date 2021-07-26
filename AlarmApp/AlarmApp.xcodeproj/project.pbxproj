@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		760F3108962B37301EDCCCA9 /* Pods_AlarmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29A73EC3651F53F5C078023 /* Pods_AlarmApp.framework */; };
+		A619E35D26AD97CE00FB0FB8 /* CustomFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619E35C26AD97CE00FB0FB8 /* CustomFormatter.swift */; };
+		A619E35F26AE4AFB00FB0FB8 /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619E35E26AE4AFB00FB0FB8 /* TimerData.swift */; };
+		A619E36426AE522800FB0FB8 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619E36326AE522800FB0FB8 /* TimerButton.swift */; };
+		A619E36626AE523400FB0FB8 /* TimerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A619E36526AE523400FB0FB8 /* TimerButton.xib */; };
+		A619E36826AE700C00FB0FB8 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619E36726AE700C00FB0FB8 /* AlarmModel.swift */; };
+		A619E36B26AE716400FB0FB8 /* clock_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E36A26AE716400FB0FB8 /* clock_bell.mp3 */; };
+		A619E36D26AE717900FB0FB8 /* digital_clock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E36C26AE717900FB0FB8 /* digital_clock.mp3 */; };
+		A619E36F26AE727F00FB0FB8 /* receive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E36E26AE727F00FB0FB8 /* receive.mp3 */; };
+		A619E37126AE72BE00FB0FB8 /* poteto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E37026AE72BE00FB0FB8 /* poteto.mp3 */; };
+		A619E37326AE72EA00FB0FB8 /* siren.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E37226AE72EA00FB0FB8 /* siren.mp3 */; };
+		A619E37526AE732000FB0FB8 /* SoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619E37426AE732000FB0FB8 /* SoundModel.swift */; };
+		A619E37726AE776900FB0FB8 /* ooatari.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E37626AE776900FB0FB8 /* ooatari.mp3 */; };
+		A619E37926AE778100FB0FB8 /* jazz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E37826AE777F00FB0FB8 /* jazz.mp3 */; };
+		A619E37B26AE77AE00FB0FB8 /* fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E37A26AE77AD00FB0FB8 /* fanfare.mp3 */; };
 		A6C8D39E26A90C28000684ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D39D26A90C28000684ED /* AppDelegate.swift */; };
 		A6C8D3A026A90C28000684ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D39F26A90C28000684ED /* SceneDelegate.swift */; };
 		A6C8D3A526A90C28000684ED /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C8D3A326A90C28000684ED /* Home.storyboard */; };
@@ -58,6 +72,20 @@
 		6F3540E742DB98235F54E1F9 /* Pods-AlarmAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AlarmAppTests/Pods-AlarmAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		97641ADFA4A9B2A5ACF2390F /* Pods-AlarmApp-AlarmAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp-AlarmAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-AlarmApp-AlarmAppUITests/Pods-AlarmApp-AlarmAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A29A73EC3651F53F5C078023 /* Pods_AlarmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A619E35C26AD97CE00FB0FB8 /* CustomFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFormatter.swift; sourceTree = "<group>"; };
+		A619E35E26AE4AFB00FB0FB8 /* TimerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
+		A619E36326AE522800FB0FB8 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
+		A619E36526AE523400FB0FB8 /* TimerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerButton.xib; sourceTree = "<group>"; };
+		A619E36726AE700C00FB0FB8 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		A619E36A26AE716400FB0FB8 /* clock_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock_bell.mp3; sourceTree = "<group>"; };
+		A619E36C26AE717900FB0FB8 /* digital_clock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = digital_clock.mp3; sourceTree = "<group>"; };
+		A619E36E26AE727F00FB0FB8 /* receive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = receive.mp3; sourceTree = "<group>"; };
+		A619E37026AE72BE00FB0FB8 /* poteto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poteto.mp3; sourceTree = "<group>"; };
+		A619E37226AE72EA00FB0FB8 /* siren.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siren.mp3; sourceTree = "<group>"; };
+		A619E37426AE732000FB0FB8 /* SoundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundModel.swift; sourceTree = "<group>"; };
+		A619E37626AE776900FB0FB8 /* ooatari.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ooatari.mp3; sourceTree = "<group>"; };
+		A619E37826AE777F00FB0FB8 /* jazz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jazz.mp3; sourceTree = "<group>"; };
+		A619E37A26AE77AD00FB0FB8 /* fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fanfare.mp3; sourceTree = "<group>"; };
 		A6C8D39A26A90C28000684ED /* AlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C8D39D26A90C28000684ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6C8D39F26A90C28000684ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +174,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A619E36226AE520100FB0FB8 /* TimerButton */ = {
+			isa = PBXGroup;
+			children = (
+				A619E36326AE522800FB0FB8 /* TimerButton.swift */,
+				A619E36526AE523400FB0FB8 /* TimerButton.xib */,
+			);
+			path = TimerButton;
+			sourceTree = "<group>";
+		};
+		A619E36926AE711700FB0FB8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A619E36C26AE717900FB0FB8 /* digital_clock.mp3 */,
+				A619E36A26AE716400FB0FB8 /* clock_bell.mp3 */,
+				A619E36E26AE727F00FB0FB8 /* receive.mp3 */,
+				A619E37026AE72BE00FB0FB8 /* poteto.mp3 */,
+				A619E37826AE777F00FB0FB8 /* jazz.mp3 */,
+				A619E37226AE72EA00FB0FB8 /* siren.mp3 */,
+				A619E37A26AE77AD00FB0FB8 /* fanfare.mp3 */,
+				A619E37626AE776900FB0FB8 /* ooatari.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		A6C8D39126A90C27000684ED = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +223,7 @@
 		A6C8D39C26A90C28000684ED /* AlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				A619E36926AE711700FB0FB8 /* Sounds */,
 				A6C8D3D026AB078A000684ED /* Model */,
 				A6C8D3CF26AB0781000684ED /* View */,
 				A6C8D3CE26AB0778000684ED /* Controller */,
@@ -215,6 +268,7 @@
 		A6C8D3CF26AB0781000684ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A619E36226AE520100FB0FB8 /* TimerButton */,
 				A6C8D3E326ABCF00000684ED /* AlarmCell */,
 				A6C8D3A326A90C28000684ED /* Home.storyboard */,
 				A6C8D3D926AB1536000684ED /* Alarm.storyboard */,
@@ -231,7 +285,11 @@
 				A6C8D3F326ABEC4F000684ED /* enum */,
 				A6C8D3E826ABD550000684ED /* AlarmData.swift */,
 				A6C8D3EA26ABD58D000684ED /* SoundData.swift */,
+				A619E35E26AE4AFB00FB0FB8 /* TimerData.swift */,
 				A6C8D3F426ABECAC000684ED /* ColorModel.swift */,
+				A619E35C26AD97CE00FB0FB8 /* CustomFormatter.swift */,
+				A619E36726AE700C00FB0FB8 /* AlarmModel.swift */,
+				A619E37426AE732000FB0FB8 /* SoundModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,10 +433,19 @@
 			files = (
 				A6C8D3DC26AB1544000684ED /* Timer.storyboard in Resources */,
 				A6C8D3DA26AB1536000684ED /* Alarm.storyboard in Resources */,
+				A619E37326AE72EA00FB0FB8 /* siren.mp3 in Resources */,
+				A619E36D26AE717900FB0FB8 /* digital_clock.mp3 in Resources */,
+				A619E37B26AE77AE00FB0FB8 /* fanfare.mp3 in Resources */,
+				A619E37926AE778100FB0FB8 /* jazz.mp3 in Resources */,
+				A619E36B26AE716400FB0FB8 /* clock_bell.mp3 in Resources */,
+				A619E37126AE72BE00FB0FB8 /* poteto.mp3 in Resources */,
 				A6C8D3AA26A90C30000684ED /* LaunchScreen.storyboard in Resources */,
 				A6C8D3A726A90C30000684ED /* Assets.xcassets in Resources */,
+				A619E36F26AE727F00FB0FB8 /* receive.mp3 in Resources */,
 				A6C8D3A526A90C28000684ED /* Home.storyboard in Resources */,
+				A619E36626AE523400FB0FB8 /* TimerButton.xib in Resources */,
 				A6C8D3E726ABCF49000684ED /* AlarmCell.xib in Resources */,
+				A619E37726AE776900FB0FB8 /* ooatari.mp3 in Resources */,
 				A6C8D3DE26AB1554000684ED /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,6 +595,7 @@
 				A6C8D3D626AB14FB000684ED /* TimerViewController.swift in Sources */,
 				A6C8D3EE26ABE98D000684ED /* AlarmViewDelegate.swift in Sources */,
 				A6C8D3F526ABECAC000684ED /* ColorModel.swift in Sources */,
+				A619E36426AE522800FB0FB8 /* TimerButton.swift in Sources */,
 				A6C8D3D426AB14D7000684ED /* AlarmViewController.swift in Sources */,
 				A6C8D3D226AB11D2000684ED /* HomeTabViewController.swift in Sources */,
 				A6C8D3F226ABE9AC000684ED /* AlarmViewLayout.swift in Sources */,
@@ -537,9 +605,13 @@
 				A6C8D3E926ABD550000684ED /* AlarmData.swift in Sources */,
 				A6C8D3E526ABCF2A000684ED /* AlarmCell.swift in Sources */,
 				A6C8D3F026ABE99D000684ED /* AlarmViewDataSource.swift in Sources */,
+				A619E36826AE700C00FB0FB8 /* AlarmModel.swift in Sources */,
 				A6C8D3E226AB2A61000684ED /* ThemeColor.swift in Sources */,
 				A6C8D3A026A90C28000684ED /* SceneDelegate.swift in Sources */,
+				A619E35D26AD97CE00FB0FB8 /* CustomFormatter.swift in Sources */,
+				A619E37526AE732000FB0FB8 /* SoundModel.swift in Sources */,
 				A6C8D3D826AB1528000684ED /* SettingViewController.swift in Sources */,
+				A619E35F26AE4AFB00FB0FB8 /* TimerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

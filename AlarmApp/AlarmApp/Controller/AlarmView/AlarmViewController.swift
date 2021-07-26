@@ -11,6 +11,7 @@ import ESTabBarController_swift
 class AlarmViewController: UIViewController {
     @IBOutlet private var alarmView: UICollectionView!
     @IBOutlet private var topSafeAreaView: UIView!
+    @IBOutlet private var addButton: UIButton!
 
     private var colorModel: ColorModel!
     private let alarmViewDelegate = AlarmViewDelegate()
@@ -18,8 +19,23 @@ class AlarmViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        askPermissionNontification()
         self.topSafeAreaView.backgroundColor = colorModel.themeColor.backgroundColor
         configureCollectionView()
+        configureButton()
+    }
+
+    func askPermissionNontification() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { _, error in
+            if let error = error {
+                print(error)
+            }
+        }
+    }
+
+    func configureButton() {
+        addButton.tintColor = colorModel.mainColor
     }
 
     func configureCollectionView() {

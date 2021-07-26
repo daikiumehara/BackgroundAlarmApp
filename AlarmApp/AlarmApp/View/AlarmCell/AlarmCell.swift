@@ -14,22 +14,39 @@ class AlarmCell: UICollectionViewCell {
     @IBOutlet private var bellImage: UIImageView!
     @IBOutlet private var alarmSwitch: UISwitch!
 
+    private var alarmData: AlarmData!
+    private var changeSwitchValue: ((Bool) -> Void)!
+
     static var identifier: String { String(describing: self) }
     static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
 
-    func configure(colorModel: ColorModel) {
-        self.layer.cornerRadius = 10
-        self.backgroundColor = colorModel.themeColor.cellBackgroundColor
-        self.layer.borderWidth = 0.5
-        outletColorConfigure(model: colorModel)
+    func configure(data: AlarmData, colorModel: ColorModel, changeSwitchValue: @escaping  (Bool) -> Void) {
+        self.alarmData = data
+        appearanceConfigure(colorModel)
+        dataConfigure(data)
+        self.changeSwitchValue = changeSwitchValue
     }
 
-    private func outletColorConfigure(model: ColorModel) {
+    private func dataConfigure(_ data: AlarmData) {
+        self.titleLabel.text = data.title
+        self.timeLabel.text = data.time
+        self.alameNameLabel.text = data.soundData.soundName
+        self.alarmSwitch.isOn = alarmData.isSetting
+    }
+
+    private func appearanceConfigure(_ model: ColorModel) {
+        self.layer.cornerRadius = 10
+        self.backgroundColor = model.themeColor.cellBackgroundColor
+        self.layer.borderWidth = 0.5
         self.titleLabel.textColor = model.themeColor.textColor
         self.timeLabel.textColor = model.themeColor.textColor
         self.alameNameLabel.textColor = model.themeColor.textColor
         self.bellImage.tintColor = model.themeColor.textColor
         self.alarmSwitch.tintColor = model.mainColor
         self.alarmSwitch.onTintColor = model.mainColor
+    }
+
+    @IBAction private func didChangeSwitchValue(_ sender: Any) {
+        self.changeSwitchValue(self.alarmSwitch.isOn)
     }
 }
