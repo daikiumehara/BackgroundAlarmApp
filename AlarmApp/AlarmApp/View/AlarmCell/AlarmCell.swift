@@ -29,7 +29,7 @@ class AlarmCell: UICollectionViewCell {
 
     private func dataConfigure(_ data: AlarmData) {
         self.titleLabel.text = data.title
-        self.timeLabel.text = data.time
+        self.timeLabel.text = data.time.toString()
         self.alameNameLabel.text = data.soundData.soundName
         self.alarmSwitch.isOn = alarmData.isSetting
     }

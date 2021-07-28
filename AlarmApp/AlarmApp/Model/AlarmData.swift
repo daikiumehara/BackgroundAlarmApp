@@ -9,7 +9,7 @@ import UIKit
 
 struct AlarmData: Comparable {
     var title: String
-    var time: String
+    var time: Time
     var soundData: SoundData
     var alarmIdentifier: String  // 作成した年日時秒(アラームの識別に使用)
     var isSetting: Bool {
@@ -18,7 +18,7 @@ struct AlarmData: Comparable {
         }
     }
 
-    init(title: String, time: String, soundData: SoundData,
+    init(title: String, time: Time, soundData: SoundData,
          identifier: String, setting: Bool) {
         self.title = title
         self.time = time
@@ -35,7 +35,7 @@ struct AlarmData: Comparable {
     }
 
     static func < (lhs: AlarmData, rhs: AlarmData) -> Bool {
-        return  CustomFormatter.stringToTime(lhs.time) > CustomFormatter.stringToTime(rhs.time)
+        return  lhs.time.toDate() > rhs.time.toDate()
     }
 
     private func settingAlarm() {
@@ -58,10 +58,8 @@ struct AlarmData: Comparable {
         let sound = UNNotificationSound(named: UNNotificationSoundName(soundData.fileName))
         content.sound = sound
         var component = DateComponents()
-//        component.timeZone = TimeZone(identifier: "Asia/Tokyo")
-        component.hour = CustomFormatter.getHourValue(time)
-        component.minute = CustomFormatter.getMinuteValue(time)
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        component.hour = time.hour
+        component.minute = time.minute
         let trigger = UNCalendarNotificationTrigger(dateMatching: component, repeats: true)
         let request = UNNotificationRequest(identifier: alarmIdentifier,
                                             content: content,
