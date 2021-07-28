@@ -17,8 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5K-Ex-FRa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HBd-pC-Vf5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xgz-bF-sd0">
                                     <size key="itemSize" width="128" height="128"/>
@@ -37,42 +41,42 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-mE-STM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-e9-1jO">
-                                <rect key="frame" x="334" y="738.5" width="60" height="59"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="07w-kM-mYA"/>
-                                    <constraint firstAttribute="height" constant="60" id="gtr-6G-31u"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="plus.circle.fill" catalog="system">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.66461390769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePN-qT-JZm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="アラーム" id="yUs-FW-9Qe">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hqZ-Rc-N1Z">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="z5K-Ex-FRa" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="1aC-RB-nMZ"/>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3Yp-g5-dpy"/>
+                            <constraint firstItem="ePN-qT-JZm" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="5fb-fm-ECf"/>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="7nJ-q1-oKb"/>
-                            <constraint firstItem="7u7-mE-STM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="D21-2v-Khz"/>
                             <constraint firstItem="HBd-pC-Vf5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E88-GB-vgv"/>
-                            <constraint firstAttribute="trailing" secondItem="7u7-mE-STM" secondAttribute="trailing" id="HOA-ck-0yI"/>
-                            <constraint firstItem="HBd-pC-Vf5" firstAttribute="top" secondItem="7u7-mE-STM" secondAttribute="bottom" id="QYT-Ik-2iU"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="fAd-e9-1jO" secondAttribute="bottom" constant="15" id="SkW-PF-ynM"/>
-                            <constraint firstItem="HBd-pC-Vf5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="T07-aj-gW7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fAd-e9-1jO" secondAttribute="trailing" constant="20" id="gfE-CX-xLu"/>
-                            <constraint firstItem="7u7-mE-STM" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="wHo-DR-yWp"/>
+                            <constraint firstAttribute="trailing" secondItem="z5K-Ex-FRa" secondAttribute="trailing" id="VKx-yk-a4d"/>
+                            <constraint firstItem="ePN-qT-JZm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nYB-fD-7sk"/>
+                            <constraint firstItem="ePN-qT-JZm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rSz-c6-pfQ"/>
+                            <constraint firstItem="z5K-Ex-FRa" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="syk-nc-ywM"/>
+                            <constraint firstItem="HBd-pC-Vf5" firstAttribute="top" secondItem="ePN-qT-JZm" secondAttribute="bottom" id="upd-Vd-gQe"/>
+                            <constraint firstItem="ePN-qT-JZm" firstAttribute="bottom" secondItem="z5K-Ex-FRa" secondAttribute="bottom" id="wlE-9t-Tn2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="sHP-0O-7hB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addButton" destination="fAd-e9-1jO" id="1A3-KS-8ly"/>
                         <outlet property="alarmView" destination="HBd-pC-Vf5" id="Djp-WE-Ivl"/>
-                        <outlet property="topSafeAreaView" destination="7u7-mE-STM" id="Eul-mP-SwH"/>
+                        <outlet property="navigationBar" destination="ePN-qT-JZm" id="UZ2-mU-JAw"/>
+                        <outlet property="topSafeAreaView" destination="z5K-Ex-FRa" id="JbX-3S-t90"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -81,7 +85,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTE-Ap-0J0">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTE-Ap-0J0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="6OT-1C-Daf"/>
                                 </items>
@@ -26,6 +25,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rTE-Ap-0J0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0t5-OQ-dc0"/>
+                            <constraint firstItem="rTE-Ap-0J0" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="2bF-gW-zGw"/>
+                            <constraint firstItem="rTE-Ap-0J0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tXV-4u-1BX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="z0e-er-lQp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

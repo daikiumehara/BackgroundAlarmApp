@@ -11,7 +11,7 @@ import ESTabBarController_swift
 class AlarmViewController: UIViewController {
     @IBOutlet private var alarmView: UICollectionView!
     @IBOutlet private var topSafeAreaView: UIView!
-    @IBOutlet private var addButton: UIButton!
+    @IBOutlet private var navigationBar: UINavigationBar!
 
     private var colorModel: ColorModel!
     private let alarmViewDelegate = AlarmViewDelegate()
@@ -20,9 +20,18 @@ class AlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         askPermissionNontification()
-        self.topSafeAreaView.backgroundColor = colorModel.themeColor.backgroundColor
         configureCollectionView()
-        configureButton()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationBar.backgroundColor = colorModel.mainColor
+        self.navigationBar.barTintColor = colorModel.mainColor
+        // navigationBarの色を統一するための処理
+        self.navigationBar.subviews.forEach { view in
+            view.backgroundColor = colorModel.mainColor
+        }
+//        self.navigationBar.subviews[1].backgroundColor = colorModel.mainColor
+        self.topSafeAreaView.backgroundColor = colorModel.mainColor
     }
 
     func askPermissionNontification() {
@@ -32,10 +41,6 @@ class AlarmViewController: UIViewController {
                 print(error)
             }
         }
-    }
-
-    func configureButton() {
-        addButton.tintColor = colorModel.mainColor
     }
 
     func configureCollectionView() {
