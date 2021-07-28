@@ -14,7 +14,6 @@ class TimerButton: UIView {
 
     private var didTap: (() -> Void)!
 
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNib()
@@ -38,7 +37,6 @@ class TimerButton: UIView {
         self.view.backgroundColor = color
         self.backgroundView.layer.cornerRadius = self.backgroundView.bounds.width / 2
         self.view.layer.cornerRadius = self.view.bounds.width / 2
-        self.view.layer.borderColor = UIColor.clear.cgColor
         self.view.layer.borderWidth = 2.0
         self.didTap = didTap
         let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapButton))

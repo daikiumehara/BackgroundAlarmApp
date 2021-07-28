@@ -24,10 +24,9 @@ class AlarmViewDataSource: NSObject, UICollectionViewDataSource {
                 .dequeueReusableCell(withReuseIdentifier: AlarmCell.identifier, for: indexPath) as? AlarmCell else {
             fatalError("セルが見つかりません")
         }
-        // TODO -Dataの取得
         let soundData = SoundModel.datas[indexPath.item]
         var data = AlarmData(title: "目覚まし",
-                             time: "14:35",
+                             time: "14:43",
                              soundData: soundData,
                              identifier: "2020:11:24:22:21:11",
                              setting: false)

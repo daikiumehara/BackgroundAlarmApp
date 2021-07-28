@@ -16,22 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-1Z-dcK">
-                                <rect key="frame" x="185" y="437.5" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VK3-EG-I8e" customClass="TimerButton" customModule="AlarmApp" customModuleProvider="target">
+                                <rect key="frame" x="314" y="194" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ShG-Af-Acv"/>
+                                    <constraint firstAttribute="height" constant="80" id="gKG-Nb-IBN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ClW-1Z-dcK" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Uz4-Tw-oOk"/>
-                            <constraint firstItem="ClW-1Z-dcK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="q5v-wv-Zgg"/>
+                            <constraint firstItem="VK3-EG-I8e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="150" id="Rw6-Tf-bVU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VK3-EG-I8e" secondAttribute="trailing" constant="20" id="gPz-cE-i5m"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Qab-NF-AhM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="startAndStopButton" destination="VK3-EG-I8e" id="c5R-RS-y9b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

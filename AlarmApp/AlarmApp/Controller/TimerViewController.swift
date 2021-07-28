@@ -9,11 +9,17 @@ import UIKit
 import ESTabBarController_swift
 
 class TimerViewController: UIViewController {
+    @IBOutlet var startAndStopButton: TimerButton!
     private var colorModel: ColorModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonConfigure()
+    }
 
-        // Do any additional setup after loading the view.
+    private func buttonConfigure() {
+        startAndStopButton.configure(color: #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)) {
+            
+        }
     }
 }
 

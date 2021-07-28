@@ -22,6 +22,7 @@
 		A619E37726AE776900FB0FB8 /* ooatari.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E37626AE776900FB0FB8 /* ooatari.mp3 */; };
 		A619E37926AE778100FB0FB8 /* jazz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E37826AE777F00FB0FB8 /* jazz.mp3 */; };
 		A619E37B26AE77AE00FB0FB8 /* fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A619E37A26AE77AD00FB0FB8 /* fanfare.mp3 */; };
+		A619E37D26B195D800FB0FB8 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619E37C26B195D800FB0FB8 /* Time.swift */; };
 		A6C8D39E26A90C28000684ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D39D26A90C28000684ED /* AppDelegate.swift */; };
 		A6C8D3A026A90C28000684ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D39F26A90C28000684ED /* SceneDelegate.swift */; };
 		A6C8D3A526A90C28000684ED /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C8D3A326A90C28000684ED /* Home.storyboard */; };
@@ -86,6 +87,7 @@
 		A619E37626AE776900FB0FB8 /* ooatari.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ooatari.mp3; sourceTree = "<group>"; };
 		A619E37826AE777F00FB0FB8 /* jazz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jazz.mp3; sourceTree = "<group>"; };
 		A619E37A26AE77AD00FB0FB8 /* fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fanfare.mp3; sourceTree = "<group>"; };
+		A619E37C26B195D800FB0FB8 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		A6C8D39A26A90C28000684ED /* AlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C8D39D26A90C28000684ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6C8D39F26A90C28000684ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				A619E35C26AD97CE00FB0FB8 /* CustomFormatter.swift */,
 				A619E36726AE700C00FB0FB8 /* AlarmModel.swift */,
 				A619E37426AE732000FB0FB8 /* SoundModel.swift */,
+				A619E37C26B195D800FB0FB8 /* Time.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				A6C8D3F226ABE9AC000684ED /* AlarmViewLayout.swift in Sources */,
 				A6C8D3E026AB27AE000684ED /* BouncesContentView.swift in Sources */,
 				A6C8D3EB26ABD58D000684ED /* SoundData.swift in Sources */,
+				A619E37D26B195D800FB0FB8 /* Time.swift in Sources */,
 				A6C8D39E26A90C28000684ED /* AppDelegate.swift in Sources */,
 				A6C8D3E926ABD550000684ED /* AlarmData.swift in Sources */,
 				A6C8D3E526ABCF2A000684ED /* AlarmCell.swift in Sources */,
