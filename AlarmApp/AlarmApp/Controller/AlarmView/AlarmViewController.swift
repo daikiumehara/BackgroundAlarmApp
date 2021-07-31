@@ -13,7 +13,7 @@ class AlarmViewController: UIViewController {
     @IBOutlet private var topSafeAreaView: UIView!
     @IBOutlet private var navigationBar: UINavigationBar!
 
-    private var colorModel: ColorModel!
+    private var colorModel = ModelLocator.colorModel
     private let alarmViewDelegate = AlarmViewDelegate()
     private lazy var alarmViewDataSource = AlarmViewDataSource(colorModel)
 
@@ -24,14 +24,7 @@ class AlarmViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationBar.backgroundColor = colorModel.mainColor
-        self.navigationBar.barTintColor = colorModel.mainColor
-        // navigationBarの色を統一するための処理
-        self.navigationBar.subviews.forEach { view in
-            view.backgroundColor = colorModel.mainColor
-        }
-//        self.navigationBar.subviews[1].backgroundColor = colorModel.mainColor
-        self.topSafeAreaView.backgroundColor = colorModel.mainColor
+        configureNVBarColor()
     }
 
     func askPermissionNontification() {
@@ -41,6 +34,12 @@ class AlarmViewController: UIViewController {
                 print(error)
             }
         }
+    }
+
+    func configureNVBarColor() {
+        self.navigationBar.isTranslucent = false
+        self.navigationBar.barTintColor = colorModel.mainColor
+        self.topSafeAreaView.backgroundColor = colorModel.mainColor
     }
 
     func configureCollectionView() {
@@ -55,14 +54,13 @@ class AlarmViewController: UIViewController {
 
 // MARK: - instantiate
 extension AlarmViewController {
-    static func instantiate(_ colorModel: ColorModel) -> AlarmViewController {
+    static func instantiate() -> AlarmViewController {
         guard let initialVC = UIStoryboard(name: "Alarm", bundle: nil)
                 .instantiateInitialViewController()as? AlarmViewController else {
             fatalError("storyboardが見つかりません")
         }
-        initialVC.colorModel = colorModel
         let contentView = BouncesContentView()
-        contentView.configure(colorModel)
+        contentView.configure(initialVC.colorModel)
         initialVC.tabBarItem = ESTabBarItem(contentView,
                                      title: "アラーム",
                                      image: UIImage(systemName: "alarm"),

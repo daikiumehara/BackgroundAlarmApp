@@ -9,7 +9,7 @@ import UIKit
 import ESTabBarController_swift
 
 class SettingViewController: UIViewController {
-    private var colorModel: ColorModel!
+    private var colorModel = ModelLocator.colorModel
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,14 +19,13 @@ class SettingViewController: UIViewController {
 
 // MARK: - instantiate
 extension SettingViewController {
-    static func instantiate(_ colorModel: ColorModel) -> SettingViewController {
+    static func instantiate() -> SettingViewController {
         guard let initialVC = UIStoryboard(name: "Setting", bundle: nil)
                 .instantiateInitialViewController() as? SettingViewController else {
             fatalError("storyboardが見つかりません")
         }
-        initialVC.colorModel = colorModel
         let contentView = BouncesContentView()
-        contentView.configure(colorModel)
+        contentView.configure(initialVC.colorModel)
         initialVC.tabBarItem = ESTabBarItem(contentView,
                                      title: "設定",
                                      image: UIImage(systemName: "gearshape"),

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Alarm View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AddAlarmViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6r-eX-J01">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="アラームを追加" id="7nv-oc-fE2">
+                                        <barButtonItem key="rightBarButtonItem" title="追加" id="Ya5-XE-gak">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-KR-lHS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qes-W2-B8w">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qes-W2-B8w" firstAttribute="top" secondItem="u6r-eX-J01" secondAttribute="bottom" id="2mw-97-3Xp"/>
+                            <constraint firstItem="XC1-KR-lHS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Eu5-ZV-o5F"/>
+                            <constraint firstItem="u6r-eX-J01" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Evr-VM-YyX"/>
+                            <constraint firstItem="Qes-W2-B8w" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="K7o-Pz-rza"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="MI2-qk-q6C"/>
+                            <constraint firstItem="XC1-KR-lHS" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PyT-th-Mvg"/>
+                            <constraint firstItem="u6r-eX-J01" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bia-HR-bBm"/>
+                            <constraint firstItem="u6r-eX-J01" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="fIt-bf-WuY"/>
+                            <constraint firstItem="Qes-W2-B8w" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fgx-4S-EUx"/>
+                            <constraint firstAttribute="trailing" secondItem="XC1-KR-lHS" secondAttribute="trailing" id="ntN-ne-AAR"/>
+                            <constraint firstItem="Qes-W2-B8w" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="s52-lG-eib"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="u6r-eX-J01" id="my7-Gz-lIq"/>
+                        <outlet property="tableView" destination="Qes-W2-B8w" id="Kme-rq-MQh"/>
+                        <outlet property="topSafeAreaView" destination="XC1-KR-lHS" id="6oV-0b-TLm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
