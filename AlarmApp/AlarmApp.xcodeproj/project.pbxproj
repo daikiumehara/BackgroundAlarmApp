@@ -26,6 +26,8 @@
 		A619E38226B1B21C00FB0FB8 /* AddAlarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A619E38126B1B21C00FB0FB8 /* AddAlarm.storyboard */; };
 		A619E38426B1B24800FB0FB8 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619E38326B1B24800FB0FB8 /* AddAlarmViewController.swift */; };
 		A619E38626B1B8DF00FB0FB8 /* MoelLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A619E38526B1B8DF00FB0FB8 /* MoelLocator.swift */; };
+		A62F167426B510150042A80E /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F167326B510150042A80E /* TimeSettingView.swift */; };
+		A62F167626B510240042A80E /* TimeSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62F167526B510240042A80E /* TimeSettingView.xib */; };
 		A6C8D39E26A90C28000684ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D39D26A90C28000684ED /* AppDelegate.swift */; };
 		A6C8D3A026A90C28000684ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D39F26A90C28000684ED /* SceneDelegate.swift */; };
 		A6C8D3A526A90C28000684ED /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C8D3A326A90C28000684ED /* Home.storyboard */; };
@@ -94,6 +96,8 @@
 		A619E38126B1B21C00FB0FB8 /* AddAlarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAlarm.storyboard; sourceTree = "<group>"; };
 		A619E38326B1B24800FB0FB8 /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 		A619E38526B1B8DF00FB0FB8 /* MoelLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoelLocator.swift; sourceTree = "<group>"; };
+		A62F167326B510150042A80E /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
+		A62F167526B510240042A80E /* TimeSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSettingView.xib; sourceTree = "<group>"; };
 		A6C8D39A26A90C28000684ED /* AlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C8D39D26A90C28000684ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6C8D39F26A90C28000684ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +210,15 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		A62F167226B50FFA0042A80E /* TimeSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				A62F167326B510150042A80E /* TimeSettingView.swift */,
+				A62F167526B510240042A80E /* TimeSettingView.xib */,
+			);
+			path = TimeSettingView;
+			sourceTree = "<group>";
+		};
 		A6C8D39126A90C27000684ED = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +290,7 @@
 		A6C8D3CF26AB0781000684ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A62F167226B50FFA0042A80E /* TimeSettingView */,
 				A619E36226AE520100FB0FB8 /* TimerButton */,
 				A6C8D3E326ABCF00000684ED /* AlarmCell */,
 				A6C8D3A326A90C28000684ED /* Home.storyboard */,
@@ -459,6 +473,7 @@
 				A619E36626AE523400FB0FB8 /* TimerButton.xib in Resources */,
 				A6C8D3E726ABCF49000684ED /* AlarmCell.xib in Resources */,
 				A619E37726AE776900FB0FB8 /* ooatari.mp3 in Resources */,
+				A62F167626B510240042A80E /* TimeSettingView.xib in Resources */,
 				A6C8D3DE26AB1554000684ED /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +628,7 @@
 				A6C8D3D426AB14D7000684ED /* AlarmViewController.swift in Sources */,
 				A6C8D3D226AB11D2000684ED /* HomeTabViewController.swift in Sources */,
 				A6C8D3F226ABE9AC000684ED /* AlarmViewLayout.swift in Sources */,
+				A62F167426B510150042A80E /* TimeSettingView.swift in Sources */,
 				A6C8D3E026AB27AE000684ED /* BouncesContentView.swift in Sources */,
 				A6C8D3EB26ABD58D000684ED /* SoundData.swift in Sources */,
 				A619E37D26B195D800FB0FB8 /* Time.swift in Sources */,
