@@ -26,7 +26,7 @@ struct AlarmData: Comparable {
         self.alarmIdentifier = identifier
         self.isSetting = setting
         if setting {
-            settingAlarm()
+            addAlarm()
         }
     }
 
@@ -39,13 +39,15 @@ struct AlarmData: Comparable {
     }
 
     private func settingAlarm() {
-        let center = UNUserNotificationCenter.current()
-        // アラームの解除
-        guard isSetting else {
-            print("アラームが解除されました")
-            center.removePendingNotificationRequests(withIdentifiers: [alarmIdentifier])
-            return
+        if isSetting {
+            addAlarm()
+        } else {
+            removeAlarm()
         }
+    }
+
+    private func addAlarm() {
+        let center = UNUserNotificationCenter.current()
         center.getNotificationSettings { setting in
             guard setting.alertSetting == .enabled else {
                 print("許可されていません")
@@ -70,5 +72,11 @@ struct AlarmData: Comparable {
             }
         }
         print("アラームがセットされました")
+    }
+
+    private func removeAlarm() {
+        let center = UNUserNotificationCenter.current()
+        print("アラームが解除されました")
+        center.removePendingNotificationRequests(withIdentifiers: [alarmIdentifier])
     }
 }

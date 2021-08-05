@@ -15,7 +15,7 @@ class AlarmViewController: UIViewController {
 
     private var colorModel = ModelLocator.colorModel
     private let alarmViewDelegate = AlarmViewDelegate()
-    private lazy var alarmViewDataSource = AlarmViewDataSource(colorModel)
+    private let alarmViewDataSource = AlarmViewDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +43,7 @@ class AlarmViewController: UIViewController {
     }
 
     func configureCollectionView() {
-        alarmView.register(AlarmCell.nib,
-                                forCellWithReuseIdentifier: AlarmCell.identifier)
+        alarmView.register(AlarmCell.self)
         alarmView.delegate = alarmViewDelegate
         alarmView.dataSource = alarmViewDataSource
         alarmView.collectionViewLayout = AlarmViewLayout()

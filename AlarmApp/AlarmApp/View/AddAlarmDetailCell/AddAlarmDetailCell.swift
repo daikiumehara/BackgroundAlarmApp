@@ -12,9 +12,6 @@ class AddAlarmDetailCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var itemLabel: UILabel!
 
-    static var identifier: String { String(describing: self) }
-    static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
-
     func configure(title: String, item: String) {
         titleLabel.text = title
         itemLabel.text = item

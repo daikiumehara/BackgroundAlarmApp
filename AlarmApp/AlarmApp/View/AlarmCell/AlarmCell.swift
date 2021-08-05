@@ -16,10 +16,7 @@ class AlarmCell: UICollectionViewCell {
 
     private var alarmData: AlarmData!
     private var changeSwitchValue: ((Bool) -> Void)!
-
-    static var identifier: String { String(describing: self) }
-    static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil) }
-
+    
     func configure(data: AlarmData, colorModel: ColorModel, changeSwitchValue: @escaping  (Bool) -> Void) {
         self.alarmData = data
         appearanceConfigure(colorModel)
