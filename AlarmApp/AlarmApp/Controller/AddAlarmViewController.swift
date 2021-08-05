@@ -30,33 +30,44 @@ class AddAlarmViewController: UIViewController {
         self.navigationBar.barTintColor = colorModel.mainColor
     }
 }
-
-class AddViewDataSource: NSObject, UITableViewDataSource {
-    enum RowInfo: Int, CaseIterable {
-        case alarmRepeat, title, sound, snooze
-
-        var labelText: String {
-            switch self {
-            case .alarmRepeat: return "繰り返し"
-            case .title: return "タイトル"
-            case .sound: return "サウンド"
-            case .snooze: return "スヌーズ"
-            }
-        }
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        RowInfo.allCases.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-
-
-}
-
-class AddViewDelegate: NSObject, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        44
-    }
-}
+//
+//class AddViewDataSource: NSObject, UITableViewDataSource {
+//    enum RowInfo: Int, CaseIterable {
+//        case alarmRepeat, title, sound, snooze
+//
+//        var labelText: String {
+//            switch self {
+//            case .alarmRepeat: return "繰り返し"
+//            case .title: return "タイトル"
+//            case .sound: return "サウンド"
+//            case .snooze: return "スヌーズ"
+//            }
+//        }
+//
+//        var cellIdentifier: String {
+//            switch self {
+//            case .alarmRepeat: return AddAlarmDetailCell.identifier
+//            case .title: return "cell"
+//            case .sound: return AddAlarmDetailCell.identifier
+//            case .snooze: return "cell"
+//        }
+//    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        RowInfo.allCases.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let rowInfo = RowInfo(rawValue: indexPath.row)!
+//        let cell = tableView.dequeueReusableCell(
+//            withIdentifier: rowInfo.cellIdentifier ,for: indexPath)
+//
+//    }
+//
+//
+//}
+//
+//class AddViewDelegate: NSObject, UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        44
+//    }
+//}
