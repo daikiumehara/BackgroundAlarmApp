@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum RowInfo: Int, CaseIterable {
+enum AddAlarmRowInfo: Int, CaseIterable {
     case alarmRepeat, title, sound, snooze
 
     static let detailCellType = AddAlarmDetailCell.self

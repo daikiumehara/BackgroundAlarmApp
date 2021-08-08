@@ -12,12 +12,14 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet private var navigationBar: UINavigationBar!
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var timeSettingView: TimeSettingView!
-    //    let dataSource: UITableViewDataSource?
+//    private let alarmData = AlarmData()
+
+    private let dataSource: UITableViewDataSource!
     //    let delegate: UITableViewDelegate?
 
     private let colorModel = ModelLocator.colorModel
     private var alarmData: AlarmData!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNVBarColor()

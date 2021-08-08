@@ -15,11 +15,11 @@ class AddAlarmDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        RowInfo.allCases.count
+        AddAlarmRowInfo.allCases.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let rowInfo = RowInfo(rawValue: indexPath.row) else {
+        guard let rowInfo = AddAlarmRowInfo(rawValue: indexPath.row) else {
             fatalError("列が見つかりませんでした")
         }
         guard let cell = tableView.dequeueReusableCell(
@@ -30,12 +30,4 @@ class AddAlarmDataSource: NSObject, UITableViewDataSource {
                        item: rowInfo.getRowItem(alarmData))
         return cell
     }
-}
-
-protocol AddAlarmCellProtocol: NSObject {
-    func configure(title: String, item: String)
-}
-
-class AddAlarmCell: UITableViewCell, AddAlarmCellProtocol {
-    func configure(title: String, item: String) {}
 }
