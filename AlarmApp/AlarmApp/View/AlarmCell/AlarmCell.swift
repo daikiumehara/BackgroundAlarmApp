@@ -16,7 +16,7 @@ class AlarmCell: UICollectionViewCell {
 
     private var alarmData: AlarmData!
     private var changeSwitchValue: ((Bool) -> Void)!
-    
+
     func configure(data: AlarmData, colorModel: ColorModel, changeSwitchValue: @escaping  (Bool) -> Void) {
         self.alarmData = data
         appearanceConfigure(colorModel)

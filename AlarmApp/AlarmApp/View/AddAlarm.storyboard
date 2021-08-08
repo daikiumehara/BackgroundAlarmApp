@@ -36,10 +36,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qes-W2-B8w">
-                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ns9-Yw-mRA" customClass="TimeSettingView" customModule="AlarmApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -47,29 +43,33 @@
                                     <constraint firstAttribute="height" constant="100" id="j1V-cX-V0B"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iSX-cA-bNu">
+                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="iSX-cA-bNu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="51M-ao-Bvr"/>
                             <constraint firstItem="XC1-KR-lHS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Eu5-ZV-o5F"/>
                             <constraint firstItem="u6r-eX-J01" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Evr-VM-YyX"/>
-                            <constraint firstItem="Qes-W2-B8w" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="K7o-Pz-rza"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="MI2-qk-q6C"/>
                             <constraint firstItem="Ns9-Yw-mRA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NUs-x9-w9A"/>
                             <constraint firstItem="Ns9-Yw-mRA" firstAttribute="top" secondItem="u6r-eX-J01" secondAttribute="bottom" id="Opj-Qx-7RL"/>
                             <constraint firstItem="XC1-KR-lHS" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PyT-th-Mvg"/>
                             <constraint firstItem="u6r-eX-J01" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bia-HR-bBm"/>
-                            <constraint firstItem="Qes-W2-B8w" firstAttribute="top" secondItem="Ns9-Yw-mRA" secondAttribute="bottom" id="e3r-cV-Lij"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iSX-cA-bNu" secondAttribute="trailing" id="cR3-ZJ-oJK"/>
                             <constraint firstItem="u6r-eX-J01" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="fIt-bf-WuY"/>
-                            <constraint firstItem="Qes-W2-B8w" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fgx-4S-EUx"/>
                             <constraint firstItem="Ns9-Yw-mRA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fte-KU-JBF"/>
+                            <constraint firstItem="iSX-cA-bNu" firstAttribute="top" secondItem="Ns9-Yw-mRA" secondAttribute="bottom" id="k1K-mZ-tJT"/>
                             <constraint firstAttribute="trailing" secondItem="XC1-KR-lHS" secondAttribute="trailing" id="ntN-ne-AAR"/>
-                            <constraint firstItem="Qes-W2-B8w" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="s52-lG-eib"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="iSX-cA-bNu" secondAttribute="bottom" id="wST-y5-VzQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="navigationBar" destination="u6r-eX-J01" id="my7-Gz-lIq"/>
-                        <outlet property="tableView" destination="Qes-W2-B8w" id="Kme-rq-MQh"/>
+                        <outlet property="tableView" destination="iSX-cA-bNu" id="ubc-Wv-Czb"/>
                         <outlet property="timeSettingView" destination="Ns9-Yw-mRA" id="cJr-cT-Zv4"/>
                         <outlet property="topSafeAreaView" destination="XC1-KR-lHS" id="6oV-0b-TLm"/>
                     </connections>

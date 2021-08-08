@@ -9,4 +9,7 @@ import Foundation
 
 class ModelLocator {
     static let colorModel = ColorModel()
+    static let soundModel = SoundModel()
+    static let trueString = "true"
+    static let falseString = "false"
 }

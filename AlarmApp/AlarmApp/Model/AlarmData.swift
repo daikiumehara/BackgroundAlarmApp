@@ -12,6 +12,8 @@ struct AlarmData: Comparable {
     var time: Time
     var soundData: SoundData
     var alarmIdentifier: String  // 作成した年日時秒(アラームの識別に使用)
+    var snooze: Bool
+    var alarmRepeat: Bool
     var isSetting: Bool {
         didSet {
             settingAlarm()
@@ -19,11 +21,13 @@ struct AlarmData: Comparable {
     }
 
     init(title: String, time: Time, soundData: SoundData,
-         identifier: String, setting: Bool) {
+         identifier: String, snooze: Bool, alarmRepeat: Bool, setting: Bool) {
         self.title = title
         self.time = time
         self.soundData = soundData
         self.alarmIdentifier = identifier
+        self.snooze = snooze
+        self.alarmRepeat = alarmRepeat
         self.isSetting = setting
         if setting {
             addAlarm()

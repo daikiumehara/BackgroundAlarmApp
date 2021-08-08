@@ -8,7 +8,7 @@
 import Foundation
 
 struct SoundModel {
-    static let datas = [SoundData(soundName: "ポテトの音", fileName: "poteto.mp3"),
+    let datas = [SoundData(soundName: "ポテトの音", fileName: "poteto.mp3"),
                  SoundData(soundName: "サイレン", fileName: "siren.mp3"),
                  SoundData(soundName: "通信", fileName: "receive.mp3"),
                  SoundData(soundName: "ベルの音", fileName: "clock_bell.mp3"),
