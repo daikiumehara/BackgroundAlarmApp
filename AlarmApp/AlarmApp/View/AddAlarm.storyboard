@@ -68,10 +68,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="navigationBar" destination="u6r-eX-J01" id="my7-Gz-lIq"/>
-                        <outlet property="tableView" destination="iSX-cA-bNu" id="ubc-Wv-Czb"/>
-                        <outlet property="timeSettingView" destination="Ns9-Yw-mRA" id="cJr-cT-Zv4"/>
-                        <outlet property="topSafeAreaView" destination="XC1-KR-lHS" id="6oV-0b-TLm"/>
+                        <outlet property="navigationBar" destination="u6r-eX-J01" id="F5z-cX-K9D"/>
+                        <outlet property="tableView" destination="iSX-cA-bNu" id="b2M-e6-Rlg"/>
+                        <outlet property="timeSettingView" destination="Ns9-Yw-mRA" id="sp6-yO-lBA"/>
+                        <outlet property="topSafeAreaView" destination="XC1-KR-lHS" id="lDC-bm-T1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

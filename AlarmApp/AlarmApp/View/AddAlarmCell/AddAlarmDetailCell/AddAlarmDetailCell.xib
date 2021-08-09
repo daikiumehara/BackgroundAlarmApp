@@ -15,13 +15,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="384.5" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okm-3X-Itd">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgB-JC-0om">
                         <rect key="frame" x="20" y="29.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwN-qq-RFE">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jq-cP-Z0U">
                         <rect key="frame" x="332.5" y="29.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -29,15 +29,15 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="okm-3X-Itd" firstAttribute="leading" secondItem="KCT-zQ-0gc" secondAttribute="leading" constant="20" id="IYi-FJ-sfZ"/>
-                    <constraint firstItem="cwN-qq-RFE" firstAttribute="centerY" secondItem="KCT-zQ-0gc" secondAttribute="centerY" id="fSx-gJ-gkP"/>
-                    <constraint firstItem="okm-3X-Itd" firstAttribute="centerY" secondItem="KCT-zQ-0gc" secondAttribute="centerY" id="gxc-Jj-uEZ"/>
-                    <constraint firstAttribute="trailing" secondItem="cwN-qq-RFE" secondAttribute="trailing" constant="10" id="nbc-tg-7my"/>
+                    <constraint firstItem="zgB-JC-0om" firstAttribute="leading" secondItem="KCT-zQ-0gc" secondAttribute="leading" constant="20" id="91m-D8-Bvb"/>
+                    <constraint firstItem="zgB-JC-0om" firstAttribute="centerY" secondItem="KCT-zQ-0gc" secondAttribute="centerY" id="WRI-iX-ZHW"/>
+                    <constraint firstAttribute="trailing" secondItem="8Jq-cP-Z0U" secondAttribute="trailing" constant="10" id="pQj-PE-rbH"/>
+                    <constraint firstItem="8Jq-cP-Z0U" firstAttribute="centerY" secondItem="KCT-zQ-0gc" secondAttribute="centerY" id="wjo-fT-FXs"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="itemLabel" destination="cwN-qq-RFE" id="nbe-EX-Fw4"/>
-                <outlet property="titleLabel" destination="okm-3X-Itd" id="3Nz-H8-AQb"/>
+                <outlet property="itemLabel" destination="8Jq-cP-Z0U" id="859-3q-Fju"/>
+                <outlet property="titleLabel" destination="zgB-JC-0om" id="1Xh-sd-m1F"/>
             </connections>
             <point key="canvasLocation" x="134.78260869565219" y="-39.508928571428569"/>
         </tableViewCell>

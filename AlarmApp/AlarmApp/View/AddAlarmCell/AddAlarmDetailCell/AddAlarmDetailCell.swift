@@ -8,9 +8,9 @@
 import UIKit
 
 class AddAlarmDetailCell: AddAlarmCell {
-    @IBOutlet private var titleLabel: UILabel!
-    @IBOutlet private var itemLabel: UILabel!
-
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var itemLabel: UILabel!
+    
     override func configure(title: String, item: String) {
         titleLabel.text = title
         itemLabel.text = item

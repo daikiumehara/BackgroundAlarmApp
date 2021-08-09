@@ -31,7 +31,7 @@ enum AddAlarmRowInfo: Int, CaseIterable {
         case .sound:
             return AddAlarmDetailCell.identifier
         case .snooze:
-            return AddAlarmDetailCell.identifier
+            return AddAlarmSnoozeCell.identifier
         }
     }
 

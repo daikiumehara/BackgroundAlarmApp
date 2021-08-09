@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddAlarmDataSource: NSObject, UITableViewDataSource {
+class AddAlarmViewDataSource: NSObject, UITableViewDataSource {
     private var alarmData: AlarmData!
 
     init(_ data: AlarmData) {
@@ -22,10 +22,12 @@ class AddAlarmDataSource: NSObject, UITableViewDataSource {
         guard let rowInfo = AddAlarmRowInfo(rawValue: indexPath.row) else {
             fatalError("列が見つかりませんでした")
         }
+
         guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: rowInfo.cellIdentifier, for: indexPath) as? AddAlarmCell else {
             fatalError("予想外のセルが返されました")
         }
+
         cell.configure(title: alarmData.title,
                        item: rowInfo.getRowItem(alarmData))
         return cell

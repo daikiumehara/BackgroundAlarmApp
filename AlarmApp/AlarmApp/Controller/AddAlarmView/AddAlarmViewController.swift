@@ -12,30 +12,33 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet private var navigationBar: UINavigationBar!
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var timeSettingView: TimeSettingView!
-//    private let alarmData = AlarmData()
 
-    private let dataSource: UITableViewDataSource!
-    //    let delegate: UITableViewDelegate?
+    private var dataSource: UITableViewDataSource!
+    private var delegate: UITableViewDelegate!
 
     private let colorModel = ModelLocator.colorModel
-    private var alarmData: AlarmData!
+    private var alarmData = AlarmData.newData()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNVBarColor()
+        configureTableView()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         configureNVBarColor()
     }
 
-    func configureNVBarColor() {
+    private func configureNVBarColor() {
         self.navigationBar.barTintColor = colorModel.mainColor
     }
+
+    private func configureTableView() {
+        self.tableView.register(AddAlarmDetailCell.self)
+        self.tableView.register(AddAlarmSnoozeCell.self)
+        self.dataSource = AddAlarmViewDataSource(self.alarmData)
+        self.delegate = AddAlarmViewDelegate()
+        self.tableView.dataSource = self.dataSource
+        self.tableView.delegate = self.delegate
+    }
 }
-//
-//class AddViewDelegate: NSObject, UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        44
-//    }
-//}

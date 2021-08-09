@@ -42,6 +42,13 @@ struct AlarmData: Comparable {
         return  lhs.time.toDate() > rhs.time.toDate()
     }
 
+    static func newData() -> AlarmData {
+        return AlarmData(title: "タイトル", time: Time(hour: 12, minute: 0),
+                         soundData: SoundData(soundName: "ベルの音", fileName: "clock_bell.mp3"),
+                         identifier: CustomFormatter.dateToString(Date()),
+                         snooze: false, alarmRepeat: false, setting: true)
+    }
+
     private func settingAlarm() {
         if isSetting {
             addAlarm()
