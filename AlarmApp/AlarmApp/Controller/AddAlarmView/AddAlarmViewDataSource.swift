@@ -28,7 +28,7 @@ class AddAlarmViewDataSource: NSObject, UITableViewDataSource {
             fatalError("予想外のセルが返されました")
         }
 
-        cell.configure(title: alarmData.title,
+        cell.configure(title: rowInfo.labelText,
                        item: rowInfo.getRowItem(alarmData))
         return cell
     }
