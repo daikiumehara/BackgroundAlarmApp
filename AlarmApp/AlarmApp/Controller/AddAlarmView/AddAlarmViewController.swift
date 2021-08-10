@@ -9,9 +9,9 @@ import UIKit
 
 class AddAlarmViewController: UIViewController {
     @IBOutlet private var topSafeAreaView: UIView!
-    @IBOutlet private var navigationBar: UINavigationBar!
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var timeSettingView: TimeSettingView!
+    @IBOutlet private var barAddButton: UIBarButtonItem!
 
     private var dataSource: UITableViewDataSource!
     private var delegate: UITableViewDelegate!
@@ -30,14 +30,19 @@ class AddAlarmViewController: UIViewController {
     }
 
     private func configureNVBarColor() {
-        self.navigationBar.barTintColor = colorModel.mainColor
+        self.navigationController?.navigationBar.tintColor =
+            colorModel.themeColor.backgroundColor
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [.foregroundColor: colorModel.themeColor.backgroundColor]
+        self.navigationController?.navigationBar.barTintColor =
+            colorModel.mainColor
     }
 
     private func configureTableView() {
         self.tableView.register(AddAlarmDetailCell.self)
         self.tableView.register(AddAlarmSnoozeCell.self)
         self.dataSource = AddAlarmViewDataSource(self.alarmData)
-        self.delegate = AddAlarmViewDelegate()
+        self.delegate = AddAlarmViewDelegate(self)
         self.tableView.dataSource = self.dataSource
         self.tableView.delegate = self.delegate
     }

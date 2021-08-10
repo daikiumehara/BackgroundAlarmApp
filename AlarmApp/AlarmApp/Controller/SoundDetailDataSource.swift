@@ -17,6 +17,7 @@ class SoundDetailDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
                 withCellType: SoundCell.self, for: indexPath)
+        cell.configure(soundModel.datas[indexPath.row])
         return cell
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exM-rR-qHU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Alarm View Controller-->
+        <!--アラームを追加-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="AddAlarmViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,24 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6r-eX-J01">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <textAttributes key="largeTitleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="アラームを追加" id="7nv-oc-fE2">
-                                        <barButtonItem key="rightBarButtonItem" title="追加" id="Ya5-XE-gak">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XC1-KR-lHS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ns9-Yw-mRA" customClass="TimeSettingView" customModule="AlarmApp" customModuleProvider="target">
@@ -53,28 +37,46 @@
                         <constraints>
                             <constraint firstItem="iSX-cA-bNu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="51M-ao-Bvr"/>
                             <constraint firstItem="XC1-KR-lHS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Eu5-ZV-o5F"/>
-                            <constraint firstItem="u6r-eX-J01" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Evr-VM-YyX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="MI2-qk-q6C"/>
                             <constraint firstItem="Ns9-Yw-mRA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NUs-x9-w9A"/>
-                            <constraint firstItem="Ns9-Yw-mRA" firstAttribute="top" secondItem="u6r-eX-J01" secondAttribute="bottom" id="Opj-Qx-7RL"/>
                             <constraint firstItem="XC1-KR-lHS" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PyT-th-Mvg"/>
-                            <constraint firstItem="u6r-eX-J01" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bia-HR-bBm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iSX-cA-bNu" secondAttribute="trailing" id="cR3-ZJ-oJK"/>
-                            <constraint firstItem="u6r-eX-J01" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="fIt-bf-WuY"/>
                             <constraint firstItem="Ns9-Yw-mRA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fte-KU-JBF"/>
                             <constraint firstItem="iSX-cA-bNu" firstAttribute="top" secondItem="Ns9-Yw-mRA" secondAttribute="bottom" id="k1K-mZ-tJT"/>
                             <constraint firstAttribute="trailing" secondItem="XC1-KR-lHS" secondAttribute="trailing" id="ntN-ne-AAR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="iSX-cA-bNu" secondAttribute="bottom" id="wST-y5-VzQ"/>
+                            <constraint firstItem="Ns9-Yw-mRA" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="xJL-kL-J7s"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="アラームを追加" id="cMK-2s-eMK">
+                        <barButtonItem key="rightBarButtonItem" title="追加" id="mcm-gr-7gM"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="navigationBar" destination="u6r-eX-J01" id="F5z-cX-K9D"/>
+                        <outlet property="barAddButton" destination="mcm-gr-7gM" id="J22-4g-5bp"/>
                         <outlet property="tableView" destination="iSX-cA-bNu" id="b2M-e6-Rlg"/>
                         <outlet property="timeSettingView" destination="Ns9-Yw-mRA" id="sp6-yO-lBA"/>
                         <outlet property="topSafeAreaView" destination="XC1-KR-lHS" id="lDC-bm-T1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="99.776785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hLE-NE-xKp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="exM-rR-qHU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sVW-zS-X7g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="ghb-fL-whd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="246-2Q-glj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
         </scene>

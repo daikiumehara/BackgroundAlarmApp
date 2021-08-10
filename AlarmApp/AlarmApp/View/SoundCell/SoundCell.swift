@@ -23,7 +23,10 @@ class SoundCell: UITableViewCell {
     }
 
     @IBAction private func didTapPlayButton(_ sender: Any) {
-        let url = URL(fileURLWithPath: "Sounds/\(soundData.fileName)")
+        let path = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!
+//        print(path.pathComponents)
+        let url = path.appendingPathComponent("Sounds/\(soundData.fileName)")
+//        print(path)
         do {
             player = try AVAudioPlayer(contentsOf: url)
             player.play()

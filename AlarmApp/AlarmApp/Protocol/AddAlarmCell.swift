@@ -12,5 +12,5 @@ protocol AddAlarmCellProtocol: NSObject {
 }
 
 class AddAlarmCell: UITableViewCell, AddAlarmCellProtocol {
-    func configure(title: String, item: String) {}
+    func configure(title: String, item: String) {  }
 }

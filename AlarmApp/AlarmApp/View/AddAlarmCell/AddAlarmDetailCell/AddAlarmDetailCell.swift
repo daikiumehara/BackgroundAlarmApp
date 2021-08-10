@@ -7,8 +7,10 @@
 import UIKit
 
 class AddAlarmDetailCell: AddAlarmCell {
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var itemLabel: UILabel!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var itemLabel: UILabel!
+
+    private var dataSource: UITableViewDataSource!
 
     override func configure(title: String, item: String) {
         titleLabel.text = title
@@ -16,6 +18,5 @@ class AddAlarmDetailCell: AddAlarmCell {
     }
 
     func didTap() {
-
     }
 }

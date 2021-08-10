@@ -14,6 +14,11 @@ class AddAlarmDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(SoundCell.self)
+        tableView.dataSource = dataSource
+    }
+
+    func configure(dataSource: UITableViewDataSource) {
+        self.dataSource = dataSource
     }
 }
 
