@@ -7,8 +7,14 @@
 
 import UIKit
 
-class SoundDetailDataSource: NSObject, UITableViewDataSource {
+protocol TableViewSelectedProtocol: NSObject {
+    var selected: Int { get set }
+}
+
+class SoundDetailDataSource: NSObject, UITableViewDataSource,
+                             TableViewSelectedProtocol {
     private var soundModel = ModelLocator.soundModel
+    var selected: Int = 0
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         soundModel.datas.count
@@ -19,6 +25,11 @@ class SoundDetailDataSource: NSObject, UITableViewDataSource {
                 withCellType: SoundCell.self, for: indexPath)
         cell.configure(soundModel.datas[indexPath.row]) { fileName in
             ModelLocator.player.playSound(fileName)
+        }
+        if selected == indexPath.row {
+            cell.showCheckmark()
+        } else {
+            cell.hiddenCheckmark()
         }
         return cell
     }

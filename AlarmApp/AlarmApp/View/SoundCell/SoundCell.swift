@@ -26,4 +26,12 @@ class SoundCell: UITableViewCell {
     @IBAction private func didTapPlayButton(_ sender: Any) {
         tapPlayButton(soundData.fileName)
     }
+
+    func showCheckmark() {
+        checkmark.isHidden = false
+    }
+
+    func hiddenCheckmark() {
+        checkmark.isHidden = true
+    }
 }
