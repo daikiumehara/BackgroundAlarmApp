@@ -9,10 +9,9 @@ import UIKit
 import AVFoundation
 
 class SoundCell: UITableViewCell {
-
     var soundData: SoundData!
     var player: AVAudioPlayer!
-    
+
     @IBOutlet private var checkmark: UIImageView!
     @IBOutlet private var soundLabel: UILabel!
     @IBOutlet private var playButton: UIButton!
@@ -23,15 +22,15 @@ class SoundCell: UITableViewCell {
     }
 
     @IBAction private func didTapPlayButton(_ sender: Any) {
-        let path = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!
-//        print(path.pathComponents)
-        let url = path.appendingPathComponent("Sounds/\(soundData.fileName)")
-//        print(path)
+        guard let path = Bundle.main.path(forAuxiliaryExecutable: soundData.fileName) else {
+            print("音源ファイルが見つかりません")
+            return
+        }
         do {
-            player = try AVAudioPlayer(contentsOf: url)
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
             player.play()
         } catch {
-            print("サウンドファイルが見つかりませんでした。")
+            print("サウンドの再生でエラーが発生しました \(error)")
         }
     }
 }
