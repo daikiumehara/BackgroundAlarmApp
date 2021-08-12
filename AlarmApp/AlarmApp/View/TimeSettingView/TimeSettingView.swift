@@ -8,8 +8,10 @@
 import UIKit
 
 class TimeSettingView: UIView {
-    @IBOutlet private var label: UILabel!
+    @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var datePicker: UIDatePicker!
+
+    private var colorModel = ModelLocator.colorModel
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +27,13 @@ class TimeSettingView: UIView {
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: nil)
         guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else { return }
         view.frame = self.bounds
+        configureColor(view)
         self.addSubview(view)
+    }
+
+    private func configureColor(_ view: UIView) {
+        view.backgroundColor = colorModel.themeColor.cellBackgroundColor
+        self.titleLabel.textColor = colorModel.themeColor.textColor
     }
 
     func getTime() -> Time {

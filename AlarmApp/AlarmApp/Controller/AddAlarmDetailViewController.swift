@@ -10,6 +10,7 @@ import UIKit
 class AddAlarmDetailViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     private var dataSource: UITableViewDataSource!
+    private var colorModel = ModelLocator.colorModel
     private var selected: Int = 0
 
     override func viewDidLoad() {
@@ -17,17 +18,23 @@ class AddAlarmDetailViewController: UIViewController {
         tableView.register(SoundCell.self)
         tableView.delegate = self
         tableView.dataSource = dataSource
+        colorConfigure()
     }
 
     func configure(dataSource: UITableViewDataSource) {
         self.dataSource = dataSource
+    }
+
+    private func colorConfigure() {
+        self.tableView.backgroundColor =
+            colorModel.themeColor.cellBackgroundColor
     }
 }
 
 // MARK: - Delegate
 extension AddAlarmDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        44
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

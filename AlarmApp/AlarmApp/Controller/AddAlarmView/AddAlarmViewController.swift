@@ -23,10 +23,12 @@ class AddAlarmViewController: UIViewController {
         super.viewDidLoad()
         configureNVBarColor()
         configureTableView()
+        configureColor()
+        configureNVBarColor()
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        configureNVBarColor()
+//        configureNVBarColor()
     }
 
     private func configureNVBarColor() {
@@ -45,5 +47,12 @@ class AddAlarmViewController: UIViewController {
         self.delegate = AddAlarmViewDelegate(self)
         self.tableView.dataSource = self.dataSource
         self.tableView.delegate = self.delegate
+    }
+
+    private func configureColor() {
+        self.tableView.backgroundColor =
+            colorModel.themeColor.cellBackgroundColor
+        self.view.backgroundColor =
+            colorModel.themeColor.backgroundColor
     }
 }

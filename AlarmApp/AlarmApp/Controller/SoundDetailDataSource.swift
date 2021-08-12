@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol TableViewSelectedProtocol: NSObject {
-    var selected: Int { get set }
-}
-
 class SoundDetailDataSource: NSObject, UITableViewDataSource,
                              TableViewSelectedProtocol {
     private var soundModel = ModelLocator.soundModel

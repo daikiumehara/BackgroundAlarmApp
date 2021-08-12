@@ -8,6 +8,7 @@
 import UIKit
 
 class AddAlarmSnoozeCell: AddAlarmCell {
+    private var colorModel = ModelLocator.colorModel
     @IBOutlet private var snoozeSwitch: UISwitch!
     @IBOutlet private var titleLabel: UILabel!
 
@@ -17,10 +18,18 @@ class AddAlarmSnoozeCell: AddAlarmCell {
         self.titleLabel.text = title
         self.item = item.toBool
         self.snoozeSwitch.isOn = self.item
+        configureColor()
     }
 
     func getCellItem() -> Bool {
         self.item
+    }
+
+    private func configureColor() {
+        self.titleLabel.textColor = colorModel.themeColor.textColor
+        self.snoozeSwitch.onTintColor = colorModel.mainColor
+        self.backgroundColor = colorModel.themeColor.cellBackgroundColor
+        self.selectedBackgroundView = CellSelectedBackgroundView()
     }
 
     @IBAction private func didChangeSwitchValue(_ sender: Any) {

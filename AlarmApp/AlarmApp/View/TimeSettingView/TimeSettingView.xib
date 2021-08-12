@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeSettingView" customModule="AlarmApp" customModuleProvider="target">
             <connections>
                 <outlet property="datePicker" destination="jc9-um-0ji" id="KYK-Vl-h6N"/>
-                <outlet property="label" destination="JG8-r8-1bQ" id="AKC-yZ-zmL"/>
+                <outlet property="titleLabel" destination="JG8-r8-1bQ" id="AKC-yZ-zmL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
