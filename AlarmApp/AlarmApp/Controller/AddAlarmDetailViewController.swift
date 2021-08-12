@@ -28,6 +28,8 @@ class AddAlarmDetailViewController: UIViewController {
     private func colorConfigure() {
         self.tableView.backgroundColor =
             colorModel.themeColor.cellBackgroundColor
+        self.view.backgroundColor =
+            colorModel.themeColor.cellBackgroundColor
     }
 }
 

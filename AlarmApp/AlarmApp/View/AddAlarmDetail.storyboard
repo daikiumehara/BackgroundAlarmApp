@@ -11,6 +11,7 @@
         <!--Add Alarm Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Y6W-OH-hqX" customClass="AddAlarmDetailViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -27,7 +28,7 @@
                             <constraint firstItem="2WS-3P-uVK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Hjk-vd-Fdc"/>
                             <constraint firstItem="2WS-3P-uVK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Roa-Oi-h76"/>
                             <constraint firstItem="2WS-3P-uVK" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="WPd-Zv-d5p"/>
-                            <constraint firstItem="2WS-3P-uVK" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="kDG-j4-gOI"/>
+                            <constraint firstItem="2WS-3P-uVK" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="aqN-pv-MPc"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
@@ -37,7 +38,6 @@
                         <outlet property="tableView" destination="2WS-3P-uVK" id="Zvi-ei-XzI"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="104.46428571428571"/>
         </scene>
