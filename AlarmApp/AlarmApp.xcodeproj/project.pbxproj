@@ -36,6 +36,8 @@
 		A61D915C26C647740038CDE2 /* RepeatDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D915B26C647740038CDE2 /* RepeatDetailDataSource.swift */; };
 		A61D916026C64A750038CDE2 /* RepeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D915E26C64A750038CDE2 /* RepeatCell.swift */; };
 		A61D916126C64A750038CDE2 /* RepeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61D915F26C64A750038CDE2 /* RepeatCell.xib */; };
+		A61D916426C69F100038CDE2 /* TitleSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D916326C69F0F0038CDE2 /* TitleSettingView.swift */; };
+		A61D916626C69F2B0038CDE2 /* TitleSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61D916526C69F2A0038CDE2 /* TitleSettingView.xib */; };
 		A62F167426B510150042A80E /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F167326B510150042A80E /* TimeSettingView.swift */; };
 		A62F167626B510240042A80E /* TimeSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62F167526B510240042A80E /* TimeSettingView.xib */; };
 		A6A3B54326BC09E600C124A8 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B54126BC09E600C124A8 /* SoundCell.swift */; };
@@ -130,6 +132,8 @@
 		A61D915B26C647740038CDE2 /* RepeatDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDetailDataSource.swift; sourceTree = "<group>"; };
 		A61D915E26C64A750038CDE2 /* RepeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCell.swift; sourceTree = "<group>"; };
 		A61D915F26C64A750038CDE2 /* RepeatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepeatCell.xib; sourceTree = "<group>"; };
+		A61D916326C69F0F0038CDE2 /* TitleSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettingView.swift; sourceTree = "<group>"; };
+		A61D916526C69F2A0038CDE2 /* TitleSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSettingView.xib; sourceTree = "<group>"; };
 		A62F167326B510150042A80E /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
 		A62F167526B510240042A80E /* TimeSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSettingView.xib; sourceTree = "<group>"; };
 		A6A3B54126BC09E600C124A8 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
@@ -301,6 +305,15 @@
 			path = RepeatCell;
 			sourceTree = "<group>";
 		};
+		A61D916226C69EDF0038CDE2 /* TitleSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				A61D916326C69F0F0038CDE2 /* TitleSettingView.swift */,
+				A61D916526C69F2A0038CDE2 /* TitleSettingView.xib */,
+			);
+			path = TitleSettingView;
+			sourceTree = "<group>";
+		};
 		A62F167226B50FFA0042A80E /* TimeSettingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +433,7 @@
 		A6C8D3CF26AB0781000684ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A61D916226C69EDF0038CDE2 /* TitleSettingView */,
 				A61D915D26C64A410038CDE2 /* RepeatCell */,
 				A6A3B54026BC09C800C124A8 /* SoundCell */,
 				A6D5271326BBDBE300EB5931 /* AddAlarmCell */,
@@ -637,6 +651,7 @@
 				A619E38226B1B21C00FB0FB8 /* AddAlarm.storyboard in Resources */,
 				A619E37126AE72BE00FB0FB8 /* poteto.mp3 in Resources */,
 				A6C8D3AA26A90C30000684ED /* LaunchScreen.storyboard in Resources */,
+				A61D916626C69F2B0038CDE2 /* TitleSettingView.xib in Resources */,
 				A6C8D3A726A90C30000684ED /* Assets.xcassets in Resources */,
 				A6A3B54426BC09E600C124A8 /* SoundCell.xib in Resources */,
 				A6D5271A26BBDC8F00EB5931 /* AddAlarmSnoozeCell.xib in Resources */,
@@ -818,6 +833,7 @@
 				A6C8D3E926ABD550000684ED /* AlarmData.swift in Sources */,
 				A6A3B55426C038DE00C124A8 /* String+Extension.swift in Sources */,
 				A6C8D3E526ABCF2A000684ED /* AlarmCell.swift in Sources */,
+				A61D916426C69F100038CDE2 /* TitleSettingView.swift in Sources */,
 				A619E38626B1B8DF00FB0FB8 /* MoelLocator.swift in Sources */,
 				A6C8D3F026ABE99D000684ED /* AlarmViewDataSource.swift in Sources */,
 				A619E36826AE700C00FB0FB8 /* AlarmModel.swift in Sources */,

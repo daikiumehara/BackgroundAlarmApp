@@ -11,13 +11,16 @@ class AlarmModel {
     private(set) var datas: [AlarmData] = []
 
     func addData(_ data: AlarmData) {
-        datas.append(data)
+        var newData = data
+        newData.setAlarm()
+        datas.append(newData)
     }
 
     func removeData(_ data: AlarmData) {
         guard let index = datas.firstIndex(of: data) else {
             return
         }
+        datas[index].cancelAlarm()
         datas.remove(at: index)
     }
 }

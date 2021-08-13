@@ -23,12 +23,7 @@ class AlarmViewController: UIViewController {
         configureNVBarColor()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        alarmView.reloadData()
-    }
-
-    func askPermissionNontification() {
+    private func askPermissionNontification() {
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .badge, .sound]) { _, error in
             if let error = error {
@@ -37,13 +32,13 @@ class AlarmViewController: UIViewController {
         }
     }
 
-    func configureNVBarColor() {
+    private func configureNVBarColor() {
         self.navigationBar.isTranslucent = false
         self.navigationBar.barTintColor = colorModel.mainColor
         self.topSafeAreaView.backgroundColor = colorModel.mainColor
     }
 
-    func configureCollectionView() {
+    private func configureCollectionView() {
         alarmView.register(AlarmCell.self)
         alarmView.dataSource = alarmViewDataSource
         alarmView.collectionViewLayout = AlarmViewLayout()

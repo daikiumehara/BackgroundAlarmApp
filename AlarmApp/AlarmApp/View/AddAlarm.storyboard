@@ -21,33 +21,43 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ns9-Yw-mRA" customClass="TimeSettingView" customModule="AlarmApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="149" width="414" height="100"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="j1V-cX-V0B"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iSX-cA-bNu">
-                                <rect key="frame" x="0.0" y="189" width="414" height="176"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILj-kf-Edj" customClass="TitleSettingView" customModule="AlarmApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="176" id="ld8-jo-Zyu"/>
+                                    <constraint firstAttribute="height" constant="60" id="JD7-xb-473"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iSX-cA-bNu">
+                                <rect key="frame" x="0.0" y="250" width="414" height="132"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="ld8-jo-Zyu"/>
                                 </constraints>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ILj-kf-Edj" secondAttribute="trailing" id="1Sh-dO-8CM"/>
                             <constraint firstItem="iSX-cA-bNu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="51M-ao-Bvr"/>
                             <constraint firstItem="XC1-KR-lHS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Eu5-ZV-o5F"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="MI2-qk-q6C"/>
                             <constraint firstItem="Ns9-Yw-mRA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NUs-x9-w9A"/>
                             <constraint firstItem="XC1-KR-lHS" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="PyT-th-Mvg"/>
+                            <constraint firstItem="iSX-cA-bNu" firstAttribute="top" secondItem="Ns9-Yw-mRA" secondAttribute="bottom" constant="1" id="W9M-Ze-IAY"/>
+                            <constraint firstItem="Ns9-Yw-mRA" firstAttribute="top" secondItem="ILj-kf-Edj" secondAttribute="bottom" constant="1" id="aTM-ue-hGd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iSX-cA-bNu" secondAttribute="trailing" id="cR3-ZJ-oJK"/>
                             <constraint firstItem="Ns9-Yw-mRA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="fte-KU-JBF"/>
-                            <constraint firstItem="iSX-cA-bNu" firstAttribute="top" secondItem="Ns9-Yw-mRA" secondAttribute="bottom" constant="1" id="k1K-mZ-tJT"/>
                             <constraint firstAttribute="trailing" secondItem="XC1-KR-lHS" secondAttribute="trailing" id="ntN-ne-AAR"/>
-                            <constraint firstItem="Ns9-Yw-mRA" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="xJL-kL-J7s"/>
+                            <constraint firstItem="ILj-kf-Edj" firstAttribute="top" secondItem="XC1-KR-lHS" secondAttribute="bottom" id="sAM-Xa-Pbu"/>
+                            <constraint firstItem="ILj-kf-Edj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uai-X8-trW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="アラームを追加" id="cMK-2s-eMK">
@@ -61,6 +71,7 @@
                         <outlet property="barAddButton" destination="mcm-gr-7gM" id="J22-4g-5bp"/>
                         <outlet property="tableView" destination="iSX-cA-bNu" id="b2M-e6-Rlg"/>
                         <outlet property="timeSettingView" destination="Ns9-Yw-mRA" id="sp6-yO-lBA"/>
+                        <outlet property="titleSettingView" destination="ILj-kf-Edj" id="ydK-GZ-hsb"/>
                         <outlet property="topSafeAreaView" destination="XC1-KR-lHS" id="lDC-bm-T1c"/>
                     </connections>
                 </viewController>

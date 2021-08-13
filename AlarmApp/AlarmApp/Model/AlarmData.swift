@@ -15,7 +15,7 @@ struct AlarmData: Comparable {
     var alarmIdentifier: String  // 作成した年日時秒(アラームの識別に使用)
     var snooze: Bool
     var alarmRepeat: [Bool]
-    var isSetting: Bool {
+    private(set) var isSetting: Bool {
         didSet {
             settingAlarm()
         }
@@ -41,6 +41,14 @@ struct AlarmData: Comparable {
 
     static func < (lhs: AlarmData, rhs: AlarmData) -> Bool {
         return  lhs.time.toDate() > rhs.time.toDate()
+    }
+
+    mutating func setAlarm() {
+        self.isSetting = true
+    }
+
+    mutating func cancelAlarm() {
+        self.isSetting = false
     }
 
     private func settingAlarm() {
@@ -93,6 +101,6 @@ extension AlarmData {
         return AlarmData(title: "タイトル", time: Time(hour: 12, minute: 0),
                          soundData: SoundData(soundName: "ベルの音", fileName: "clock_bell.mp3"),
                          identifier: CustomFormatter.dateToString(Date()),
-                         snooze: false, alarmRepeat: repeatDatas, setting: true)
+                         snooze: false, alarmRepeat: repeatDatas, setting: false)
     }
 }

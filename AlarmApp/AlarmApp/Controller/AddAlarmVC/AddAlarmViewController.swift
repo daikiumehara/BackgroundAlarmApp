@@ -12,6 +12,7 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var timeSettingView: TimeSettingView!
     @IBOutlet private var barAddButton: UIBarButtonItem!
+    @IBOutlet private var titleSettingView: TitleSettingView!
 
     private var dataSource: UITableViewDataSource!
     private var alarmModel = ModelLocator.alarmModel
@@ -50,7 +51,7 @@ class AddAlarmViewController: UIViewController {
             colorModel.themeColor.backgroundColor
     }
 
-    @IBAction func didTapAddButton(_ sender: Any) {
+    @IBAction private func didTapAddButton(_ sender: Any) {
         alarmModel.addData(self.newAlarmData)
         dismiss(animated: true, completion: nil)
     }

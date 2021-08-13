@@ -20,8 +20,12 @@ class AlarmViewDataSource: NSObject, UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withCellType: AlarmCell.self, indexPath: indexPath)
         var data = alarmModel.datas[indexPath.item]
-        let changeSwitchValue = { setting in
-            data.isSetting = setting
+        let changeSwitchValue: (Bool) -> Void = { setting in
+            if setting {
+                data.setAlarm()
+            } else {
+                data.cancelAlarm()
+            }
         }
         cell.configure(data: data, colorModel: colorModel, changeSwitchValue: changeSwitchValue)
         return cell
