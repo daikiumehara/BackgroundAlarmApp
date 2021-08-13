@@ -8,16 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Alarm Detail View Controller-->
+        <!--Sound Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="Y6W-OH-hqX" customClass="AddAlarmDetailViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SoundDetailViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-3P-uVK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-sS-EkQ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -25,21 +24,22 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2WS-3P-uVK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Hjk-vd-Fdc"/>
-                            <constraint firstItem="2WS-3P-uVK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Roa-Oi-h76"/>
-                            <constraint firstItem="2WS-3P-uVK" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="WPd-Zv-d5p"/>
-                            <constraint firstItem="2WS-3P-uVK" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="aqN-pv-MPc"/>
+                            <constraint firstItem="vMc-sS-EkQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="HD6-rh-OrL"/>
+                            <constraint firstItem="vMc-sS-EkQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UND-e6-RjT"/>
+                            <constraint firstItem="vMc-sS-EkQ" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="gbl-kd-giR"/>
+                            <constraint firstItem="vMc-sS-EkQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="qPB-BN-Sxn"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="2WS-3P-uVK" id="Zvi-ei-XzI"/>
+                        <outlet property="tableView" destination="vMc-sS-EkQ" id="lUA-JI-mdg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="104.46428571428571"/>
+            <point key="canvasLocation" x="44.927536231884062" y="80.357142857142847"/>
         </scene>
     </scenes>
     <resources>

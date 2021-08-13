@@ -8,7 +8,7 @@
 import UIKit
 
 enum AddAlarmRowInfo: Int, CaseIterable {
-    case alarmRepeat, title, sound, snooze
+    case alarmRepeat, sound, snooze
 
     static let detailCellType = AddAlarmDetailCell.self
     static let snoozeCellType = AddAlarmDetailCell.self
@@ -16,7 +16,6 @@ enum AddAlarmRowInfo: Int, CaseIterable {
     var labelText: String {
         switch self {
         case .alarmRepeat: return "繰り返し"
-        case .title: return "タイトル"
         case .sound: return "サウンド"
         case .snooze: return "スヌーズ"
         }
@@ -26,8 +25,6 @@ enum AddAlarmRowInfo: Int, CaseIterable {
         switch self {
         case .alarmRepeat:
             return AddAlarmDetailCell.identifier
-        case .title:
-            return AddAlarmDetailCell.identifier
         case .sound:
             return AddAlarmDetailCell.identifier
         case .snooze:
@@ -35,11 +32,10 @@ enum AddAlarmRowInfo: Int, CaseIterable {
         }
     }
 
-    var detailDataSource: UITableViewDataSource? {
+    var detailVC: UIViewController? {
         switch self {
-        case .alarmRepeat: return SoundDetailDataSource()
-        case .title: return SoundDetailDataSource()
-        case .sound: return SoundDetailDataSource()
+        case .alarmRepeat: return SoundDetailViewController.instantiate()
+        case .sound: return SoundDetailViewController.instantiate()
         case .snooze: return nil
         }
     }
@@ -47,7 +43,6 @@ enum AddAlarmRowInfo: Int, CaseIterable {
     func getRowItem(_ data: AlarmData) -> String {
         switch self {
         case .alarmRepeat: return data.title
-        case .title: return data.title
         case .sound: return data.soundData.soundName
         case .snooze: return data.snooze.toString
         }

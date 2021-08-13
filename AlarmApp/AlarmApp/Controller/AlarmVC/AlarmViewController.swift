@@ -14,7 +14,6 @@ class AlarmViewController: UIViewController {
     @IBOutlet private var navigationBar: UINavigationBar!
 
     private var colorModel = ModelLocator.colorModel
-    private let alarmViewDelegate = AlarmViewDelegate()
     private let alarmViewDataSource = AlarmViewDataSource()
 
     override func viewDidLoad() {
@@ -44,7 +43,6 @@ class AlarmViewController: UIViewController {
 
     func configureCollectionView() {
         alarmView.register(AlarmCell.self)
-        alarmView.delegate = alarmViewDelegate
         alarmView.dataSource = alarmViewDataSource
         alarmView.collectionViewLayout = AlarmViewLayout()
         alarmView.backgroundColor = colorModel.themeColor.backgroundColor
@@ -67,4 +65,9 @@ extension AlarmViewController {
                                      tag: 1)
         return initialVC
     }
+}
+
+// MARK: - UICollectionViewDelegate
+extension AlarmViewController: UICollectionViewDelegate {
+    
 }

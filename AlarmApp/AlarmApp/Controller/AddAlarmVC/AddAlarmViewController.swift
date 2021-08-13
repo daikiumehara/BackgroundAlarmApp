@@ -14,7 +14,6 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet private var barAddButton: UIBarButtonItem!
 
     private var dataSource: UITableViewDataSource!
-    private var delegate: UITableViewDelegate!
 
     private let colorModel = ModelLocator.colorModel
     private var alarmData = AlarmData.newData()
@@ -25,10 +24,6 @@ class AddAlarmViewController: UIViewController {
         configureTableView()
         configureColor()
         configureNVBarColor()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-//        configureNVBarColor()
     }
 
     private func configureNVBarColor() {
@@ -44,9 +39,8 @@ class AddAlarmViewController: UIViewController {
         self.tableView.register(AddAlarmDetailCell.self)
         self.tableView.register(AddAlarmSnoozeCell.self)
         self.dataSource = AddAlarmViewDataSource(self.alarmData)
-        self.delegate = AddAlarmViewDelegate(self)
         self.tableView.dataSource = self.dataSource
-        self.tableView.delegate = self.delegate
+        self.tableView.delegate = self
     }
 
     private func configureColor() {
@@ -54,5 +48,19 @@ class AddAlarmViewController: UIViewController {
             colorModel.themeColor.cellBackgroundColor
         self.view.backgroundColor =
             colorModel.themeColor.backgroundColor
+    }
+}
+
+extension AddAlarmViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        44
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rowInfo = AddAlarmRowInfo(rawValue: indexPath.row)!
+        guard let nextVC = rowInfo.detailVC else {
+            return
+        }
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

@@ -5,6 +5,7 @@
 //  Created by daiki umehara on 2021/07/24.
 //
 
+import Foundation
 import UIKit
 
 struct AlarmData: Comparable {
