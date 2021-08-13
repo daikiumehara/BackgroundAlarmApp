@@ -19,6 +19,15 @@ class RepeatDetailDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withCellType: RepeatCell.self,
+            for: indexPath)
+        let rowInfo = RepeatRowInfo(rawValue: indexPath.row)!
+        if self.viewController.repeatDatas[indexPath.row] {
+            cell.showCheckmark()
+        } else {
+            cell.hiddenCheckmark()
+        }
+        cell.configure(rowInfo.title)
+        return cell
     }
 }

@@ -8,16 +8,30 @@
 import UIKit
 
 class RepeatCell: UITableViewCell {
+    @IBOutlet private var checkmark: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private let colorModel = ModelLocator.colorModel
+
+    func configure(_ title: String) {
+        titleLabel.text = title
+        configureColor()
+    }
+    private func configureColor() {
+        self.backgroundColor =
+            colorModel.themeColor.cellBackgroundColor
+        self.checkmark.tintColor =
+            colorModel.mainColor
+        self.titleLabel.textColor =
+            colorModel.themeColor.textColor
+        self.selectedBackgroundView = CellSelectedBackgroundView()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func showCheckmark() {
+        checkmark.isHidden = false
     }
-    
+
+    func hiddenCheckmark() {
+        checkmark.isHidden = true
+    }
 }

@@ -8,14 +8,16 @@
 import UIKit
 
 class RepeatDetailViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
+    private(set) var repeatDatas: [Bool]!
 
     private var dataSource: RepeatDetailDataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(RepeatCell.self)
         tableView.delegate = self
-
+        tableView.dataSource = dataSource
     }
 }
 
@@ -26,6 +28,8 @@ extension RepeatDetailViewController {
                 .instantiateInitialViewController() as? RepeatDetailViewController else {
             fatalError("StoryBoardが見つかりませんでした")
         }
+        initialVC.repeatDatas = [Bool](repeating: false,
+                                       count: RepeatRowInfo.allCases.count)
         initialVC.dataSource = RepeatDetailDataSource(initialVC)
         return initialVC
     }
@@ -37,7 +41,8 @@ extension RepeatDetailViewController: UITableViewDelegate {
         44
     }
 
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.repeatDatas[indexPath.row] = !self.repeatDatas[indexPath.row]
+        tableView.reloadData()
+    }
 }
