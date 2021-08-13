@@ -14,7 +14,7 @@ struct AlarmData: Comparable {
     var soundData: SoundData
     var alarmIdentifier: String  // 作成した年日時秒(アラームの識別に使用)
     var snooze: Bool
-    var alarmRepeat: Bool
+    var alarmRepeat: [Bool]
     var isSetting: Bool {
         didSet {
             settingAlarm()
@@ -22,7 +22,7 @@ struct AlarmData: Comparable {
     }
 
     init(title: String, time: Time, soundData: SoundData,
-         identifier: String, snooze: Bool, alarmRepeat: Bool, setting: Bool) {
+         identifier: String, snooze: Bool, alarmRepeat: [Bool], setting: Bool) {
         self.title = title
         self.time = time
         self.soundData = soundData
@@ -41,13 +41,6 @@ struct AlarmData: Comparable {
 
     static func < (lhs: AlarmData, rhs: AlarmData) -> Bool {
         return  lhs.time.toDate() > rhs.time.toDate()
-    }
-
-    static func newData() -> AlarmData {
-        return AlarmData(title: "タイトル", time: Time(hour: 12, minute: 0),
-                         soundData: SoundData(soundName: "ベルの音", fileName: "clock_bell.mp3"),
-                         identifier: CustomFormatter.dateToString(Date()),
-                         snooze: false, alarmRepeat: false, setting: true)
     }
 
     private func settingAlarm() {
@@ -90,5 +83,16 @@ struct AlarmData: Comparable {
         let center = UNUserNotificationCenter.current()
         print("アラームが解除されました")
         center.removePendingNotificationRequests(withIdentifiers: [alarmIdentifier])
+    }
+}
+
+// MARK: - newData
+extension AlarmData {
+    static func newData() -> AlarmData {
+        let repeatDatas = [Bool](repeating: false, count: RepeatRowInfo.allCases.count)
+        return AlarmData(title: "タイトル", time: Time(hour: 12, minute: 0),
+                         soundData: SoundData(soundName: "ベルの音", fileName: "clock_bell.mp3"),
+                         identifier: CustomFormatter.dateToString(Date()),
+                         snooze: false, alarmRepeat: repeatDatas, setting: true)
     }
 }

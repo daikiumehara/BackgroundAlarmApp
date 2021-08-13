@@ -51,7 +51,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="アラームを追加" id="cMK-2s-eMK">
-                        <barButtonItem key="rightBarButtonItem" title="追加" id="mcm-gr-7gM"/>
+                        <barButtonItem key="rightBarButtonItem" title="追加" id="mcm-gr-7gM">
+                            <connections>
+                                <action selector="didTapAddButton:" destination="Y6W-OH-hqX" id="r7l-Ze-csX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="barAddButton" destination="mcm-gr-7gM" id="J22-4g-5bp"/>

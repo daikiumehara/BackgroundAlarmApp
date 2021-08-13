@@ -12,12 +12,12 @@ struct Time {
     var minute: Int
 
     func toString() -> String {
-        return "\(hour):\(minute)"
+        return "\(hour):\(String(format: "%02d", minute))"
     }
 
     func toDate() -> Date {
         let formatter = DateFormatter()
-        formatter.dateFormat = "HH:MM"
+        formatter.dateFormat = "HH:mm"
         guard let date = formatter.date(from: self.toString()) else {
             fatalError("formatterに不正な文字列が渡されました")
         }

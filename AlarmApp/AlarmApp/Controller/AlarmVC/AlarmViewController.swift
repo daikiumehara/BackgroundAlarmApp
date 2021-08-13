@@ -20,10 +20,12 @@ class AlarmViewController: UIViewController {
         super.viewDidLoad()
         askPermissionNontification()
         configureCollectionView()
+        configureNVBarColor()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        configureNVBarColor()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        alarmView.reloadData()
     }
 
     func askPermissionNontification() {

@@ -14,9 +14,9 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet private var barAddButton: UIBarButtonItem!
 
     private var dataSource: UITableViewDataSource!
-
+    private var alarmModel = ModelLocator.alarmModel
     private let colorModel = ModelLocator.colorModel
-    private var alarmData = AlarmData.newData()
+    private var newAlarmData = AlarmData.newData()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class AddAlarmViewController: UIViewController {
     private func configureTableView() {
         self.tableView.register(AddAlarmDetailCell.self)
         self.tableView.register(AddAlarmSnoozeCell.self)
-        self.dataSource = AddAlarmViewDataSource(self.alarmData)
+        self.dataSource = AddAlarmViewDataSource(self.newAlarmData)
         self.tableView.dataSource = self.dataSource
         self.tableView.delegate = self
     }
@@ -49,8 +49,14 @@ class AddAlarmViewController: UIViewController {
         self.view.backgroundColor =
             colorModel.themeColor.backgroundColor
     }
+
+    @IBAction func didTapAddButton(_ sender: Any) {
+        alarmModel.addData(self.newAlarmData)
+        dismiss(animated: true, completion: nil)
+    }
 }
 
+// MARK: - UITableViewDelegate
 extension AddAlarmViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         44

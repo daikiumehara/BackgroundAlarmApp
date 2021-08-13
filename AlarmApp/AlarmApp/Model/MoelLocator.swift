@@ -10,6 +10,7 @@ import AVFoundation
 class ModelLocator {
     static let colorModel = ColorModel()
     static let soundModel = SoundModel()
+    static let alarmModel = AlarmModel()
     static let trueString = "true"
     static let falseString = "false"
     static let player = SoundPlayer()

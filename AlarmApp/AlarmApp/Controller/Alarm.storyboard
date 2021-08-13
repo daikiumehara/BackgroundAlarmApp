@@ -27,7 +27,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hqZ-Rc-N1Z">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="Zxp-cs-b5M" kind="presentation" id="mna-lY-iHt"/>
+                                                <segue destination="hRn-ng-1PH" kind="presentation" id="JYB-8e-G9u"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -87,12 +87,12 @@
             <point key="canvasLocation" x="131.8840579710145" y="70.982142857142847"/>
         </scene>
         <!--AddAlarm-->
-        <scene sceneID="Ppc-Yl-fU8">
+        <scene sceneID="eW8-Np-rNc">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddAlarm" id="Zxp-cs-b5M" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gTG-ur-2Td" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AddAlarm" id="hRn-ng-1PH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aU-va-PmJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="71"/>
+            <point key="canvasLocation" x="808" y="-32"/>
         </scene>
     </scenes>
     <resources>
