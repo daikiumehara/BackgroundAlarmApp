@@ -34,6 +34,8 @@ class TimeSettingView: UIView {
     private func configureColor(_ view: UIView) {
         view.backgroundColor = colorModel.themeColor.cellBackgroundColor
         self.titleLabel.textColor = colorModel.themeColor.textColor
+        view.layer.borderWidth = 0.5
+        view.layer.borderColor = colorModel.themeColor.textColor.cgColor
     }
 
     func getTime() -> Time {
