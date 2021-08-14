@@ -14,6 +14,10 @@ class AddAlarmViewDataSource: NSObject, UITableViewDataSource {
         self.alarmData = data
     }
 
+    func updateAlarmData(_ data: AlarmData) {
+        self.alarmData = data
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         AddAlarmRowInfo.allCases.count
     }
@@ -30,5 +34,21 @@ class AddAlarmViewDataSource: NSObject, UITableViewDataSource {
         cell.configure(title: rowInfo.labelText,
                        item: rowInfo.getRowItem(alarmData))
         return cell
+    }
+
+    func getAlarmData() -> AlarmData {
+        return self.alarmData
+    }
+}
+
+extension AddAlarmViewDataSource: SoundDetailDelegate {
+    func chengeSoundData(_ data: SoundData) {
+        self.alarmData.soundData = data
+    }
+}
+
+extension AddAlarmViewDataSource: RepeatDetailDelegate {
+    func chengeRepeatDate(_ data: [Bool]) {
+        self.alarmData.alarmRepeat = data
     }
 }

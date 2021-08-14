@@ -38,6 +38,7 @@
 		A61D916126C64A750038CDE2 /* RepeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61D915F26C64A750038CDE2 /* RepeatCell.xib */; };
 		A61D916426C69F100038CDE2 /* TitleSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D916326C69F0F0038CDE2 /* TitleSettingView.swift */; };
 		A61D916626C69F2B0038CDE2 /* TitleSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61D916526C69F2A0038CDE2 /* TitleSettingView.xib */; };
+		A61FB9CB26C80DBA00BBAADD /* AddAlarmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9CA26C80DBA00BBAADD /* AddAlarmDelegate.swift */; };
 		A62F167426B510150042A80E /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F167326B510150042A80E /* TimeSettingView.swift */; };
 		A62F167626B510240042A80E /* TimeSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62F167526B510240042A80E /* TimeSettingView.xib */; };
 		A6A3B54326BC09E600C124A8 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B54126BC09E600C124A8 /* SoundCell.swift */; };
@@ -134,6 +135,7 @@
 		A61D915F26C64A750038CDE2 /* RepeatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepeatCell.xib; sourceTree = "<group>"; };
 		A61D916326C69F0F0038CDE2 /* TitleSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettingView.swift; sourceTree = "<group>"; };
 		A61D916526C69F2A0038CDE2 /* TitleSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSettingView.xib; sourceTree = "<group>"; };
+		A61FB9CA26C80DBA00BBAADD /* AddAlarmDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmDelegate.swift; sourceTree = "<group>"; };
 		A62F167326B510150042A80E /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
 		A62F167526B510240042A80E /* TimeSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSettingView.xib; sourceTree = "<group>"; };
 		A6A3B54126BC09E600C124A8 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				A6A3B55526C04FB200C124A8 /* AddAlarmCell.swift */,
+				A61FB9CA26C80DBA00BBAADD /* AddAlarmDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 				A619E36826AE700C00FB0FB8 /* AlarmModel.swift in Sources */,
 				A6C8D3E226AB2A61000684ED /* ThemeColor.swift in Sources */,
 				A6A3B54E26BE65A400C124A8 /* AddAlarmRowInfo.swift in Sources */,
+				A61FB9CB26C80DBA00BBAADD /* AddAlarmDelegate.swift in Sources */,
 				A61D915326C63B1B0038CDE2 /* HomeTabViewController.swift in Sources */,
 				A61D916026C64A750038CDE2 /* RepeatCell.swift in Sources */,
 				A6D5271226BB805A00EB5931 /* UIView+Extension.swift in Sources */,

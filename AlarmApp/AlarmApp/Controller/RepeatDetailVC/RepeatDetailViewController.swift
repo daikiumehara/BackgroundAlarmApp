@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RepeatDetailViewController: UIViewController {
+class RepeatDetailViewController: AddAlarmAcceptanceController {
     @IBOutlet private var tableView: UITableView!
     private(set) var repeatDatas: [Bool]!
 
@@ -18,6 +18,12 @@ class RepeatDetailViewController: UIViewController {
         tableView.register(RepeatCell.self)
         tableView.delegate = self
         tableView.dataSource = dataSource
+        navigationController?.delegate = self
+    }
+
+    override func setDelegate(_ viewController: AddAlarmViewController, data: AlarmData) {
+        self.delegate = viewController
+        self.repeatDatas = data.alarmRepeat
     }
 }
 
@@ -44,5 +50,11 @@ extension RepeatDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.repeatDatas[indexPath.row] = !self.repeatDatas[indexPath.row]
         tableView.reloadData()
+    }
+}
+
+extension RepeatDetailViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        self.delegate?.chengeRepeatDate(self.repeatDatas)
     }
 }

@@ -14,10 +14,14 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet private var barAddButton: UIBarButtonItem!
     @IBOutlet private var titleSettingView: TitleSettingView!
 
-    private var dataSource: UITableViewDataSource!
+    private var dataSource: AddAlarmViewDataSource!
     private var alarmModel = ModelLocator.alarmModel
     private let colorModel = ModelLocator.colorModel
-    private var newAlarmData = AlarmData.newData()
+    private var newAlarmData = AlarmData.newData() {
+        didSet {
+            self.dataSource.updateAlarmData(self.newAlarmData)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,9 +69,23 @@ extension AddAlarmViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowInfo = AddAlarmRowInfo(rawValue: indexPath.row)!
-        guard let nextVC = rowInfo.detailVC else {
+        guard let nextVC = rowInfo.detailVC as? AddAlarmAcceptanceController else {
             return
         }
+        nextVC.setDelegate(self, data: newAlarmData)
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+}
+
+extension AddAlarmViewController: SoundDetailDelegate {
+    func chengeSoundData(_ data: SoundData) {
+        self.newAlarmData.soundData = data
+        tableView.reloadData()
+    }
+}
+
+extension AddAlarmViewController: RepeatDetailDelegate {
+    func chengeRepeatDate(_ data: [Bool]) {
+        self.newAlarmData.alarmRepeat = data
     }
 }

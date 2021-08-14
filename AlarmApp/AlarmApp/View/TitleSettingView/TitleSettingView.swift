@@ -40,8 +40,6 @@ class TitleSettingView: UIView {
         textField.textColor = colorModel.themeColor.textColor
         textField.backgroundColor = colorModel.themeColor.cellBackgroundColor
         view.backgroundColor = colorModel.themeColor.cellBackgroundColor
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = colorModel.themeColor.textColor.cgColor
     }
 
     func getTitle() -> String {

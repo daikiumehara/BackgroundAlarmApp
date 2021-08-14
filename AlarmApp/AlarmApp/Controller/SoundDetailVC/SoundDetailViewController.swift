@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SoundDetailViewController: UIViewController {
+class SoundDetailViewController: AddAlarmAcceptanceController {
     @IBOutlet private var tableView: UITableView!
 
     private var dataSource: SoundDetailDataSource!
@@ -19,6 +19,7 @@ class SoundDetailViewController: UIViewController {
         tableView.register(SoundCell.self)
         tableView.delegate = self
         tableView.dataSource = dataSource
+        navigationController?.delegate = self
         colorConfigure()
     }
 
@@ -27,6 +28,11 @@ class SoundDetailViewController: UIViewController {
             colorModel.themeColor.cellBackgroundColor
         self.view.backgroundColor =
             colorModel.themeColor.cellBackgroundColor
+    }
+
+    override func setDelegate(_ viewController: AddAlarmViewController, data: AlarmData) {
+        self.delegate = viewController
+        self.selected = ModelLocator.soundModel.datas.firstIndex(of: data.soundData)!
     }
 }
 
@@ -51,5 +57,13 @@ extension SoundDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selected = indexPath.row
         tableView.reloadData()
+    }
+}
+
+extension SoundDetailViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController,
+                              willShow viewController: UIViewController,
+                              animated: Bool) {
+        self.delegate?.chengeSoundData(ModelLocator.soundModel.datas[selected])
     }
 }
