@@ -27,7 +27,7 @@
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hqZ-Rc-N1Z">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="hRn-ng-1PH" kind="presentation" id="JYB-8e-G9u"/>
+                                                <segue destination="hRn-ng-1PH" kind="presentation" modalPresentationStyle="fullScreen" id="JYB-8e-G9u"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

@@ -13,6 +13,7 @@ class AddAlarmSnoozeCell: AddAlarmCell {
     @IBOutlet private var titleLabel: UILabel!
 
     private var item: Bool!
+    private weak var dataSource: AddAlarmViewDataSource!
 
     override func configure(title: String, item: String) {
         self.titleLabel.text = title
@@ -21,8 +22,8 @@ class AddAlarmSnoozeCell: AddAlarmCell {
         configureColor()
     }
 
-    func getCellItem() -> Bool {
-        self.item
+    func setDataSource(_ dataSource: AddAlarmViewDataSource) {
+        self.dataSource = dataSource
     }
 
     private func configureColor() {
@@ -35,5 +36,6 @@ class AddAlarmSnoozeCell: AddAlarmCell {
     @IBAction private func didChangeSwitchValue(_ sender: Any) {
         self.item = !self.item
         self.snoozeSwitch.isOn = self.item
+        self.dataSource.chengeSnooze(self.item)
     }
 }

@@ -61,6 +61,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="アラームを追加" id="cMK-2s-eMK">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="G5z-7t-ByU">
+                            <connections>
+                                <action selector="didTapBackButton:" destination="Y6W-OH-hqX" id="y20-y4-6kP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="追加" id="mcm-gr-7gM">
                             <connections>
                                 <action selector="didTapAddButton:" destination="Y6W-OH-hqX" id="r7l-Ze-csX"/>
@@ -69,6 +74,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="barAddButton" destination="mcm-gr-7gM" id="J22-4g-5bp"/>
+                        <outlet property="barBackButton" destination="G5z-7t-ByU" id="2L8-nG-uVn"/>
                         <outlet property="tableView" destination="iSX-cA-bNu" id="b2M-e6-Rlg"/>
                         <outlet property="timeSettingView" destination="Ns9-Yw-mRA" id="sp6-yO-lBA"/>
                         <outlet property="titleSettingView" destination="ILj-kf-Edj" id="ydK-GZ-hsb"/>

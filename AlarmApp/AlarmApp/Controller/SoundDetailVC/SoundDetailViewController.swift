@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SoundDetailViewController: AddAlarmAcceptanceController {
+class SoundDetailViewController: AddAlarmDetailViewController {
     @IBOutlet private var tableView: UITableView!
 
     private var dataSource: SoundDetailDataSource!
@@ -30,8 +30,9 @@ class SoundDetailViewController: AddAlarmAcceptanceController {
             colorModel.themeColor.cellBackgroundColor
     }
 
-    override func setDelegate(_ viewController: AddAlarmViewController, data: AlarmData) {
-        self.delegate = viewController
+    override func setDelegate(_ dataSource: AddAlarmViewDataSource,
+                              data: AlarmData) {
+        self.delegate = dataSource
         self.selected = ModelLocator.soundModel.datas.firstIndex(of: data.soundData)!
     }
 }

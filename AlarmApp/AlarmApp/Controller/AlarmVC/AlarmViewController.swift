@@ -23,6 +23,10 @@ class AlarmViewController: UIViewController {
         configureNVBarColor()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.alarmView.reloadData()
+    }
+
     private func askPermissionNontification() {
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .badge, .sound]) { _, error in
@@ -44,6 +48,11 @@ class AlarmViewController: UIViewController {
         alarmView.collectionViewLayout = AlarmViewLayout()
         alarmView.backgroundColor = colorModel.themeColor.backgroundColor
     }
+
+    func updateView() {
+        print("update view")
+        self.alarmView.reloadData()
+    }
 }
 
 // MARK: - instantiate
@@ -62,9 +71,4 @@ extension AlarmViewController {
                                      tag: 1)
         return initialVC
     }
-}
-
-// MARK: - UICollectionViewDelegate
-extension AlarmViewController: UICollectionViewDelegate {
-    
 }

@@ -12,16 +12,13 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     @IBOutlet private var timeSettingView: TimeSettingView!
     @IBOutlet private var barAddButton: UIBarButtonItem!
+    @IBOutlet private var barBackButton: UIBarButtonItem!
     @IBOutlet private var titleSettingView: TitleSettingView!
 
     private var dataSource: AddAlarmViewDataSource!
     private var alarmModel = ModelLocator.alarmModel
     private let colorModel = ModelLocator.colorModel
-    private var newAlarmData = AlarmData.newData() {
-        didSet {
-            self.dataSource.updateAlarmData(self.newAlarmData)
-        }
-    }
+    private var alarmData = AlarmData.newData()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +26,11 @@ class AddAlarmViewController: UIViewController {
         configureTableView()
         configureColor()
         configureNVBarColor()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
 
     private func configureNVBarColor() {
@@ -43,7 +45,7 @@ class AddAlarmViewController: UIViewController {
     private func configureTableView() {
         self.tableView.register(AddAlarmDetailCell.self)
         self.tableView.register(AddAlarmSnoozeCell.self)
-        self.dataSource = AddAlarmViewDataSource(self.newAlarmData)
+        self.dataSource = AddAlarmViewDataSource(self, self.alarmData)
         self.tableView.dataSource = self.dataSource
         self.tableView.delegate = self
     }
@@ -56,8 +58,18 @@ class AddAlarmViewController: UIViewController {
     }
 
     @IBAction private func didTapAddButton(_ sender: Any) {
-        alarmModel.addData(self.newAlarmData)
+        addNewData()
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction private func didTapBackButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    private func addNewData() {
+        var newData = dataSource.getAlarmData()
+        newData.title = titleSettingView.getTitle()
+        newData.time = timeSettingView.getTime()
+        alarmModel.addData(newData)
     }
 }
 
@@ -69,23 +81,10 @@ extension AddAlarmViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowInfo = AddAlarmRowInfo(rawValue: indexPath.row)!
-        guard let nextVC = rowInfo.detailVC as? AddAlarmAcceptanceController else {
+        guard let nextVC = rowInfo.detailVC as? AddAlarmDetailViewController else {
             return
         }
-        nextVC.setDelegate(self, data: newAlarmData)
+        nextVC.setDelegate(dataSource, data: dataSource.getAlarmData())
         self.navigationController?.pushViewController(nextVC, animated: true)
-    }
-}
-
-extension AddAlarmViewController: SoundDetailDelegate {
-    func chengeSoundData(_ data: SoundData) {
-        self.newAlarmData.soundData = data
-        tableView.reloadData()
-    }
-}
-
-extension AddAlarmViewController: RepeatDetailDelegate {
-    func chengeRepeatDate(_ data: [Bool]) {
-        self.newAlarmData.alarmRepeat = data
     }
 }

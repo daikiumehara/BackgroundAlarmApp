@@ -8,10 +8,12 @@
 import UIKit
 
 class AddAlarmViewDataSource: NSObject, UITableViewDataSource {
+    private weak var viewController: AddAlarmViewController!
     private var alarmData: AlarmData!
 
-    init(_ data: AlarmData) {
+    init(_ viewController: AddAlarmViewController, _ data: AlarmData) {
         self.alarmData = data
+        self.viewController = viewController
     }
 
     func updateAlarmData(_ data: AlarmData) {
@@ -33,7 +35,10 @@ class AddAlarmViewDataSource: NSObject, UITableViewDataSource {
         }
         cell.configure(title: rowInfo.labelText,
                        item: rowInfo.getRowItem(alarmData))
-        return cell
+        guard let snoozeCell = cell as? AddAlarmSnoozeCell else {
+            return cell
+        }
+        return snoozeCell
     }
 
     func getAlarmData() -> AlarmData {
@@ -50,5 +55,23 @@ extension AddAlarmViewDataSource: SoundDetailDelegate {
 extension AddAlarmViewDataSource: RepeatDetailDelegate {
     func chengeRepeatDate(_ data: [Bool]) {
         self.alarmData.alarmRepeat = data
+    }
+}
+
+extension AddAlarmViewDataSource: TitleDelegate {
+    func chengeTitle(_ data: String) {
+        self.alarmData.title = data
+    }
+}
+
+extension AddAlarmViewDataSource: TimeDelegate {
+    func chengeTime(_ data: Time) {
+        self.alarmData.time = data
+    }
+}
+
+extension AddAlarmViewDataSource: SnoozeDelegate {
+    func chengeSnooze(_ data: Bool) {
+        self.alarmData.snooze = data
     }
 }
