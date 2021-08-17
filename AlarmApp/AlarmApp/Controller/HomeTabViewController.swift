@@ -13,10 +13,6 @@ class HomeTabViewController: ESTabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureVC()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         configureColor()
     }
 
@@ -24,12 +20,8 @@ class HomeTabViewController: ESTabBarController {
         let alarmVC = AlarmViewController.instantiate()
         let timerVC = TimerViewController.instantiate()
         let settingVC = SettingViewController.instantiate()
-        let vcArray = [alarmVC, timerVC, settingVC]
-//        vcArray.forEach { viewController in
-//            colorModel.addVC(viewController)
-//        }
         self.colorModel.addVC(self)
-        self.viewControllers = vcArray
+        self.viewControllers = [alarmVC, timerVC, settingVC]
     }
 
     private func configureColor() {
