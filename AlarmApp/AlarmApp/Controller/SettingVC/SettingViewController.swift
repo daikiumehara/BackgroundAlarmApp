@@ -12,12 +12,26 @@ class SettingViewController: UIViewController {
     @IBOutlet private var navigationBar: UINavigationItem!
     @IBOutlet private var tableView: UITableView!
     
-    private var colorModel = ModelLocator.colorModel
+    private lazy var colorModel = ModelLocator.colorModel {
+        didSet {
+            colorModel.addVC(self)
+        }
+    }
     private var dataSource: SettingViewDataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+        configureColor()
+    }
+
+    private func configureColor() {
+        self.tableView.dataSource = self.dataSource
         configureNVBarColor()
     }
 
@@ -25,7 +39,6 @@ class SettingViewController: UIViewController {
         self.tableView.register(ThemeColorSettingCell.self)
         self.tableView.register(SettingCell.self)
         self.dataSource = SettingViewDataSource(self)
-        self.tableView.dataSource = self.dataSource
     }
 
     private func configureNVBarColor() {

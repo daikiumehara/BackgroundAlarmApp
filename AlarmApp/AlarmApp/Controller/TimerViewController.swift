@@ -10,15 +10,25 @@ import ESTabBarController_swift
 
 class TimerViewController: UIViewController {
     @IBOutlet private var startAndStopButton: TimerButton!
-    private var colorModel = ModelLocator.colorModel
+
+    private lazy var colorModel = ModelLocator.colorModel {
+        didSet {
+            colorModel.addVC(self)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonConfigure()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
     private func buttonConfigure() {
-        startAndStopButton.configure(color: #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)) {
-        }
+//        startAndStopButton.configure(color: #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)) {
+//        }
     }
 }
 

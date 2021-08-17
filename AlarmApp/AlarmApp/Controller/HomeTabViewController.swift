@@ -12,15 +12,24 @@ class HomeTabViewController: ESTabBarController {
     private var colorModel = ModelLocator.colorModel
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureVC()
-        self.configureColor()
+        configureVC()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureColor()
     }
 
     private func configureVC() {
         let alarmVC = AlarmViewController.instantiate()
         let timerVC = TimerViewController.instantiate()
         let settingVC = SettingViewController.instantiate()
-        self.viewControllers = [alarmVC, timerVC, settingVC]
+        let vcArray = [alarmVC, timerVC, settingVC]
+//        vcArray.forEach { viewController in
+//            colorModel.addVC(viewController)
+//        }
+        self.colorModel.addVC(self)
+        self.viewControllers = vcArray
     }
 
     private func configureColor() {

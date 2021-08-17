@@ -29,6 +29,5 @@ extension ColorPickerViewController {
 extension ColorPickerViewController: UIColorPickerViewControllerDelegate {
     func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
         self.colorModel.mainColor = self.selectedColor
-        print("selectColor")
     }
 }

@@ -20,11 +20,11 @@ class AlarmViewController: UIViewController {
         super.viewDidLoad()
         askPermissionNontification()
         configureCollectionView()
-        configureNVBarColor()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         self.alarmView.reloadData()
+        configureColor()
     }
 
     private func askPermissionNontification() {
@@ -34,6 +34,11 @@ class AlarmViewController: UIViewController {
                 print(error)
             }
         }
+    }
+
+    private func configureColor() {
+        configureNVBarColor()
+        alarmView.backgroundColor = colorModel.themeColor.backgroundColor
     }
 
     private func configureNVBarColor() {
@@ -46,12 +51,6 @@ class AlarmViewController: UIViewController {
         alarmView.register(AlarmCell.self)
         alarmView.dataSource = alarmViewDataSource
         alarmView.collectionViewLayout = AlarmViewLayout()
-        alarmView.backgroundColor = colorModel.themeColor.backgroundColor
-    }
-
-    func updateView() {
-        print("update view")
-        self.alarmView.reloadData()
     }
 }
 
