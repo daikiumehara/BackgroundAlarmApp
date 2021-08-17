@@ -15,10 +15,14 @@ class RepeatDetailViewController: AddAlarmDetailViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = self
+        configureTableView()
+    }
+
+    private func configureTableView() {
         tableView.register(RepeatCell.self)
         tableView.delegate = self
         tableView.dataSource = dataSource
-        navigationController?.delegate = self
     }
 
     override func setDelegate(_ dataSource: AddAlarmViewDataSource,

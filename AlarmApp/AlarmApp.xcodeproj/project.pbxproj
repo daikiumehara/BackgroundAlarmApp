@@ -38,9 +38,20 @@
 		A61D916126C64A750038CDE2 /* RepeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61D915F26C64A750038CDE2 /* RepeatCell.xib */; };
 		A61D916426C69F100038CDE2 /* TitleSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D916326C69F0F0038CDE2 /* TitleSettingView.swift */; };
 		A61D916626C69F2B0038CDE2 /* TitleSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61D916526C69F2A0038CDE2 /* TitleSettingView.xib */; };
-		A61FB9CB26C80DBA00BBAADD /* AddAlarmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9CA26C80DBA00BBAADD /* AddAlarmDelegate.swift */; };
+		A61FB9CB26C80DBA00BBAADD /* SoundDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9CA26C80DBA00BBAADD /* SoundDetailDelegate.swift */; };
 		A61FB9CD26C844BB00BBAADD /* AddAlarmAcceptanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9CC26C844BB00BBAADD /* AddAlarmAcceptanceProtocol.swift */; };
 		A61FB9D026C8BA6100BBAADD /* AddAlarmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9CF26C8BA6100BBAADD /* AddAlarmDetailViewController.swift */; };
+		A61FB9D226C9435B00BBAADD /* SettingRowInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9D126C9435B00BBAADD /* SettingRowInfo.swift */; };
+		A61FB9D426C97F2400BBAADD /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9D326C97F2400BBAADD /* ColorPickerViewController.swift */; };
+		A61FB9D626CA24DB00BBAADD /* SettingViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9D526CA24DB00BBAADD /* SettingViewDataSource.swift */; };
+		A61FB9DA26CA26F700BBAADD /* ThemeColorSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9D826CA26F700BBAADD /* ThemeColorSettingCell.swift */; };
+		A61FB9DB26CA26F700BBAADD /* ThemeColorSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61FB9D926CA26F700BBAADD /* ThemeColorSettingCell.xib */; };
+		A61FB9E126CA359800BBAADD /* RepeatDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9E026CA359800BBAADD /* RepeatDetailDelegate.swift */; };
+		A61FB9E326CA35B300BBAADD /* SnoozeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9E226CA35B300BBAADD /* SnoozeDelegate.swift */; };
+		A61FB9E726CA3DD500BBAADD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9E526CA3DD500BBAADD /* SettingCell.swift */; };
+		A61FB9E826CA3DD500BBAADD /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A61FB9E626CA3DD500BBAADD /* SettingCell.xib */; };
+		A61FB9EA26CA40D500BBAADD /* SelectedCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9E926CA40D500BBAADD /* SelectedCellProtocol.swift */; };
+		A61FB9EC26CA413D00BBAADD /* SelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61FB9EB26CA413D00BBAADD /* SelectedCell.swift */; };
 		A62F167426B510150042A80E /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62F167326B510150042A80E /* TimeSettingView.swift */; };
 		A62F167626B510240042A80E /* TimeSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A62F167526B510240042A80E /* TimeSettingView.xib */; };
 		A6A3B54326BC09E600C124A8 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B54126BC09E600C124A8 /* SoundCell.swift */; };
@@ -137,9 +148,20 @@
 		A61D915F26C64A750038CDE2 /* RepeatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepeatCell.xib; sourceTree = "<group>"; };
 		A61D916326C69F0F0038CDE2 /* TitleSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSettingView.swift; sourceTree = "<group>"; };
 		A61D916526C69F2A0038CDE2 /* TitleSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSettingView.xib; sourceTree = "<group>"; };
-		A61FB9CA26C80DBA00BBAADD /* AddAlarmDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmDelegate.swift; sourceTree = "<group>"; };
+		A61FB9CA26C80DBA00BBAADD /* SoundDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDetailDelegate.swift; sourceTree = "<group>"; };
 		A61FB9CC26C844BB00BBAADD /* AddAlarmAcceptanceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmAcceptanceProtocol.swift; sourceTree = "<group>"; };
 		A61FB9CF26C8BA6100BBAADD /* AddAlarmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmDetailViewController.swift; sourceTree = "<group>"; };
+		A61FB9D126C9435B00BBAADD /* SettingRowInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowInfo.swift; sourceTree = "<group>"; };
+		A61FB9D326C97F2400BBAADD /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		A61FB9D526CA24DB00BBAADD /* SettingViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewDataSource.swift; sourceTree = "<group>"; };
+		A61FB9D826CA26F700BBAADD /* ThemeColorSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColorSettingCell.swift; sourceTree = "<group>"; };
+		A61FB9D926CA26F700BBAADD /* ThemeColorSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeColorSettingCell.xib; sourceTree = "<group>"; };
+		A61FB9E026CA359800BBAADD /* RepeatDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDetailDelegate.swift; sourceTree = "<group>"; };
+		A61FB9E226CA35B300BBAADD /* SnoozeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoozeDelegate.swift; sourceTree = "<group>"; };
+		A61FB9E526CA3DD500BBAADD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		A61FB9E626CA3DD500BBAADD /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		A61FB9E926CA40D500BBAADD /* SelectedCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCellProtocol.swift; sourceTree = "<group>"; };
+		A61FB9EB26CA413D00BBAADD /* SelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCell.swift; sourceTree = "<group>"; };
 		A62F167326B510150042A80E /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
 		A62F167526B510240042A80E /* TimeSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSettingView.xib; sourceTree = "<group>"; };
 		A6A3B54126BC09E600C124A8 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
@@ -320,6 +342,42 @@
 			path = TitleSettingView;
 			sourceTree = "<group>";
 		};
+		A61FB9D726CA26A200BBAADD /* ThemeColorSettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				A61FB9D826CA26F700BBAADD /* ThemeColorSettingCell.swift */,
+				A61FB9D926CA26F700BBAADD /* ThemeColorSettingCell.xib */,
+			);
+			path = ThemeColorSettingCell;
+			sourceTree = "<group>";
+		};
+		A61FB9DE26CA30B500BBAADD /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				A6C8D3D726AB1528000684ED /* SettingViewController.swift */,
+				A61FB9D526CA24DB00BBAADD /* SettingViewDataSource.swift */,
+			);
+			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		A61FB9DF26CA354A00BBAADD /* SubClass */ = {
+			isa = PBXGroup;
+			children = (
+				A61FB9CF26C8BA6100BBAADD /* AddAlarmDetailViewController.swift */,
+				A61FB9EB26CA413D00BBAADD /* SelectedCell.swift */,
+			);
+			path = SubClass;
+			sourceTree = "<group>";
+		};
+		A61FB9E426CA3D6C00BBAADD /* SettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				A61FB9E526CA3DD500BBAADD /* SettingCell.swift */,
+				A61FB9E626CA3DD500BBAADD /* SettingCell.xib */,
+			);
+			path = SettingCell;
+			sourceTree = "<group>";
+		};
 		A62F167226B50FFA0042A80E /* TimeSettingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,8 +400,11 @@
 			isa = PBXGroup;
 			children = (
 				A6A3B55526C04FB200C124A8 /* AddAlarmCell.swift */,
-				A61FB9CA26C80DBA00BBAADD /* AddAlarmDelegate.swift */,
+				A61FB9CA26C80DBA00BBAADD /* SoundDetailDelegate.swift */,
+				A61FB9E026CA359800BBAADD /* RepeatDetailDelegate.swift */,
+				A61FB9E226CA35B300BBAADD /* SnoozeDelegate.swift */,
 				A61FB9CC26C844BB00BBAADD /* AddAlarmAcceptanceProtocol.swift */,
+				A61FB9E926CA40D500BBAADD /* SelectedCellProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -391,6 +452,7 @@
 		A6C8D39C26A90C28000684ED /* AlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				A61FB9DF26CA354A00BBAADD /* SubClass */,
 				A6A3B55726C04FDC00C124A8 /* Protocol */,
 				A6D5270C26BB7CC900EB5931 /* Extension */,
 				A619E36926AE711700FB0FB8 /* Sounds */,
@@ -427,14 +489,14 @@
 		A6C8D3CE26AB0778000684ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A61FB9DE26CA30B500BBAADD /* SettingVC */,
 				A61D915626C645750038CDE2 /* RepeatDetailVC */,
 				A61D915126C639870038CDE2 /* HomeTabViewController */,
 				A61D915026C636C20038CDE2 /* SoundDetailVC */,
 				A6A3B55826C04FFC00C124A8 /* AddAlarmVC */,
 				A6C8D3EC26ABE967000684ED /* AlarmVC */,
 				A6C8D3D526AB14FB000684ED /* TimerViewController.swift */,
-				A61FB9CF26C8BA6100BBAADD /* AddAlarmDetailViewController.swift */,
-				A6C8D3D726AB1528000684ED /* SettingViewController.swift */,
+				A61FB9D326C97F2400BBAADD /* ColorPickerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -442,6 +504,8 @@
 		A6C8D3CF26AB0781000684ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A61FB9E426CA3D6C00BBAADD /* SettingCell */,
+				A61FB9D726CA26A200BBAADD /* ThemeColorSettingCell */,
 				A61D916226C69EDF0038CDE2 /* TitleSettingView */,
 				A61D915D26C64A410038CDE2 /* RepeatCell */,
 				A6A3B54026BC09C800C124A8 /* SoundCell */,
@@ -505,6 +569,7 @@
 				A6A3B54D26BE65A400C124A8 /* AddAlarmRowInfo.swift */,
 				A6C8D3E126AB2A61000684ED /* ThemeColor.swift */,
 				A61D90FE26C50D520038CDE2 /* RepeatRowInfo.swift */,
+				A61FB9D126C9435B00BBAADD /* SettingRowInfo.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -660,6 +725,7 @@
 				A619E38226B1B21C00FB0FB8 /* AddAlarm.storyboard in Resources */,
 				A619E37126AE72BE00FB0FB8 /* poteto.mp3 in Resources */,
 				A6C8D3AA26A90C30000684ED /* LaunchScreen.storyboard in Resources */,
+				A61FB9DB26CA26F700BBAADD /* ThemeColorSettingCell.xib in Resources */,
 				A61D916626C69F2B0038CDE2 /* TitleSettingView.xib in Resources */,
 				A6C8D3A726A90C30000684ED /* Assets.xcassets in Resources */,
 				A6A3B54426BC09E600C124A8 /* SoundCell.xib in Resources */,
@@ -669,6 +735,7 @@
 				A6C8D3A526A90C28000684ED /* Home.storyboard in Resources */,
 				A619E36626AE523400FB0FB8 /* TimerButton.xib in Resources */,
 				A6C8D3E726ABCF49000684ED /* AlarmCell.xib in Resources */,
+				A61FB9E826CA3DD500BBAADD /* SettingCell.xib in Resources */,
 				A619E37726AE776900FB0FB8 /* ooatari.mp3 in Resources */,
 				A62F167626B510240042A80E /* TimeSettingView.xib in Resources */,
 				A61D915A26C645B20038CDE2 /* RepeatDetail.storyboard in Resources */,
@@ -821,11 +888,15 @@
 				A6C8D3D626AB14FB000684ED /* TimerViewController.swift in Sources */,
 				A619E38426B1B24800FB0FB8 /* AddAlarmViewController.swift in Sources */,
 				A6C8D3F526ABECAC000684ED /* ColorModel.swift in Sources */,
+				A61FB9E326CA35B300BBAADD /* SnoozeDelegate.swift in Sources */,
 				A6A3B55026BE667700C124A8 /* AddAlarmViewDataSource.swift in Sources */,
+				A61FB9E126CA359800BBAADD /* RepeatDetailDelegate.swift in Sources */,
 				A6A3B54C26BC62CD00C124A8 /* SoundDetailDataSource.swift in Sources */,
 				A6A3B55626C04FB300C124A8 /* AddAlarmCell.swift in Sources */,
 				A619E36426AE522800FB0FB8 /* TimerButton.swift in Sources */,
 				A6D5270E26BB7CE900EB5931 /* UICollectionView+Extension.swift in Sources */,
+				A61FB9D626CA24DB00BBAADD /* SettingViewDataSource.swift in Sources */,
+				A61FB9EC26CA413D00BBAADD /* SelectedCell.swift in Sources */,
 				A61D915C26C647740038CDE2 /* RepeatDetailDataSource.swift in Sources */,
 				A6C8D3D426AB14D7000684ED /* AlarmViewController.swift in Sources */,
 				A61D90F626C40C030038CDE2 /* SoundPlayer.swift in Sources */,
@@ -833,6 +904,7 @@
 				A61D90FF26C50D530038CDE2 /* RepeatRowInfo.swift in Sources */,
 				A6C8D3F226ABE9AC000684ED /* AlarmViewLayout.swift in Sources */,
 				A6A3B54A26BC4D2E00C124A8 /* UITableView+Extension.swift in Sources */,
+				A61FB9D226C9435B00BBAADD /* SettingRowInfo.swift in Sources */,
 				A62F167426B510150042A80E /* TimeSettingView.swift in Sources */,
 				A6C8D3E026AB27AE000684ED /* BouncesContentView.swift in Sources */,
 				A6C8D3EB26ABD58D000684ED /* SoundData.swift in Sources */,
@@ -840,7 +912,9 @@
 				A6C8D39E26A90C28000684ED /* AppDelegate.swift in Sources */,
 				A6D5271926BBDC8F00EB5931 /* AddAlarmSnoozeCell.swift in Sources */,
 				A6C8D3E926ABD550000684ED /* AlarmData.swift in Sources */,
+				A61FB9DA26CA26F700BBAADD /* ThemeColorSettingCell.swift in Sources */,
 				A6A3B55426C038DE00C124A8 /* String+Extension.swift in Sources */,
+				A61FB9EA26CA40D500BBAADD /* SelectedCellProtocol.swift in Sources */,
 				A6C8D3E526ABCF2A000684ED /* AlarmCell.swift in Sources */,
 				A61D916426C69F100038CDE2 /* TitleSettingView.swift in Sources */,
 				A619E38626B1B8DF00FB0FB8 /* MoelLocator.swift in Sources */,
@@ -849,12 +923,14 @@
 				A619E36826AE700C00FB0FB8 /* AlarmModel.swift in Sources */,
 				A6C8D3E226AB2A61000684ED /* ThemeColor.swift in Sources */,
 				A6A3B54E26BE65A400C124A8 /* AddAlarmRowInfo.swift in Sources */,
-				A61FB9CB26C80DBA00BBAADD /* AddAlarmDelegate.swift in Sources */,
+				A61FB9CB26C80DBA00BBAADD /* SoundDetailDelegate.swift in Sources */,
+				A61FB9E726CA3DD500BBAADD /* SettingCell.swift in Sources */,
 				A61D915326C63B1B0038CDE2 /* HomeTabViewController.swift in Sources */,
 				A61D916026C64A750038CDE2 /* RepeatCell.swift in Sources */,
 				A6D5271226BB805A00EB5931 /* UIView+Extension.swift in Sources */,
 				A6A3B54626BC1C8C00C124A8 /* SoundDetailViewController.swift in Sources */,
 				A6C8D3A026A90C28000684ED /* SceneDelegate.swift in Sources */,
+				A61FB9D426C97F2400BBAADD /* ColorPickerViewController.swift in Sources */,
 				A619E35D26AD97CE00FB0FB8 /* CustomFormatter.swift in Sources */,
 				A619E37526AE732000FB0FB8 /* SoundModel.swift in Sources */,
 				A6A3B55E26C1061D00C124A8 /* AddAlarmDetailCell.swift in Sources */,

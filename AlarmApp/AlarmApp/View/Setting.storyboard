@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--設定-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="SettingViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,27 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTE-Ap-0J0">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="6OT-1C-Daf"/>
-                                </items>
-                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T0H-c4-nJw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rTE-Ap-0J0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0t5-OQ-dc0"/>
-                            <constraint firstItem="rTE-Ap-0J0" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="2bF-gW-zGw"/>
-                            <constraint firstItem="rTE-Ap-0J0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tXV-4u-1BX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="T0H-c4-nJw" secondAttribute="trailing" id="6J5-Zk-6Ll"/>
+                            <constraint firstItem="T0H-c4-nJw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ye7-GH-4Kl"/>
+                            <constraint firstItem="T0H-c4-nJw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gdC-te-SLJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="T0H-c4-nJw" secondAttribute="bottom" id="s9j-bO-Zgu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="z0e-er-lQp"/>
+                    <navigationItem key="navigationItem" title="設定" id="nqq-a1-OhZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="nqq-a1-OhZ" id="KoN-AH-JeB"/>
+                        <outlet property="tableView" destination="T0H-c4-nJw" id="6tQ-IS-l7h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="71"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="70.982142857142847"/>
         </scene>
     </scenes>
     <resources>

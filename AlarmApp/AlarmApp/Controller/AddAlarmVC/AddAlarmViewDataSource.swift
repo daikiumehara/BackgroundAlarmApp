@@ -58,18 +58,6 @@ extension AddAlarmViewDataSource: RepeatDetailDelegate {
     }
 }
 
-extension AddAlarmViewDataSource: TitleDelegate {
-    func chengeTitle(_ data: String) {
-        self.alarmData.title = data
-    }
-}
-
-extension AddAlarmViewDataSource: TimeDelegate {
-    func chengeTime(_ data: Time) {
-        self.alarmData.time = data
-    }
-}
-
 extension AddAlarmViewDataSource: SnoozeDelegate {
     func chengeSnooze(_ data: Bool) {
         self.alarmData.snooze = data

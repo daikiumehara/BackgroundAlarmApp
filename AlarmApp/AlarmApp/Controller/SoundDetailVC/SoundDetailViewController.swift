@@ -16,18 +16,22 @@ class SoundDetailViewController: AddAlarmDetailViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(SoundCell.self)
-        tableView.delegate = self
-        tableView.dataSource = dataSource
-        navigationController?.delegate = self
-        colorConfigure()
+        self.navigationController?.delegate = self
+        configureTableView()
+        configureColor()
     }
 
-    private func colorConfigure() {
+    private func configureColor() {
         self.tableView.backgroundColor =
             colorModel.themeColor.cellBackgroundColor
         self.view.backgroundColor =
             colorModel.themeColor.cellBackgroundColor
+    }
+
+    private func configureTableView() {
+        tableView.register(SoundCell.self)
+        tableView.delegate = self
+        tableView.dataSource = dataSource
     }
 
     override func setDelegate(_ dataSource: AddAlarmViewDataSource,
