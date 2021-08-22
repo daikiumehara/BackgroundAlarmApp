@@ -14,6 +14,13 @@ class HomeTabViewController: ESTabBarController {
         super.viewDidLoad()
         configureVC()
         configureColor()
+        removeNotification()
+    }
+
+    // 機能が完成したら削除する
+    private func removeNotification() {
+        let center = UNUserNotificationCenter.current()
+        center.removeAllDeliveredNotifications()
     }
 
     private func configureVC() {

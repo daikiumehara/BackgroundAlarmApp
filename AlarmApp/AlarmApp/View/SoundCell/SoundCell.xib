@@ -32,7 +32,7 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQv-Qe-tiC">
                         <rect key="frame" x="281" y="10" width="24" height="24"/>
-                        <state key="normal" image="volume.2" catalog="system"/>
+                        <state key="normal" image="speaker.wave.2" catalog="system"/>
                         <connections>
                             <action selector="didTapPlayButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oHA-tO-VBX"/>
                         </connections>
@@ -59,6 +59,6 @@
     </objects>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="volume.2" catalog="system" width="128" height="90"/>
+        <image name="speaker.wave.2" catalog="system" width="128" height="90"/>
     </resources>
 </document>

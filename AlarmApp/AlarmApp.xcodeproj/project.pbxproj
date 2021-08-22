@@ -143,7 +143,7 @@
 		A61D915226C63B1B0038CDE2 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTabViewController.swift; path = AlarmApp/Controller/HomeTabViewController.swift; sourceTree = SOURCE_ROOT; };
 		A61D915426C6402D0038CDE2 /* SoundDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SoundDetail.storyboard; sourceTree = "<group>"; };
 		A61D915726C645A50038CDE2 /* RepeatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDetailViewController.swift; sourceTree = "<group>"; };
-		A61D915926C645B20038CDE2 /* RepeatDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = RepeatDetail.storyboard; path = AlarmApp/Controller/RepeatDetailVC/RepeatDetail.storyboard; sourceTree = SOURCE_ROOT; };
+		A61D915926C645B20038CDE2 /* RepeatDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = RepeatDetail.storyboard; path = AlarmApp/View/Storyboard/RepeatDetail.storyboard; sourceTree = SOURCE_ROOT; };
 		A61D915B26C647740038CDE2 /* RepeatDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDetailDataSource.swift; sourceTree = "<group>"; };
 		A61D915E26C64A750038CDE2 /* RepeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCell.swift; sourceTree = "<group>"; };
 		A61D915F26C64A750038CDE2 /* RepeatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepeatCell.xib; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		A6C8D3D326AB14D7000684ED /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		A6C8D3D526AB14FB000684ED /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		A6C8D3D726AB1528000684ED /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		A6C8D3D926AB1536000684ED /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Alarm.storyboard; path = AlarmApp/Controller/Alarm.storyboard; sourceTree = SOURCE_ROOT; };
+		A6C8D3D926AB1536000684ED /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Alarm.storyboard; path = AlarmApp/View/Storyboard/Alarm.storyboard; sourceTree = SOURCE_ROOT; };
 		A6C8D3DB26AB1544000684ED /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		A6C8D3DD26AB1554000684ED /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		A6C8D3DF26AB27AE000684ED /* BouncesContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncesContentView.swift; sourceTree = "<group>"; };
@@ -300,32 +300,6 @@
 			path = SelectedBackgroundView;
 			sourceTree = "<group>";
 		};
-		A61D915026C636C20038CDE2 /* SoundDetailVC */ = {
-			isa = PBXGroup;
-			children = (
-				A6A3B54526BC1C8C00C124A8 /* SoundDetailViewController.swift */,
-				A6A3B54B26BC62CD00C124A8 /* SoundDetailDataSource.swift */,
-			);
-			path = SoundDetailVC;
-			sourceTree = "<group>";
-		};
-		A61D915126C639870038CDE2 /* HomeTabViewController */ = {
-			isa = PBXGroup;
-			children = (
-				A61D915226C63B1B0038CDE2 /* HomeTabViewController.swift */,
-			);
-			path = HomeTabViewController;
-			sourceTree = "<group>";
-		};
-		A61D915626C645750038CDE2 /* RepeatDetailVC */ = {
-			isa = PBXGroup;
-			children = (
-				A61D915726C645A50038CDE2 /* RepeatDetailViewController.swift */,
-				A61D915B26C647740038CDE2 /* RepeatDetailDataSource.swift */,
-			);
-			path = RepeatDetailVC;
-			sourceTree = "<group>";
-		};
 		A61D915D26C64A410038CDE2 /* RepeatCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,15 +325,6 @@
 				A61FB9D926CA26F700BBAADD /* ThemeColorSettingCell.xib */,
 			);
 			path = ThemeColorSettingCell;
-			sourceTree = "<group>";
-		};
-		A61FB9DE26CA30B500BBAADD /* SettingVC */ = {
-			isa = PBXGroup;
-			children = (
-				A6C8D3D726AB1528000684ED /* SettingViewController.swift */,
-				A61FB9D526CA24DB00BBAADD /* SettingViewDataSource.swift */,
-			);
-			path = SettingVC;
 			sourceTree = "<group>";
 		};
 		A61FB9DF26CA354A00BBAADD /* SubClass */ = {
@@ -410,15 +375,6 @@
 				A61FB9E926CA40D500BBAADD /* SelectedCellProtocol.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		A6A3B55826C04FFC00C124A8 /* AddAlarmVC */ = {
-			isa = PBXGroup;
-			children = (
-				A619E38326B1B24800FB0FB8 /* AddAlarmViewController.swift */,
-				A6A3B54F26BE667600C124A8 /* AddAlarmViewDataSource.swift */,
-			);
-			path = AddAlarmVC;
 			sourceTree = "<group>";
 		};
 		A6A3B55B26C105F700C124A8 /* AddAlarmDetailCell */ = {
@@ -492,14 +448,14 @@
 		A6C8D3CE26AB0778000684ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A61FB9DE26CA30B500BBAADD /* SettingVC */,
-				A61D915626C645750038CDE2 /* RepeatDetailVC */,
-				A61D915126C639870038CDE2 /* HomeTabViewController */,
-				A61D915026C636C20038CDE2 /* SoundDetailVC */,
-				A6A3B55826C04FFC00C124A8 /* AddAlarmVC */,
-				A6C8D3EC26ABE967000684ED /* AlarmVC */,
+				A6C8D3D726AB1528000684ED /* SettingViewController.swift */,
+				A61D915726C645A50038CDE2 /* RepeatDetailViewController.swift */,
+				A61D915226C63B1B0038CDE2 /* HomeTabViewController.swift */,
+				A6A3B54526BC1C8C00C124A8 /* SoundDetailViewController.swift */,
 				A6C8D3D526AB14FB000684ED /* TimerViewController.swift */,
+				A619E38326B1B24800FB0FB8 /* AddAlarmViewController.swift */,
 				A61FB9D326C97F2400BBAADD /* ColorPickerViewController.swift */,
+				A6C8D3EC26ABE967000684ED /* AlarmVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -507,6 +463,8 @@
 		A6C8D3CF26AB0781000684ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6DAFBFB26D21F980080B0B4 /* BouncesContentView */,
+				A6DAFBF926D21F5C0080B0B4 /* Storyboard */,
 				A61FB9E426CA3D6C00BBAADD /* SettingCell */,
 				A61FB9D726CA26A200BBAADD /* ThemeColorSettingCell */,
 				A61D916226C69EDF0038CDE2 /* TitleSettingView */,
@@ -516,14 +474,6 @@
 				A62F167226B50FFA0042A80E /* TimeSettingView */,
 				A619E36226AE520100FB0FB8 /* TimerButton */,
 				A6C8D3E326ABCF00000684ED /* AlarmCell */,
-				A6C8D3A326A90C28000684ED /* Home.storyboard */,
-				A6C8D3D926AB1536000684ED /* Alarm.storyboard */,
-				A6C8D3DB26AB1544000684ED /* Timer.storyboard */,
-				A6C8D3DD26AB1554000684ED /* Setting.storyboard */,
-				A61D915426C6402D0038CDE2 /* SoundDetail.storyboard */,
-				A619E38126B1B21C00FB0FB8 /* AddAlarm.storyboard */,
-				A61D915926C645B20038CDE2 /* RepeatDetail.storyboard */,
-				A6C8D3DF26AB27AE000684ED /* BouncesContentView.swift */,
 				A61D90FB26C4E1BB0038CDE2 /* SelectedBackgroundView */,
 			);
 			path = View;
@@ -532,6 +482,9 @@
 		A6C8D3D026AB078A000684ED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A6DAFBF726D21DAC0080B0B4 /* RepeatDetail */,
+				A6DAFBF626D21B390080B0B4 /* Setting */,
+				A6DAFBF526D21ADB0080B0B4 /* AddAlarm */,
 				A6C8D3F326ABEC4F000684ED /* enum */,
 				A6C8D3E826ABD550000684ED /* AlarmData.swift */,
 				A6C8D3EA26ABD58D000684ED /* SoundData.swift */,
@@ -543,6 +496,8 @@
 				A619E37C26B195D800FB0FB8 /* Time.swift */,
 				A619E38526B1B8DF00FB0FB8 /* MoelLocator.swift */,
 				A61D90F526C40C030038CDE2 /* SoundPlayer.swift */,
+				A6C8D3EF26ABE99D000684ED /* AlarmViewDataSource.swift */,
+				A6A3B54B26BC62CD00C124A8 /* SoundDetailDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -560,7 +515,6 @@
 			isa = PBXGroup;
 			children = (
 				A6C8D3D326AB14D7000684ED /* AlarmViewController.swift */,
-				A6C8D3EF26ABE99D000684ED /* AlarmViewDataSource.swift */,
 				A6C8D3F126ABE9AC000684ED /* AlarmViewLayout.swift */,
 			);
 			path = AlarmVC;
@@ -569,10 +523,7 @@
 		A6C8D3F326ABEC4F000684ED /* enum */ = {
 			isa = PBXGroup;
 			children = (
-				A6A3B54D26BE65A400C124A8 /* AddAlarmRowInfo.swift */,
 				A6C8D3E126AB2A61000684ED /* ThemeColor.swift */,
-				A61D90FE26C50D520038CDE2 /* RepeatRowInfo.swift */,
-				A61FB9D126C9435B00BBAADD /* SettingRowInfo.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -605,6 +556,55 @@
 				A6D5271826BBDC8F00EB5931 /* AddAlarmSnoozeCell.xib */,
 			);
 			path = AddAlarmSnoozeCell;
+			sourceTree = "<group>";
+		};
+		A6DAFBF526D21ADB0080B0B4 /* AddAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				A6A3B54F26BE667600C124A8 /* AddAlarmViewDataSource.swift */,
+				A6A3B54D26BE65A400C124A8 /* AddAlarmRowInfo.swift */,
+			);
+			path = AddAlarm;
+			sourceTree = "<group>";
+		};
+		A6DAFBF626D21B390080B0B4 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A61FB9D126C9435B00BBAADD /* SettingRowInfo.swift */,
+				A61FB9D526CA24DB00BBAADD /* SettingViewDataSource.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A6DAFBF726D21DAC0080B0B4 /* RepeatDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A61D915B26C647740038CDE2 /* RepeatDetailDataSource.swift */,
+				A61D90FE26C50D520038CDE2 /* RepeatRowInfo.swift */,
+			);
+			path = RepeatDetail;
+			sourceTree = "<group>";
+		};
+		A6DAFBF926D21F5C0080B0B4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A6C8D3A326A90C28000684ED /* Home.storyboard */,
+				A6C8D3D926AB1536000684ED /* Alarm.storyboard */,
+				A6C8D3DB26AB1544000684ED /* Timer.storyboard */,
+				A6C8D3DD26AB1554000684ED /* Setting.storyboard */,
+				A61D915426C6402D0038CDE2 /* SoundDetail.storyboard */,
+				A619E38126B1B21C00FB0FB8 /* AddAlarm.storyboard */,
+				A61D915926C645B20038CDE2 /* RepeatDetail.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A6DAFBFB26D21F980080B0B4 /* BouncesContentView */ = {
+			isa = PBXGroup;
+			children = (
+				A6C8D3DF26AB27AE000684ED /* BouncesContentView.swift */,
+			);
+			path = BouncesContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -11,7 +11,7 @@ import ESTabBarController_swift
 class SettingViewController: UIViewController {
     @IBOutlet private var navigationBar: UINavigationItem!
     @IBOutlet private var tableView: UITableView!
-    
+
     private lazy var colorModel = ModelLocator.colorModel {
         didSet {
             colorModel.addVC(self)
@@ -66,5 +66,12 @@ extension SettingViewController {
                                      selectedImage: UIImage(systemName: "gearshape"),
                                      tag: 3)
         return initialVC
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension SettingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        44
     }
 }

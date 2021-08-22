@@ -12,7 +12,7 @@ extension UITableView {
         self.register(UINib(nibName: T.identifier, bundle: nil),
                       forCellReuseIdentifier: T.identifier)
     }
-    
+
     func dequeueReusableCell<T: UITableViewCell>(withCellType: T.Type,
                                                  for indexPath: IndexPath) -> T {
         guard let cell = self.dequeueReusableCell(withIdentifier: T.identifier,
