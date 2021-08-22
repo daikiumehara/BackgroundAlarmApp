@@ -43,18 +43,21 @@ class AddAlarmViewDataSource: NSObject, UITableViewDataSource {
     }
 }
 
+// MARK: - SoundDetailDelegate
 extension AddAlarmViewDataSource: SoundDetailDelegate {
     func chengeSoundData(_ data: SoundData) {
         self.alarmData.soundData = data
     }
 }
 
+// MARK: - RepeatDetailDelegate
 extension AddAlarmViewDataSource: RepeatDetailDelegate {
     func chengeRepeatDate(_ data: [Bool]) {
         self.alarmData.alarmRepeat = data
     }
 }
 
+// MARK: - SnoozeDelegate
 extension AddAlarmViewDataSource: SnoozeDelegate {
     func chengeSnooze(_ data: Bool) {
         self.alarmData.snooze = data
