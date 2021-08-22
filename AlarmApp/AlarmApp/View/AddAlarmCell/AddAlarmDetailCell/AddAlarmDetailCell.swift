@@ -11,11 +11,13 @@ class AddAlarmDetailCell: AddAlarmCell {
     @IBOutlet private var itemLabel: UILabel!
 
     private var colorModel = ModelLocator.colorModel
-    private var dataSource: UITableViewDataSource!
+//    private var dataSource: UITableViewDataSource!
+    private var didTapAction: (() -> Void)!
 
-    override func configure(title: String, item: String) {
+    override func configure(title: String, item: String, didTap: @escaping () -> Void) {
         titleLabel.text = title
         itemLabel.text = item
+        self.didTapAction = didTap
         configureColor()
     }
 
@@ -29,6 +31,10 @@ class AddAlarmDetailCell: AddAlarmCell {
         self.selectedBackgroundView = CellSelectedBackgroundView()
     }
 
-    func didTap() {
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        if selected {
+            didTapAction()
+        }
     }
 }

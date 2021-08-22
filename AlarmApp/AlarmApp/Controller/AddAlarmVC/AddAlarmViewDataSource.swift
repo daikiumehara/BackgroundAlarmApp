@@ -28,17 +28,14 @@ class AddAlarmViewDataSource: NSObject, UITableViewDataSource {
         guard let rowInfo = AddAlarmRowInfo(rawValue: indexPath.row) else {
             fatalError("列が見つかりませんでした")
         }
-
         guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: rowInfo.cellIdentifier, for: indexPath) as? AddAlarmCell else {
             fatalError("予想外のセルが返されました")
         }
         cell.configure(title: rowInfo.labelText,
-                       item: rowInfo.getRowItem(alarmData))
-        guard let snoozeCell = cell as? AddAlarmSnoozeCell else {
-            return cell
-        }
-        return snoozeCell
+                       item: rowInfo.getRowItem(alarmData),
+                       didTap: rowInfo.didTapAction(viewController, self))
+        return cell
     }
 
     func getAlarmData() -> AlarmData {

@@ -63,7 +63,7 @@
 		A6A3B55026BE667700C124A8 /* AddAlarmViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B54F26BE667600C124A8 /* AddAlarmViewDataSource.swift */; };
 		A6A3B55226C0384800C124A8 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B55126C0384800C124A8 /* Bool+Extension.swift */; };
 		A6A3B55426C038DE00C124A8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B55326C038DE00C124A8 /* String+Extension.swift */; };
-		A6A3B55626C04FB300C124A8 /* AddAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B55526C04FB200C124A8 /* AddAlarmCell.swift */; };
+		A6A3B55626C04FB300C124A8 /* AddAlarmCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B55526C04FB200C124A8 /* AddAlarmCellProtocol.swift */; };
 		A6A3B55E26C1061D00C124A8 /* AddAlarmDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B55C26C1061D00C124A8 /* AddAlarmDetailCell.swift */; };
 		A6A3B55F26C1061D00C124A8 /* AddAlarmDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6A3B55D26C1061D00C124A8 /* AddAlarmDetailCell.xib */; };
 		A6C8D39E26A90C28000684ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D39D26A90C28000684ED /* AppDelegate.swift */; };
@@ -92,6 +92,7 @@
 		A6D5271226BB805A00EB5931 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5271126BB805A00EB5931 /* UIView+Extension.swift */; };
 		A6D5271926BBDC8F00EB5931 /* AddAlarmSnoozeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5271726BBDC8F00EB5931 /* AddAlarmSnoozeCell.swift */; };
 		A6D5271A26BBDC8F00EB5931 /* AddAlarmSnoozeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D5271826BBDC8F00EB5931 /* AddAlarmSnoozeCell.xib */; };
+		A6DAFBF426D206F20080B0B4 /* AddAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAFBF326D206F20080B0B4 /* AddAlarmCell.swift */; };
 		AF9ACB9444068D99589DA3AF /* Pods_AlarmApp_AlarmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C345D327125BA6F122680 /* Pods_AlarmApp_AlarmAppUITests.framework */; };
 		D971C42591C587F511E71236 /* Pods_AlarmAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C6B18270BFCFCD00DA3A33 /* Pods_AlarmAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -173,7 +174,7 @@
 		A6A3B54F26BE667600C124A8 /* AddAlarmViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewDataSource.swift; sourceTree = "<group>"; };
 		A6A3B55126C0384800C124A8 /* Bool+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
 		A6A3B55326C038DE00C124A8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		A6A3B55526C04FB200C124A8 /* AddAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmCell.swift; sourceTree = "<group>"; };
+		A6A3B55526C04FB200C124A8 /* AddAlarmCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmCellProtocol.swift; sourceTree = "<group>"; };
 		A6A3B55C26C1061D00C124A8 /* AddAlarmDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmDetailCell.swift; sourceTree = "<group>"; };
 		A6A3B55D26C1061D00C124A8 /* AddAlarmDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAlarmDetailCell.xib; sourceTree = "<group>"; };
 		A6C8D39A26A90C28000684ED /* AlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +209,7 @@
 		A6D5271126BB805A00EB5931 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A6D5271726BBDC8F00EB5931 /* AddAlarmSnoozeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmSnoozeCell.swift; sourceTree = "<group>"; };
 		A6D5271826BBDC8F00EB5931 /* AddAlarmSnoozeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAlarmSnoozeCell.xib; sourceTree = "<group>"; };
+		A6DAFBF326D206F20080B0B4 /* AddAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmCell.swift; sourceTree = "<group>"; };
 		A943C5B272FFCBBE5D9FB1EA /* Pods-AlarmApp-AlarmAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp-AlarmAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AlarmApp-AlarmAppUITests/Pods-AlarmApp-AlarmAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A95F69DA3E3E59017BEDA4FF /* Pods-AlarmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp.release.xcconfig"; path = "Target Support Files/Pods-AlarmApp/Pods-AlarmApp.release.xcconfig"; sourceTree = "<group>"; };
 		C57C345D327125BA6F122680 /* Pods_AlarmApp_AlarmAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmApp_AlarmAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +367,7 @@
 			children = (
 				A61FB9CF26C8BA6100BBAADD /* AddAlarmDetailViewController.swift */,
 				A61FB9EB26CA413D00BBAADD /* SelectedCell.swift */,
+				A6DAFBF326D206F20080B0B4 /* AddAlarmCell.swift */,
 			);
 			path = SubClass;
 			sourceTree = "<group>";
@@ -399,7 +402,7 @@
 		A6A3B55726C04FDC00C124A8 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				A6A3B55526C04FB200C124A8 /* AddAlarmCell.swift */,
+				A6A3B55526C04FB200C124A8 /* AddAlarmCellProtocol.swift */,
 				A61FB9CA26C80DBA00BBAADD /* SoundDetailDelegate.swift */,
 				A61FB9E026CA359800BBAADD /* RepeatDetailDelegate.swift */,
 				A61FB9E226CA35B300BBAADD /* SnoozeDelegate.swift */,
@@ -892,7 +895,7 @@
 				A6A3B55026BE667700C124A8 /* AddAlarmViewDataSource.swift in Sources */,
 				A61FB9E126CA359800BBAADD /* RepeatDetailDelegate.swift in Sources */,
 				A6A3B54C26BC62CD00C124A8 /* SoundDetailDataSource.swift in Sources */,
-				A6A3B55626C04FB300C124A8 /* AddAlarmCell.swift in Sources */,
+				A6A3B55626C04FB300C124A8 /* AddAlarmCellProtocol.swift in Sources */,
 				A619E36426AE522800FB0FB8 /* TimerButton.swift in Sources */,
 				A6D5270E26BB7CE900EB5931 /* UICollectionView+Extension.swift in Sources */,
 				A61FB9D626CA24DB00BBAADD /* SettingViewDataSource.swift in Sources */,
@@ -904,6 +907,7 @@
 				A61D90FF26C50D530038CDE2 /* RepeatRowInfo.swift in Sources */,
 				A6C8D3F226ABE9AC000684ED /* AlarmViewLayout.swift in Sources */,
 				A6A3B54A26BC4D2E00C124A8 /* UITableView+Extension.swift in Sources */,
+				A6DAFBF426D206F20080B0B4 /* AddAlarmCell.swift in Sources */,
 				A61FB9D226C9435B00BBAADD /* SettingRowInfo.swift in Sources */,
 				A62F167426B510150042A80E /* TimeSettingView.swift in Sources */,
 				A6C8D3E026AB27AE000684ED /* BouncesContentView.swift in Sources */,

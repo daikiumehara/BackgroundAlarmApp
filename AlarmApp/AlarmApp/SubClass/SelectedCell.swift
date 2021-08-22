@@ -8,7 +8,7 @@
 import UIKit
 
 class SelectedCell: UITableViewCell, SelectedCellProtocol {
-    var didTapAction: (() -> ())!
+    var didTapAction: (() -> Void)!
 
     func configure(_ title: String, _ didTapAction: @escaping () -> Void) {}
 }

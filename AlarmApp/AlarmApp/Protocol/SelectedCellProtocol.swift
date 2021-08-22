@@ -9,6 +9,5 @@ import Foundation
 
 protocol SelectedCellProtocol {
     var didTapAction: (() -> Void)! { get set }
-
     func configure(_ title: String, _ didTapAction: @escaping () -> Void)
 }

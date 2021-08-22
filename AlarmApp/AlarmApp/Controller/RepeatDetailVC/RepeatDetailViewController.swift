@@ -25,10 +25,9 @@ class RepeatDetailViewController: AddAlarmDetailViewController {
         tableView.dataSource = dataSource
     }
 
-    override func setDelegate(_ dataSource: AddAlarmViewDataSource,
-                              data: AlarmData) {
-        self.delegate = dataSource
-        self.repeatDatas = data.alarmRepeat
+    override func configure(_ dataSource: AddAlarmViewDataSource) {
+        super.configure(dataSource)
+        self.repeatDatas = dataSource.getAlarmData().alarmRepeat
     }
 }
 
@@ -58,6 +57,7 @@ extension RepeatDetailViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UINavigationControllerDelegate
 extension RepeatDetailViewController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController,
                               willShow viewController: UIViewController,

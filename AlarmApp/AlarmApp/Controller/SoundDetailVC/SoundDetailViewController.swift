@@ -34,10 +34,10 @@ class SoundDetailViewController: AddAlarmDetailViewController {
         tableView.dataSource = dataSource
     }
 
-    override func setDelegate(_ dataSource: AddAlarmViewDataSource,
-                              data: AlarmData) {
-        self.delegate = dataSource
-        self.selected = ModelLocator.soundModel.datas.firstIndex(of: data.soundData)!
+    override func configure(_ dataSource: AddAlarmViewDataSource) {
+        super.configure(dataSource)
+        self.selected = ModelLocator.soundModel.datas
+            .firstIndex(of: dataSource.getAlarmData().soundData)!
     }
 }
 
@@ -65,6 +65,7 @@ extension SoundDetailViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UINavigationControllerDelegate
 extension SoundDetailViewController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController,
                               willShow viewController: UIViewController,

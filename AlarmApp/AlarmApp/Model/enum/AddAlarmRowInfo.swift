@@ -29,19 +29,29 @@ enum AddAlarmRowInfo: Int, CaseIterable {
         }
     }
 
-    var detailVC: UIViewController? {
-        switch self {
-        case .alarmRepeat: return RepeatDetailViewController.instantiate()
-        case .sound: return SoundDetailViewController.instantiate()
-        case .snooze: return nil
-        }
-    }
-
     func getRowItem(_ data: AlarmData) -> String {
         switch self {
         case .alarmRepeat: return ""
         case .sound: return data.soundData.soundName
         case .snooze: return data.snooze.toString
+        }
+    }
+
+    func didTapAction(_ viewController: UIViewController, _ dataSource: AddAlarmViewDataSource) -> (() -> Void) {
+        switch self {
+        case .alarmRepeat:
+            return { [weak viewController, dataSource] in
+                let nextVC = RepeatDetailViewController.instantiate()
+                nextVC.configure(dataSource)
+                viewController?.navigationController?.pushViewController(nextVC, animated: true)
+            }
+        case .sound:
+            return { [weak viewController, dataSource] in
+                let nextVC = SoundDetailViewController.instantiate()
+                nextVC.configure(dataSource)
+                viewController?.navigationController?.pushViewController(nextVC, animated: true)
+            }
+        case .snooze: return {}
         }
     }
 }

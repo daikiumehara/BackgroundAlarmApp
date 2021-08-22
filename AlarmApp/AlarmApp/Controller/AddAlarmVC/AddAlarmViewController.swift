@@ -78,13 +78,4 @@ extension AddAlarmViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         44
     }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rowInfo = AddAlarmRowInfo(rawValue: indexPath.row)!
-        guard let nextVC = rowInfo.detailVC as? AddAlarmDetailViewController else {
-            return
-        }
-        nextVC.setDelegate(dataSource, data: dataSource.getAlarmData())
-        self.navigationController?.pushViewController(nextVC, animated: true)
-    }
 }

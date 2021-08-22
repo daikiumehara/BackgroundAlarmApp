@@ -30,8 +30,8 @@
             filePath = "AlarmApp/Controller/AddAlarmVC/AddAlarmViewDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "chengeSoundData(_:)"
             landmarkType = "7">
          </BreakpointContent>

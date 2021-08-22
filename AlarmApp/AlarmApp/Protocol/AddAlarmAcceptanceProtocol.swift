@@ -9,5 +9,5 @@ import Foundation
 
 protocol AddAlarmAcceptanceProtocol: NSObject {
     var delegate: AddAlarmViewDataSource? { get set }
-    func setDelegate(_ dataSource: AddAlarmViewDataSource, data: AlarmData)
+    func configure(_ dataSource: AddAlarmViewDataSource)
 }

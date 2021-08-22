@@ -7,10 +7,10 @@
 
 import UIKit
 
-class AddAlarmDetailViewController: UIViewController,
-                                    AddAlarmAcceptanceProtocol {
+class AddAlarmDetailViewController: UIViewController, AddAlarmAcceptanceProtocol {
     weak var delegate: AddAlarmViewDataSource?
 
-    func setDelegate(_ dataSource: AddAlarmViewDataSource, data: AlarmData) {
+    func configure(_ dataSource: AddAlarmViewDataSource) {
+        self.delegate = dataSource
     }
 }

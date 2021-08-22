@@ -15,10 +15,11 @@ class AddAlarmSnoozeCell: AddAlarmCell {
     private var item: Bool!
     private weak var dataSource: AddAlarmViewDataSource!
 
-    override func configure(title: String, item: String) {
+    override func configure(title: String, item: String, didTap: @escaping () -> Void) {
         self.titleLabel.text = title
         self.item = item.toBool
         self.snoozeSwitch.isOn = self.item
+        _ = didTap
         configureColor()
     }
 
