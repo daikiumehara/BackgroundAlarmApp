@@ -15,7 +15,7 @@ class ColorModel {
     }
     // Tabが選択されていない時のカラー
     var subColor = #colorLiteral(red: 0.6862131953, green: 0.686313808, blue: 0.6861912012, alpha: 1)
-    var themeColor = ThemeColor.normal
+    var themeColor: ThemeColorProtocol = NormalThemecolor()
 
     private var viewController: UIViewController?
 

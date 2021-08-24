@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -63,7 +62,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="270" height="90"/>
             <connections>
-                <outlet property="alameNameLabel" destination="uUJ-YW-emZ" id="jlT-rQ-w9g"/>
+                <outlet property="alarmNameLabel" destination="uUJ-YW-emZ" id="jlT-rQ-w9g"/>
                 <outlet property="alarmSwitch" destination="Hub-wm-QY1" id="SXL-Lx-CrG"/>
                 <outlet property="bellImage" destination="VPZ-D5-OEV" id="hyA-kc-PhP"/>
                 <outlet property="timeLabel" destination="Uoc-Hk-a3X" id="5hL-MX-jgs"/>

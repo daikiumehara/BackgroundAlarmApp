@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct CustomFormatter {
+enum CustomFormatter {
     static func dateToString(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy:MM:dd:HH:mm:ss"
         return formatter.string(from: date)
     }
 
-    static func dateToTime(_ date: Date) -> Time {
+    static func dateToTime(_ date: Date) -> HourMinute {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         let timeStrings = formatter.string(from: date).split(separator: ":")
@@ -22,6 +22,6 @@ struct CustomFormatter {
               let minute = Int(timeStrings[1]) else {
             fatalError("dateからTimeへの変換でエラーが発生しました")
         }
-        return Time(hour: hour, minute: minute)
+        return HourMinute(hour: hour, minute: minute)
     }
 }

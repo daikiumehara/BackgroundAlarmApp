@@ -10,7 +10,7 @@ import UIKit
 class AlarmCell: UICollectionViewCell {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var timeLabel: UILabel!
-    @IBOutlet private var alameNameLabel: UILabel!
+    @IBOutlet private var alarmNameLabel: UILabel!
     @IBOutlet private var bellImage: UIImageView!
     @IBOutlet private var alarmSwitch: UISwitch!
 
@@ -27,8 +27,8 @@ class AlarmCell: UICollectionViewCell {
     private func dataConfigure(_ data: AlarmData) {
         self.titleLabel.text = data.title
         self.timeLabel.text = data.time.toString()
-        self.alameNameLabel.text = data.soundData.soundName
-        self.alarmSwitch.isOn = alarmData.isSetting
+        self.alarmNameLabel.text = data.soundData.soundName
+        self.alarmSwitch.isOn = alarmData.isOn
     }
 
     private func appearanceConfigure(_ model: ColorModel) {
@@ -37,7 +37,7 @@ class AlarmCell: UICollectionViewCell {
         self.layer.borderWidth = 0.5
         self.titleLabel.textColor = model.themeColor.textColor
         self.timeLabel.textColor = model.themeColor.textColor
-        self.alameNameLabel.textColor = model.themeColor.textColor
+        self.alarmNameLabel.textColor = model.themeColor.textColor
         self.bellImage.tintColor = model.themeColor.textColor
         self.alarmSwitch.tintColor = model.mainColor
         self.alarmSwitch.onTintColor = model.mainColor

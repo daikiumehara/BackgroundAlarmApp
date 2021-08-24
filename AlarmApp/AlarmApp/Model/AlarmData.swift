@@ -5,54 +5,52 @@
 //  Created by daiki umehara on 2021/07/24.
 //
 
-import Foundation
 import UIKit
 
 struct AlarmData: Comparable {
     var title: String
-    var time: Time
+    var time: HourMinute
     var soundData: SoundData
-    var alarmIdentifier: String  // 作成した年日時秒(アラームの識別に使用)
+    var alarmIdentifier = UUID().uuidString
     var snooze: Bool
     var alarmRepeat: [Bool]
-    private(set) var isSetting: Bool {
+    private(set) var isOn: Bool {
         didSet {
             settingAlarm()
         }
     }
 
-    init(title: String, time: Time, soundData: SoundData,
-         identifier: String, snooze: Bool, alarmRepeat: [Bool], setting: Bool) {
+    init(title: String, time: HourMinute, soundData: SoundData,
+         snooze: Bool, alarmRepeat: [Bool], isOn: Bool) {
         self.title = title
         self.time = time
         self.soundData = soundData
-        self.alarmIdentifier = identifier
         self.snooze = snooze
         self.alarmRepeat = alarmRepeat
-        self.isSetting = setting
-        if setting {
+        self.isOn = isOn
+        if isOn {
             addAlarm()
         }
     }
 
     static func == (lhs: AlarmData, rhs: AlarmData) -> Bool {
-        return lhs.alarmIdentifier == rhs.alarmIdentifier
+        return lhs.time.toDate() > rhs.time.toDate()
     }
 
     static func < (lhs: AlarmData, rhs: AlarmData) -> Bool {
-        return  lhs.time.toDate() > rhs.time.toDate()
+        return lhs.time.toDate() > rhs.time.toDate()
     }
 
     mutating func setAlarm() {
-        self.isSetting = true
+        self.isOn = true
     }
 
     mutating func cancelAlarm() {
-        self.isSetting = false
+        self.isOn = false
     }
 
     private func settingAlarm() {
-        if isSetting {
+        if isOn {
             addAlarm()
         } else {
             removeAlarm()
@@ -98,9 +96,8 @@ struct AlarmData: Comparable {
 extension AlarmData {
     static func newData() -> AlarmData {
         let repeatDatas = [Bool](repeating: false, count: RepeatRowInfo.allCases.count)
-        return AlarmData(title: "タイトル", time: Time(hour: 12, minute: 0),
+        return AlarmData(title: "タイトル", time: HourMinute(hour: 12, minute: 0),
                          soundData: SoundData(soundName: "ベルの音", fileName: "clock_bell.mp3"),
-                         identifier: CustomFormatter.dateToString(Date()),
-                         snooze: false, alarmRepeat: repeatDatas, setting: false)
+                         snooze: false, alarmRepeat: repeatDatas, isOn: false)
     }
 }

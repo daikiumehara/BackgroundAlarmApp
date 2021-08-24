@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Time {
+struct HourMinute {
     var hour: Int
     var minute: Int
 

@@ -11,11 +11,7 @@ import ESTabBarController_swift
 class TimerViewController: UIViewController {
     @IBOutlet private var startAndStopButton: TimerButton!
 
-    private lazy var colorModel = ModelLocator.colorModel {
-        didSet {
-            colorModel.addVC(self)
-        }
-    }
+    private var colorModel = ModelLocator.colorModel
 
     override func viewDidLoad() {
         super.viewDidLoad()

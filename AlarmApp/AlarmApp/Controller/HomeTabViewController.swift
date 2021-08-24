@@ -17,10 +17,10 @@ class HomeTabViewController: ESTabBarController {
         removeNotification()
     }
 
-    // 機能が完成したら削除する
     private func removeNotification() {
         let center = UNUserNotificationCenter.current()
         center.removeAllDeliveredNotifications()
+        #warning("機能が完成したら削除する")
     }
 
     private func configureVC() {

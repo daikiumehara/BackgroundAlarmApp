@@ -38,7 +38,7 @@ class TimeSettingView: UIView {
         view.layer.borderColor = colorModel.themeColor.textColor.cgColor
     }
 
-    func getTime() -> Time {
+    func getTime() -> HourMinute {
         let date = datePicker.date
         return CustomFormatter.dateToTime(date)
     }
