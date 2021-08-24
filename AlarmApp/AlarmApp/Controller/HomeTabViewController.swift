@@ -10,8 +10,11 @@ import ESTabBarController_swift
 
 class HomeTabViewController: ESTabBarController {
     private var colorModel = ModelLocator.colorModel
+    private var colorModelObserver: ColorModelObserver!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setObserver()
         configureVC()
         configureColor()
         removeNotification()
@@ -27,7 +30,6 @@ class HomeTabViewController: ESTabBarController {
         let alarmVC = AlarmViewController.instantiate()
         let timerVC = TimerViewController.instantiate()
         let settingVC = SettingViewController.instantiate()
-        self.colorModel.addVC(self)
         self.viewControllers = [alarmVC, timerVC, settingVC]
     }
 
@@ -36,5 +38,12 @@ class HomeTabViewController: ESTabBarController {
         self.tabBar.backgroundColor = colorModel.themeColor.tabBarColor
         self.tabBar.layer.borderWidth = 0.5
         self.tabBar.layer.borderColor = colorModel.themeColor.textColor.cgColor
+    }
+
+    private func setObserver() {
+        self.colorModelObserver = ColorModelObserver(colorModel: colorModel,
+                                                     changedHandler: { [weak self] in
+            self?.configureColor()
+        })
     }
 }

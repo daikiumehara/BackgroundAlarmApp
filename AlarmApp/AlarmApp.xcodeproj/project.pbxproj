@@ -95,6 +95,7 @@
 		A6DAFC0626D367950080B0B4 /* AlarmDataIdentifierEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAFC0526D367940080B0B4 /* AlarmDataIdentifierEquatable.swift */; };
 		A6DAFC0826D371860080B0B4 /* ThemeColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAFC0726D371860080B0B4 /* ThemeColorProtocol.swift */; };
 		A6DAFC0C26D372070080B0B4 /* NormalThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAFC0B26D372070080B0B4 /* NormalThemeColor.swift */; };
+		A6DAFC0F26D4C3CF0080B0B4 /* ColorModelObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DAFC0E26D4C3CF0080B0B4 /* ColorModelObserver.swift */; };
 		AF9ACB9444068D99589DA3AF /* Pods_AlarmApp_AlarmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57C345D327125BA6F122680 /* Pods_AlarmApp_AlarmAppUITests.framework */; };
 		D971C42591C587F511E71236 /* Pods_AlarmAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C6B18270BFCFCD00DA3A33 /* Pods_AlarmAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -214,6 +215,7 @@
 		A6DAFC0526D367940080B0B4 /* AlarmDataIdentifierEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDataIdentifierEquatable.swift; sourceTree = "<group>"; };
 		A6DAFC0726D371860080B0B4 /* ThemeColorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColorProtocol.swift; sourceTree = "<group>"; };
 		A6DAFC0B26D372070080B0B4 /* NormalThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalThemeColor.swift; sourceTree = "<group>"; };
+		A6DAFC0E26D4C3CF0080B0B4 /* ColorModelObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModelObserver.swift; sourceTree = "<group>"; };
 		A943C5B272FFCBBE5D9FB1EA /* Pods-AlarmApp-AlarmAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp-AlarmAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AlarmApp-AlarmAppUITests/Pods-AlarmApp-AlarmAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A95F69DA3E3E59017BEDA4FF /* Pods-AlarmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp.release.xcconfig"; path = "Target Support Files/Pods-AlarmApp/Pods-AlarmApp.release.xcconfig"; sourceTree = "<group>"; };
 		C57C345D327125BA6F122680 /* Pods_AlarmApp_AlarmAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmApp_AlarmAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -416,6 +418,7 @@
 		A6C8D39C26A90C28000684ED /* AlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				A6DAFC0D26D4C3B50080B0B4 /* Observer */,
 				A61FB9DF26CA354A00BBAADD /* SubClass */,
 				A6A3B55726C04FDC00C124A8 /* Protocol */,
 				A6D5270C26BB7CC900EB5931 /* Extension */,
@@ -611,6 +614,14 @@
 				A6DAFC0B26D372070080B0B4 /* NormalThemeColor.swift */,
 			);
 			path = ThemeColor;
+			sourceTree = "<group>";
+		};
+		A6DAFC0D26D4C3B50080B0B4 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				A6DAFC0E26D4C3CF0080B0B4 /* ColorModelObserver.swift */,
+			);
+			path = Observer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -921,6 +932,7 @@
 				A6C8D3EB26ABD58D000684ED /* SoundData.swift in Sources */,
 				A619E37D26B195D800FB0FB8 /* HourMinute.swift in Sources */,
 				A6DAFC0626D367950080B0B4 /* AlarmDataIdentifierEquatable.swift in Sources */,
+				A6DAFC0F26D4C3CF0080B0B4 /* ColorModelObserver.swift in Sources */,
 				A6C8D39E26A90C28000684ED /* AppDelegate.swift in Sources */,
 				A6D5271926BBDC8F00EB5931 /* AddAlarmSnoozeCell.swift in Sources */,
 				A6C8D3E926ABD550000684ED /* AlarmData.swift in Sources */,

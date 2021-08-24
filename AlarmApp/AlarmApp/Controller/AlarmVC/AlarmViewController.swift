@@ -14,17 +14,18 @@ class AlarmViewController: UIViewController {
     @IBOutlet private var navigationBar: UINavigationBar!
 
     private var colorModel = ModelLocator.colorModel
+    private var colorModelObserver: ColorModelObserver!
     private let alarmViewDataSource = AlarmViewDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         askPermissionNontification()
         configureCollectionView()
+        configureColor()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         self.alarmView.reloadData()
-        configureColor()
     }
 
     private func askPermissionNontification() {
@@ -52,6 +53,25 @@ class AlarmViewController: UIViewController {
         alarmView.dataSource = alarmViewDataSource
         alarmView.collectionViewLayout = AlarmViewLayout()
     }
+
+    private func configureTabItem() {
+        let contentView = BouncesContentView()
+        contentView.configure(self.colorModel)
+        self.tabBarItem = ESTabBarItem(contentView,
+                                     title: "アラーム",
+                                     image: UIImage(systemName: "alarm"),
+                                     selectedImage: UIImage(systemName: "alarm"),
+                                     tag: 1)
+    }
+
+    private func setObserver() {
+        self.colorModelObserver = ColorModelObserver(colorModel: self.colorModel,
+                                                     changedHandler: { [weak self] in
+                                                        self?.configureColor()
+                                                        self?.configureTabItem()
+                                                        self?.alarmView.reloadData()
+                                                     })
+    }
 }
 
 // MARK: - instantiate
@@ -61,13 +81,8 @@ extension AlarmViewController {
                 .instantiateInitialViewController()as? AlarmViewController else {
             fatalError("storyboardが見つかりません")
         }
-        let contentView = BouncesContentView()
-        contentView.configure(initialVC.colorModel)
-        initialVC.tabBarItem = ESTabBarItem(contentView,
-                                     title: "アラーム",
-                                     image: UIImage(systemName: "alarm"),
-                                     selectedImage: UIImage(systemName: "alarm"),
-                                     tag: 1)
+        initialVC.configureTabItem()
+        initialVC.setObserver()
         return initialVC
     }
 }
