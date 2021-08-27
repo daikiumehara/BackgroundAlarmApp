@@ -22,13 +22,6 @@ struct AlarmData: Comparable {
     static func < (lhs: AlarmData, rhs: AlarmData) -> Bool {
         return lhs.time.toDate() > rhs.time.toDate()
     }
-<<<<<<< HEAD
-=======
-
-    mutating func setAlarm() {
-
-    }
->>>>>>> develop
 }
 
 // MARK: - newData
