@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 import ESTabBarController_swift
 
 class AlarmViewController: UIViewController {
@@ -14,7 +15,7 @@ class AlarmViewController: UIViewController {
     @IBOutlet private var navigationBar: UINavigationBar!
 
     private var colorModel = ModelLocator.colorModel
-    private var colorModelObserver: ColorModelObserver!
+    private var cancellable: Cancellable?
     private let alarmViewDataSource = AlarmViewDataSource()
 
     override func viewDidLoad() {
@@ -64,13 +65,14 @@ class AlarmViewController: UIViewController {
                                      tag: 1)
     }
 
-    private func setObserver() {
-        self.colorModelObserver = ColorModelObserver(colorModel: self.colorModel,
-                                                     changedHandler: { [weak self] in
-                                                        self?.configureColor()
-                                                        self?.configureTabItem()
-                                                        self?.alarmView.reloadData()
-                                                     })
+    private func configureBinding() {
+        self.cancellable = colorModel.$mainColor
+            .sink(receiveValue: { [weak self] _ in
+                    print("alarmView")
+//                    self?.configureColor()
+                    self?.configureTabItem()
+//                    self?.alarmView.reloadData()
+            })
     }
 }
 
@@ -82,7 +84,7 @@ extension AlarmViewController {
             fatalError("storyboardが見つかりません")
         }
         initialVC.configureTabItem()
-        initialVC.setObserver()
+        initialVC.configureBinding()
         return initialVC
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 import ESTabBarController_swift
 
 class SettingViewController: UIViewController {
@@ -13,8 +14,8 @@ class SettingViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
 
     private var colorModel = ModelLocator.colorModel
-    private var colorModelObserver: ColorModelObserver!
     private var dataSource: SettingViewDataSource!
+    private var cancellable: Cancellable?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,13 +58,13 @@ class SettingViewController: UIViewController {
                                      tag: 3)
     }
 
-    private func setObserver() {
-        self.colorModelObserver = ColorModelObserver(colorModel: self.colorModel,
-                                                     changedHandler: { [weak self] in
-                                                        self?.configureColor()
-                                                        self?.configureTabItem()
-                                                        self?.tableView.reloadData()
-                                                     })
+    private func configureBinding() {
+        self.cancellable = colorModel.$mainColor
+            .sink(receiveValue: { [weak self] _ in
+                print("setting View")
+                self?.configureColor()
+                self?.configureTabItem()
+            })
     }
 }
 
@@ -75,7 +76,8 @@ extension SettingViewController {
             fatalError("storyboardが見つかりません")
         }
         initialVC.configureTabItem()
-        initialVC.setObserver()
+//        initialVC.setObserver()
+        initialVC.configureBinding()
         return initialVC
     }
 }

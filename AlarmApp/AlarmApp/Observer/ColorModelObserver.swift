@@ -18,7 +18,7 @@ class ColorModelObserver: NSObject {
         super.init()
 
         observation = observe(\.colorModelObserve?.mainColor,
-                              options: [.new, .old], changeHandler: { _, _ in
+                              options: [], changeHandler: { _, _ in
                                 self.changedHandler()
                               })
     }

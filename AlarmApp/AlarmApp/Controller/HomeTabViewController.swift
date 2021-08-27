@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import Combine
 import ESTabBarController_swift
 
 class HomeTabViewController: ESTabBarController {
     private var colorModel = ModelLocator.colorModel
-    private var colorModelObserver: ColorModelObserver!
+    private var cancellable: Cancellable?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setObserver()
+        configureBinding()
         configureVC()
         configureColor()
         removeNotification()
@@ -40,10 +41,10 @@ class HomeTabViewController: ESTabBarController {
         self.tabBar.layer.borderColor = colorModel.themeColor.textColor.cgColor
     }
 
-    private func setObserver() {
-        self.colorModelObserver = ColorModelObserver(colorModel: colorModel,
-                                                     changedHandler: { [weak self] in
-            self?.configureColor()
-        })
+    private func configureBinding() {
+        self.cancellable = colorModel.$mainColor
+            .sink(receiveValue: { [weak self] _ in
+                self?.configureColor()
+            })
     }
 }

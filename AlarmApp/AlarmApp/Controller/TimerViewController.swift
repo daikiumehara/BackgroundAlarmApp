@@ -6,14 +6,14 @@
 //
 
 import UIKit
+import Combine
 import ESTabBarController_swift
 
 class TimerViewController: UIViewController {
     @IBOutlet private var startAndStopButton: TimerButton!
 
     private var colorModel = ModelLocator.colorModel
-    private var colorModelObserver: ColorModelObserver!
-
+    private var cancellable: Cancellable?
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonConfigure()
@@ -33,13 +33,12 @@ class TimerViewController: UIViewController {
                                      tag: 2)
     }
 
-    private func setObserver() {
-        self.colorModelObserver = ColorModelObserver(colorModel: self.colorModel,
-                                                     changedHandler: { [weak self] in
-                                                        self?.configureColor()
-                                                        self?.configureTabItem()
-                                                        print("call")
-                                                     })
+    private func configureBinding() {
+        self.cancellable = colorModel.$mainColor
+            .sink(receiveValue: { [weak self] _ in
+                self?.configureColor()
+                self?.configureTabItem()
+            })
     }
 
     private func buttonConfigure() {
@@ -54,7 +53,7 @@ extension TimerViewController {
             fatalError("storyboardが見つかりません")
         }
         initialVC.configureTabItem()
-        initialVC.setObserver()
+        initialVC.configureBinding()
         return initialVC
     }
 }
