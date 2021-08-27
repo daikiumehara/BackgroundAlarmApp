@@ -87,6 +87,7 @@
 		A6C8D3F026ABE99D000684ED /* AlarmViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D3EF26ABE99D000684ED /* AlarmViewDataSource.swift */; };
 		A6C8D3F226ABE9AC000684ED /* AlarmViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D3F126ABE9AC000684ED /* AlarmViewLayout.swift */; };
 		A6C8D3F526ABECAC000684ED /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C8D3F426ABECAC000684ED /* ColorModel.swift */; };
+		A6CF5B6426D933F700C58CF1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CF5B6326D933F700C58CF1 /* NotificationManager.swift */; };
 		A6D5270E26BB7CE900EB5931 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5270D26BB7CE900EB5931 /* UICollectionView+Extension.swift */; };
 		A6D5271226BB805A00EB5931 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5271126BB805A00EB5931 /* UIView+Extension.swift */; };
 		A6D5271926BBDC8F00EB5931 /* AddAlarmSnoozeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5271726BBDC8F00EB5931 /* AddAlarmSnoozeCell.swift */; };
@@ -207,6 +208,7 @@
 		A6C8D3EF26ABE99D000684ED /* AlarmViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewDataSource.swift; sourceTree = "<group>"; };
 		A6C8D3F126ABE9AC000684ED /* AlarmViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewLayout.swift; sourceTree = "<group>"; };
 		A6C8D3F426ABECAC000684ED /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		A6CF5B6326D933F700C58CF1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		A6D5270D26BB7CE900EB5931 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		A6D5271126BB805A00EB5931 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A6D5271726BBDC8F00EB5931 /* AddAlarmSnoozeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmSnoozeCell.swift; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 				A6DAFBF626D21B390080B0B4 /* Setting */,
 				A6DAFBF526D21ADB0080B0B4 /* AddAlarm */,
 				A6C8D3E826ABD550000684ED /* AlarmData.swift */,
+				A6CF5B6326D933F700C58CF1 /* NotificationManager.swift */,
 				A6DAFC0526D367940080B0B4 /* AlarmDataIdentifierEquatable.swift */,
 				A6C8D3EA26ABD58D000684ED /* SoundData.swift */,
 				A619E35E26AE4AFB00FB0FB8 /* TimerData.swift */,
@@ -947,6 +950,7 @@
 				A619E36826AE700C00FB0FB8 /* AlarmModel.swift in Sources */,
 				A6A3B54E26BE65A400C124A8 /* AddAlarmRowInfo.swift in Sources */,
 				A61FB9CB26C80DBA00BBAADD /* SoundDetailDelegate.swift in Sources */,
+				A6CF5B6426D933F700C58CF1 /* NotificationManager.swift in Sources */,
 				A6DAFC0826D371860080B0B4 /* ThemeColorProtocol.swift in Sources */,
 				A61FB9E726CA3DD500BBAADD /* SettingCell.swift in Sources */,
 				A61D915326C63B1B0038CDE2 /* HomeTabViewController.swift in Sources */,
