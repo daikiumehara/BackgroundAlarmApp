@@ -11,9 +11,7 @@ class AlarmModel {
     private(set) var datas: [AlarmData] = []
 
     func addData(_ data: AlarmData) {
-        var newData = data
-        newData.setAlarm()
-        datas.append(newData)
+        datas.append(data)
     }
 
     func removeData(_ data: AlarmData) {
