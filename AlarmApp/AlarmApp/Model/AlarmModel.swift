@@ -20,7 +20,11 @@ class AlarmModel {
         guard let index = datas.firstIndex(of: data) else {
             return
         }
-        datas[index].cancelAlarm()
+        NotificationManager.removeAlarm(datas[index])
         datas.remove(at: index)
+    }
+
+    func changeValue(index: Int, data: AlarmData) {
+        self.datas[index] = data
     }
 }
